@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="25.578" height="18.385" viewBox="0 0 25.578 18.385">
+  <g id="그룹_14443" data-name="그룹 14443" transform="translate(-456.808 -1943.313)">
+    <g id="사각형_373" data-name="사각형 373" transform="translate(466 1943.313) rotate(45)" fill="none" stroke="#fff" stroke-width="2">
+      <rect width="13" height="13" rx="3" stroke="none"/>
+      <rect x="1" y="1" width="11" height="11" rx="2" fill="none"/>
+    </g>
+    <g id="사각형_372" data-name="사각형 372" transform="translate(473.193 1943.313) rotate(45)" fill="none" stroke="#fe0001" stroke-width="2">
+      <rect width="13" height="13" rx="3" stroke="none"/>
+      <rect x="1" y="1" width="11" height="11" rx="2" fill="none"/>
+    </g>
+    <path id="교차_1" data-name="교차 1" d="M20574.184,22666.32l1.41-1.412,1.412,1.418-1.412,1.41Z" transform="translate(-20106 -20718)" fill="#fff"/>
+  </g>
+</svg>
