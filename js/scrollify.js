@@ -1,6 +1,5 @@
 let body;
 const topBtn = document.querySelector('.top-btn');
-const gnbEls = document.querySelectorAll('.gnb .pagination li');
 window.onload = () => {
     size();
     body = document.querySelector('body');
@@ -17,6 +16,19 @@ window.onload = () => {
             $('.panel').removeClass('active')
             current = $.scrollify.current();
             current.addClass('active')
+            var currentWrapper = $.scrollify.current();
+            //console.log(currentWrapper)
+            if(currentWrapper[0].classList.contains('positions') || currentWrapper[0].classList.contains('products')) {
+                topBtn.classList.add('white')
+            }else {
+                topBtn.classList.remove('white')
+            }
+            if(currentWrapper[0].classList.contains('foot')) {
+                topBtn.classList.add('foot')
+            }else {
+                topBtn.classList.remove('foot')
+            }
+             
         },
         afterRender: () => {
             var pagination = "<ul class=\"pagination\">";
