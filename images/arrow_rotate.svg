@@ -1,20 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="72.926" height="71.885" viewBox="0 0 72.926 71.885">
-  <g id="그룹_175" data-name="그룹 175" transform="translate(-46.789 -47.652)">
-    <g id="그룹_171" data-name="그룹 171" transform="translate(50.314 48.91)">
-      <path id="패스_273" data-name="패스 273" d="M80.821,61.1A35.693,35.693,0,0,0,61.1,80.82" transform="translate(-61.1 -59.694)" fill="none" stroke="#eb3323" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-      <path id="패스_274" data-name="패스 274" d="M81.234,59.423l3.3,1.059-1.059,3.3" transform="translate(-64.377 -59.423)" fill="none" stroke="#eb3323" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+  <g id="group_175" data-name="group 175" transform="translate(-46.789 -47.652)">
+    <g id="group_171" data-name="group 171" transform="translate(50.314 48.91)">
+      <path id="path_273" data-name="path 273" d="M80.821,61.1A35.693,35.693,0,0,0,61.1,80.82" transform="translate(-61.1 -59.694)" fill="none" stroke="#eb3323" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <path id="path_274" data-name="path 274" d="M81.234,59.423l3.3,1.059-1.059,3.3" transform="translate(-64.377 -59.423)" fill="none" stroke="#eb3323" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     </g>
-    <g id="그룹_172" data-name="그룹 172">
-      <path id="패스_270" data-name="패스 270" d="M136.132,80.823A35.7,35.7,0,0,0,116.409,61.1" transform="translate(-19.789 -10.785)" fill="none" stroke="#2c4e5f" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-      <path id="패스_275" data-name="패스 275" d="M141.556,83.1l-1.318,3.206-3.206-1.318" transform="translate(-23.147 -14.367)" fill="none" stroke="#2c4e5f" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <g id="group_172" data-name="group 172">
+      <path id="path_270" data-name="path 270" d="M136.132,80.823A35.7,35.7,0,0,0,116.409,61.1" transform="translate(-19.789 -10.785)" fill="none" stroke="#2c4e5f" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <path id="path_275" data-name="path 275" d="M141.556,83.1l-1.318,3.206-3.206-1.318" transform="translate(-23.147 -14.367)" fill="none" stroke="#2c4e5f" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     </g>
-    <g id="그룹_174" data-name="그룹 174">
-      <path id="패스_271" data-name="패스 271" d="M116.409,136.132a35.69,35.69,0,0,0,19.723-19.724" transform="translate(-19.789 -19.789)" fill="none" stroke="#eb3323" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-      <path id="패스_276" data-name="패스 276" d="M117.33,141.4l-3.269-1.154,1.154-3.268" transform="translate(-19.407 -23.139)" fill="none" stroke="#eb3323" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <g id="group_174" data-name="group 174">
+      <path id="path_271" data-name="path 271" d="M116.409,136.132a35.69,35.69,0,0,0,19.723-19.724" transform="translate(-19.789 -19.789)" fill="none" stroke="#eb3323" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <path id="path_276" data-name="path 276" d="M117.33,141.4l-3.269-1.154,1.154-3.268" transform="translate(-19.407 -23.139)" fill="none" stroke="#eb3323" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     </g>
-    <g id="그룹_173" data-name="그룹 173">
-      <path id="패스_272" data-name="패스 272" d="M61.1,116.413a35.693,35.693,0,0,0,19.721,19.72" transform="translate(-10.784 -19.789)" fill="none" stroke="#2c4e5f" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-      <path id="패스_277" data-name="패스 277" d="M58.468,116.945l1.427-3.16,3.159,1.427" transform="translate(-10.356 -19.361)" fill="none" stroke="#2c4e5f" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <g id="group_173" data-name="group 173">
+      <path id="path_272" data-name="path 272" d="M61.1,116.413a35.693,35.693,0,0,0,19.721,19.72" transform="translate(-10.784 -19.789)" fill="none" stroke="#2c4e5f" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <path id="path_277" data-name="path 277" d="M58.468,116.945l1.427-3.16,3.159,1.427" transform="translate(-10.356 -19.361)" fill="none" stroke="#2c4e5f" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     </g>
   </g>
 </svg>

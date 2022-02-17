@@ -118,13 +118,3 @@ function removeActive(index, lists){
         el.classList.remove("on");
     }
 }
-
-//BUSINESS SECTION
-document.addEventListener("DOMContentLoaded", function () {
-    let pathBody = document.querySelector(".arrow-body");
-    // let pathHead = document.querySelector(".arrow-head");
-    let pathLength = pathBody.getTotalLength();
-    // let pathLengthH = pathHead.getTotalLength();
-    let pathes = $(".line").find("path");
-    console.log(pathLength);
-});

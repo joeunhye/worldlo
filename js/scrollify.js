@@ -1,5 +1,6 @@
 let body;
 const topBtn = document.querySelector('.top-btn');
+const gnbEls = document.querySelectorAll('.gnb .pagination li');
 window.onload = () => {
     size();
     body = document.querySelector('body');

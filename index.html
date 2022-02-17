@@ -25,7 +25,7 @@
                 <h1 class="logo"><span class="logo-text">월드로지텍</span></h1>
                 <nav>
                     <ul class="pagination">
-                        <li><a href="#intro">HOME</a></li>
+                        <li><a href="#intro" class="active">HOME</a></li>
                         <li><a href="#about">회사소개</a></li>
                         <li><a href="#business">경영방침</a></li>
                         <li><a href="#positions">주요역할</a></li>
@@ -199,7 +199,7 @@
                                 </svg>
                                 <svg class="arrow-red-head" xmlns="http://www.w3.org/2000/svg" width="8.811" height="5.406" viewBox="0 0 8.811 5.406">
                                     <path id="path_159" data-name="path 159" d="M188.163,70.406h0a1,1,0,0,1-.707-.293l-3.405-3.406a1,1,0,1,1,1.414-1.414l2.7,2.7,2.7-2.7a1,1,0,0,1,1.414,1.414l-3.406,3.406A1,1,0,0,1,188.163,70.406Z" transform="translate(-183.758 -65)" fill="#d50010"/>
-                                </svg>                                  
+                                </svg>
                                 <svg class="arrow-blue-body" xmlns="http://www.w3.org/2000/svg" width="57.197" height="31.898" viewBox="0 0 57.197 31.898">
                                     <g id="group_14562" data-name="group 14562" transform="translate(-34.726 -106.9)">
                                       <path class="arrow-body" id="path_160" data-name="path 160" d="M101.641,165.555H50.264v-28.9" transform="translate(-10.717 -27.756)" fill="none" stroke="#2c4e5f" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
@@ -221,10 +221,10 @@
                             <div class="icon-box">
                                 <img src="./images/business_icon3.svg" alt="">
                                 <img src="./images/arrow_rotate.svg" class="arrow-rotate" alt="">
-                                <p class="box box-top on"><span></span></p>
-                                <p class="box box-right"><span></span></p>
-                                <p class="box box-bottom"><span></span></p>
-                                <p class="box box-left"><span></span></p>
+                                <p class="box box-top on"><span class="fontcon-box_icon"></span></p>
+                                <p class="box box-right"><span class="fontcon-box_icon"></span></p>
+                                <p class="box box-bottom"><span class="fontcon-box_icon"></span></p>
+                                <p class="box box-left"><span class="fontcon-box_icon"></span></p>
                             </div>
                             <div class="icon-text">
                                 <p>전문경영</p>
@@ -235,6 +235,19 @@
                     </li>
                 </ul>
             </div>
+        </div>
+        <div class="wave-bg">
+            <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                <defs>
+                <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+                </defs>
+                <g class="parallax">
+                <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7"></use>
+                <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(165,208,253,0.5)"></use>
+                <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)"></use>
+                <use xlink:href="#gentle-wave" x="48" y="7" fill="rgba(48,94,160,1)"></use>
+                </g>
+            </svg>
         </div>
     </section>
     <!-- BUSINESS SECTION 종료 -->
@@ -335,7 +348,7 @@
                         <div class="products-bg"></div>
                         <div class="products-company">
                             <p>현대자동차</p>
-                            <a href="javascript:void(0)" class="btn more-view">상세보기</a>
+                            <div class="btn-wrap"><a href="javascript:void(0)" class="btn more-view">상세보기</a></div>
                         </div>
                         <img src="./images/hyundai_logo.svg" alt="" class="products-logo" />
                     </li>
@@ -343,7 +356,7 @@
                         <div class="products-bg"></div>
                         <div class="products-company">
                             <p>기아자동차</p>
-                            <a href="javascript:void(0)" class="btn more-view">상세보기</a>
+                            <div class="btn-wrap"><a href="javascript:void(0)" class="btn more-view">상세보기</a></div>
                         </div>
                         <img src="./images/kia_logo.svg" alt="" class="products-logo" />
                     </li>
@@ -1158,7 +1171,7 @@
     <!-- LOCATION SECTION 종료 -->
 
     <!-- section 끝 -->
-    <a href="#intro" class="top-btn"><img src="./images/arrow_top.svg" alt="" /></a>
+    <a href="#intro" class="top-btn"><span class="fontcon-arrow_movetop"></span></a>
     <!-- footer시작 -->
     <footer id="footer">
         <div class="wrapper">

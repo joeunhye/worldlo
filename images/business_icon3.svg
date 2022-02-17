@@ -1,14 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="168.658" height="168.66" viewBox="0 0 168.658 168.66">
-  <g id="그룹_14478" data-name="그룹 14478" transform="translate(1 1)">
-    <path id="패스_260" data-name="패스 260" d="M87.207,155.735a68.528,68.528,0,1,1,68.528-68.529,68.605,68.605,0,0,1-68.528,68.529m0-117.707a49.179,49.179,0,1,0,49.178,49.178A49.235,49.235,0,0,0,87.207,38.028" transform="translate(-3.878 -3.878)" fill="#a5d0fd"/>
-    <path id="패스_261" data-name="패스 261" d="M87.207,155.735a68.528,68.528,0,1,1,68.528-68.529A68.605,68.605,0,0,1,87.207,155.735Zm0-117.707a49.179,49.179,0,1,0,49.178,49.178A49.235,49.235,0,0,0,87.207,38.028Z" transform="translate(-3.878 -3.878)" fill="none" stroke="#2c4e5f" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-    <path id="패스_262" data-name="패스 262" d="M119.761,24.87A23.87,23.87,0,1,1,95.891,1a23.87,23.87,0,0,1,23.87,23.87" transform="translate(-12.563 -1)" fill="#fff"/>
-    <path id="패스_263" data-name="패스 263" d="M119.761,24.87A23.87,23.87,0,1,1,95.891,1,23.87,23.87,0,0,1,119.761,24.87Z" transform="translate(-12.563 -1)" fill="none" stroke="#2c4e5f" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-    <path id="패스_264" data-name="패스 264" d="M119.761,166.914a23.87,23.87,0,1,1-23.87-23.87,23.87,23.87,0,0,1,23.87,23.87" transform="translate(-12.563 -24.126)" fill="#fff"/>
-    <path id="패스_265" data-name="패스 265" d="M119.761,166.914a23.87,23.87,0,1,1-23.87-23.87A23.87,23.87,0,0,1,119.761,166.914Z" transform="translate(-12.563 -24.126)" fill="none" stroke="#2c4e5f" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-    <path id="패스_266" data-name="패스 266" d="M166.913,119.761a23.87,23.87,0,1,1,23.87-23.87,23.87,23.87,0,0,1-23.87,23.87" transform="translate(-24.126 -12.563)" fill="#fff"/>
-    <path id="패스_267" data-name="패스 267" d="M166.913,119.761a23.87,23.87,0,1,1,23.87-23.87A23.87,23.87,0,0,1,166.913,119.761Z" transform="translate(-24.126 -12.563)" fill="none" stroke="#2c4e5f" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-    <path id="패스_268" data-name="패스 268" d="M24.869,119.761a23.87,23.87,0,1,1,23.87-23.87,23.869,23.869,0,0,1-23.87,23.87" transform="translate(-1 -12.563)" fill="#fff"/>
-    <path id="패스_269" data-name="패스 269" d="M24.869,119.761a23.87,23.87,0,1,1,23.87-23.87A23.869,23.869,0,0,1,24.869,119.761Z" transform="translate(-1 -12.563)" fill="none" stroke="#2c4e5f" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+  <g id="group_14478" data-name="group 14478" transform="translate(1 1)">
+    <path id="path_260" data-name="path 260" d="M87.207,155.735a68.528,68.528,0,1,1,68.528-68.529,68.605,68.605,0,0,1-68.528,68.529m0-117.707a49.179,49.179,0,1,0,49.178,49.178A49.235,49.235,0,0,0,87.207,38.028" transform="translate(-3.878 -3.878)" fill="#a5d0fd"/>
+    <path id="path_261" data-name="path 261" d="M87.207,155.735a68.528,68.528,0,1,1,68.528-68.529A68.605,68.605,0,0,1,87.207,155.735Zm0-117.707a49.179,49.179,0,1,0,49.178,49.178A49.235,49.235,0,0,0,87.207,38.028Z" transform="translate(-3.878 -3.878)" fill="none" stroke="#2c4e5f" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <path id="path_262" data-name="path 262" d="M119.761,24.87A23.87,23.87,0,1,1,95.891,1a23.87,23.87,0,0,1,23.87,23.87" transform="translate(-12.563 -1)" fill="#fff"/>
+    <path id="path_263" data-name="path 263" d="M119.761,24.87A23.87,23.87,0,1,1,95.891,1,23.87,23.87,0,0,1,119.761,24.87Z" transform="translate(-12.563 -1)" fill="none" stroke="#2c4e5f" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <path id="path_264" data-name="path 264" d="M119.761,166.914a23.87,23.87,0,1,1-23.87-23.87,23.87,23.87,0,0,1,23.87,23.87" transform="translate(-12.563 -24.126)" fill="#fff"/>
+    <path id="path_265" data-name="path 265" d="M119.761,166.914a23.87,23.87,0,1,1-23.87-23.87A23.87,23.87,0,0,1,119.761,166.914Z" transform="translate(-12.563 -24.126)" fill="none" stroke="#2c4e5f" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <path id="path_266" data-name="path 266" d="M166.913,119.761a23.87,23.87,0,1,1,23.87-23.87,23.87,23.87,0,0,1-23.87,23.87" transform="translate(-24.126 -12.563)" fill="#fff"/>
+    <path id="path_267" data-name="path 267" d="M166.913,119.761a23.87,23.87,0,1,1,23.87-23.87A23.87,23.87,0,0,1,166.913,119.761Z" transform="translate(-24.126 -12.563)" fill="none" stroke="#2c4e5f" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <path id="path_268" data-name="path 268" d="M24.869,119.761a23.87,23.87,0,1,1,23.87-23.87,23.869,23.869,0,0,1-23.87,23.87" transform="translate(-1 -12.563)" fill="#fff"/>
+    <path id="path_269" data-name="path 269" d="M24.869,119.761a23.87,23.87,0,1,1,23.87-23.87A23.869,23.869,0,0,1,24.869,119.761Z" transform="translate(-1 -12.563)" fill="none" stroke="#2c4e5f" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
 </svg>

@@ -95,7 +95,7 @@ header.on nav a {color:#fff;}
 .scroll-arrow .scroll-move {position: absolute; top: 24px;display: inline-block;width: 2px; height: 5px; border: 1px solid #fff; border-radius: 3px;animation: scrollMove 1.5s infinite;}
 
 /*TOP BTN*/
-.top-btn {opacity: 0; pointer-events: none; position: fixed; right: 70px; bottom:35px; z-index: 2;background-color: rgba(6,9,43,0.17);display: inline-block;width: 56px;height: 56px;display: flex;justify-content: center;align-items: center;border-radius: 50%;transition: .3s all ease-in-out;transform: translateY(160px);}
+.top-btn {opacity: 0; pointer-events: none; position: fixed; right: 70px; bottom:35px; z-index: 2;color: #000; background-color: rgba(6,9,43,0.17);display: inline-block;width: 56px;height: 56px;display: flex;justify-content: center;align-items: center;border-radius: 50%;transition: .3s all ease-in-out;transform: translateY(160px);}
 .top-btn.on {opacity: 1;pointer-events: auto;transform: translateY(0px);}
 
 /*COLUMN LIST*/
@@ -229,6 +229,8 @@ header.on nav a {color:#fff;}
 }
 
 /*****BUSINESS*****/
+.business {height: 100vh; background-color: #EFF6FF;}
+.business-in {padding-top: 20vh;}
 .business .column-list {margin:35px -35px 0;}
 .business .column-list li {flex: 1 1 30%; margin: 0 40px;opacity: 0; transform: translateY(50px); transition: .5s .2s all ease-in-out;}
 .business .column-list li:nth-child(1) {transition-delay: .2s;}
@@ -255,24 +257,49 @@ header.on nav a {color:#fff;}
 .business .column-list li:nth-child(2):hover .user-white {animation: moveUpDown 1.3s infinite; animation-direction: alternate;}
 .business .column-list li:nth-child(2):hover .arrow-body {stroke-dasharray: 80;stroke-dashoffset: 160;animation: dash 2s ease-in-out infinite;}
 .business .column-list li:nth-child(2):hover .arrow-red-head,
-.business .column-list li:nth-child(2):hover .arrow-blue-head  {animation: opacity 2s 1s ease-in-out infinite;}
+.business .column-list li:nth-child(2):hover .arrow-blue-head {animation: opacity 2s 1s ease-in-out infinite;}
 .business .column-list .icon-box .arrow-rotate {position: absolute;top: 26%;left: 29%; width: 70px; transition: .3s all ease;}
-.business .column-list .icon-box .box {position: absolute; transition: .3s all ease;}
-.business .column-list .icon-box .box span {display: inline-block; width: 28px; height: 30px; background: url('../images/box.svg') no-repeat right;}
-.business .column-list .icon-box .box.on span {background-position-x: left;}
-.business .column-list .icon-box .box.box-top {top: 4%;left: 50%;transform: translateX(-50%);}
-.business .column-list .icon-box .box.box-right {top: 44%;transform: translateY(-50%); right: 6%;}
+.business .column-list .icon-box .box {position: absolute;text-align: center; transition: .3s all ease;}
+.business .column-list .icon-box .box span {display: inline-block; width: 28px; height: 30px; font-size: 28px; color: #2C4E5F;}
+.business .column-list .icon-box .box.on span {color: #EB3323;}
+.business .column-list .icon-box .box.box-top {top: 5%;left: 50%;transform: translateX(-50%);}
+.business .column-list .icon-box .box.box-right {top: 45%; right: 7%;transform: translateY(-50%);}
 .business .column-list .icon-box .box.box-bottom {bottom: 16%;left: 50%;transform: translateX(-50%);}
 .business .column-list .icon-box .box.box-left {top: 37%; left: 14%;transform: translateX(-50%);}
 .business .column-list li:nth-child(3):hover .arrow-rotate {animation: rotate 2s ease-in-out infinite;}
-.business .column-list li:nth-child(3):hover .box.box-top span {animation: box 2s ease-in-out infinite;}
-.business .column-list li:nth-child(3):hover .box.box-right span {animation: box 2s 3s ease-in-out infinite;}
-.business .column-list li:nth-child(3):hover .box.box-bottom span {animation: box 2s 5s ease-in-out infinite;}
-.business .column-list li:nth-child(3):hover .box.box-left span {animation: box 2s 7s ease-in-out infinite;}
-
+.business .column-list li:nth-child(3):hover .box.box-top span {animation: iconColorOff 6s ease-in-out;}
+.business .column-list li:nth-child(3):hover .box.box-right span {animation: iconColorOn 1.5s 1s ease-in-out;}
+.business .column-list li:nth-child(3):hover .box.box-bottom span {animation: iconColorOn 1.5s 2s ease-in-out;}
+.business .column-list li:nth-child(3):hover .box.box-left span {animation: iconColorOn 1.5s 3s ease-in-out;}
 .business .column-list .icon-text span {color: #555;}
-.business {height: 100vh; background-color: #EFF6FF;}
-.business-in {padding-top: 20vh;}
+
+.wave-bg {position: absolute; bottom: 0; width: 100%; z-index: 1;}
+.waves {position:relative;width: 100%;height:15vh;margin-bottom:-7px;min-height:100px;max-height:150px;}
+.parallax > use {animation: move-forever 25s cubic-bezier(.55,.5,.45,.5) infinite;}
+.parallax > use:nth-child(1) {animation-delay: -2s; animation-duration: 7s;}
+.parallax > use:nth-child(2) {animation-delay: -3s; animation-duration: 10s;}
+.parallax > use:nth-child(3) {animation-delay: -4s; animation-duration: 13s;}
+.parallax > use:nth-child(4) {animation-delay: -5s;animation-duration: 20s;}
+@keyframes move-forever {
+    0% {
+        transform: translate3d(-90px,0,0);
+    }
+    100% { 
+        transform: translate3d(85px,0,0);
+    }
+}
+/* @media (max-width: 768px) {
+    .waves {
+      height:40px;
+      min-height:40px;
+    }
+    .content {
+      height:30vh;
+    }
+    h1 {
+      font-size:24px;
+    }
+} */
 
 @keyframes arrowleft {
     0% {
@@ -339,16 +366,23 @@ header.on nav a {color:#fff;}
         transform: rotate(360deg);
     }
 }
-
-@keyframes box {
+@keyframes iconColorOff {
     0% {
-        background-position-x: right;
+        color: #EB3323;
     }
     50% {
-        background-position-x: left;
+        color: #2C4E5F;
     }
-    50% {
-        background-position-x: right;
+    100% {
+        color: #EB3323;
+    }
+}
+@keyframes iconColorOn {
+    0% {
+        color: #2C4E5F;
+    }
+    100% {
+        color: #EB3323;
     }
 }
 
@@ -393,7 +427,7 @@ header.on nav a {color:#fff;}
 .mobis-slider.destroy .swiper-slide {flex-shrink: 1; display: flex;flex-direction: column;justify-content: space-evenly; align-items: center; margin-left: 60px;}
 .mobis-slider.destroy .swiper-slide:first-child {margin:0;}
 
-.mip-slider {position: relative; margin-top: 40px;opacity: 0; transform: translateY(50px); transition: .3s .4s all ease-in-out;}
+.mip-slider {position: relative; margin-top: 40px;opacity: 0; transform: translateY(50px); transition: .3s .5s all ease-in-out;}
 .positions.active .mip-slider {opacity: 1; transform: translateY(0);}
 .mip-slider:before {content: ''; position: absolute; top:50%; left:0; transform: translateY(-50%); width: 2px; height: 85px; border-left: 3px solid #1a3769;opacity: 1;z-index: 2;}
 .mip-slider .swiper {background-color: rgba(21,35,72,0.5);}
@@ -421,7 +455,25 @@ header.on nav a {color:#fff;}
 .products .products-cont ul li:hover .products-bg {transform: scale(1.1);} 
 .products .products-company {position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);color: #fff;z-index: 1; text-align: center;}
 .products .products-company p {margin-bottom: 110px; font-size: 40px;}
-.products .products-company .btn {font-size: 24px;font-weight: 300;color: #fff;}
+
+.btn-wrap {position: relative;}
+.btn-wrap:hover .btn {font-weight: 500;color: #FE0000;transition-duration: 0.4s;}
+.btn-wrap:before, .btn-wrap:after, .btn:before, .btn:after {content: '';position: absolute;background: #FE0000;transition: all .3s;}
+.btn-wrap:before, .btn-wrap:after {top: 0;width: 2px;height: 100%;transform: scale3d(1, 0, 1);}
+.btn-wrap:before {left: 0;transform-origin: 50% 100%;}
+.btn-wrap:after {right: 0;transform-origin: 50% 0%;}
+.btn {position: relative;display: block;padding: 20px 0;text-align: center;color: #fff;font-size: 24px;font-weight: 300;transition: .3s all ease;}
+.btn:hover, .btn:focus {color: #929292;}
+.btn:before, .btn:after {left: 35%;width: 30%;height: 2px;/*transform: scale3d(0, 1, 1);*/}
+.btn:before {top: 0;transform-origin: 0 50%;}
+.btn:after {bottom: 0;transform-origin: 100% 50%;}
+.btn-wrap:hover:before,
+.btn-wrap:hover:after,
+.btn-wrap:hover .btn:before,
+.btn-wrap:hover .btn:after {transform: scale3d(1, 1, 1);transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);transition-duration: 0.4s;}
+.btn-wrap:hover:after {transition-delay: 0s;}
+.btn-wrap:hover .btn:before {width: 100%; left: 0;/*transition-delay: 0.2s;*/}
+.btn-wrap:hover .btn:after {width: 100%; left:0; /*transition-delay: 0.2s;*/}
 .products .products-logo {position: absolute;bottom: 62px;left: 50%;transform: translateX(-50%);opacity: 0.3;}
 
 /*POPUP*/
