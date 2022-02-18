@@ -54,10 +54,10 @@ const aboutSwiper = new Swiper('.about-slider .swiper', {
     effect: 'fade',
     speed: 1000,
     loop: true,
-    autoplay: {
-        delay: 5000,
-        disableOnInteraction: false,
-    },
+    // autoplay: {
+    //     delay: 5000,
+    //     disableOnInteraction: false,
+    // },
     touchRatio: 1,
     slidesPerView: 1,
     pagination: {

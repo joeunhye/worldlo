@@ -71,7 +71,7 @@ header.on nav a {color:#fff;}
 .panel-text {width: 500px; margin-top:22px; word-break: keep-all;font-size: 18px; line-height: 30px; color:#555555;}
 .wrapper {position: relative;max-width: 1300px; height: 100%; margin: 0 auto;}
 
-/*PAGE NATION*/
+/*PAGENATION*/
 .pagination {position: fixed;left: 20px;top: 50%;transform: translateY(-50%);z-index: 10;}
 .pagination li {position: relative; margin-bottom: 20px;}
 .pagination li a {position: relative;}
@@ -611,7 +611,11 @@ footer .copyright span {margin-left:10px;}
 
 /*****MEDIA QUERY*****/
 @media screen and (max-width: 1200px) {
-
+    /*HEADER*/
+    header nav ul a {font-size: 18px;}
+    
+    /*PAGE NATION*/
+    .panel .pagination {display: none;}
 }
 
 @media screen and (max-width: 1024px) {
