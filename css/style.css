@@ -44,12 +44,10 @@ header.on .gnb .logo {background-position-y: 0px;}
 header .gnb .logo .logo-text {width: 0;height: 0;font-size: 0;text-indent: -9999px;overflow: hidden;}
 header .gnb .pagination {position: relative;top: 0; left:0; transform: translateY(0px);}
 header .gnb .pagination a::before {display: none;}
-header nav {}
 header nav ul.pagination {display: flex;}
 header nav ul.pagination li {margin-left: 75px; margin-bottom: 0;}
 header nav ul a {font-size: 20px; color:#000; transition: .3s all ease-in-out;}
 header.on nav a {color:#fff;}
-/* header nav a.active {color:rgb(187, 187, 187)} */
 @keyframes gradient {
 	0% {
 		background-position: 0% 50%;
@@ -72,22 +70,24 @@ header.on nav a {color:#fff;}
 .wrapper {position: relative;max-width: 1300px; height: 100%; margin: 0 auto;}
 
 /*PAGE NATION*/
-.pagination {position: fixed;left: 20px;top: 50%;transform: translateY(-50%);z-index: 10;}
-.pagination li {position: relative; margin-bottom: 20px;}
-.pagination li a {position: relative;}
-.pagination li a:before {content: ''; position: absolute; width: 6px; height: 6px; border-radius: 50px; background-color: #B1B1B1; transition: .3s all ease;}
-.pagination li a:after {content: ''; position: absolute;}
-.pagination li a.active {margin-left: -2px;}
-.pagination li a.active:before {background-color: transparent; border: 2px solid #000;}
-.pagination li a .hover-text {display: inline-block;margin-left: 12px;opacity: 0;font-size: 14px;text-transform: uppercase; color: #000;}
-.pagination li a.active .hover-text {opacity: 1;}
-.pagination li a .hover-arrow {position: absolute;width: 0px; height: 6px;top: 8px; left: 7px; background: url('../images/page-arrow.svg') no-repeat; transition: .3s all ease;}
-.pagination li a.active .hover-arrow {width: 60px;}
-.pagination li a .panel-name {position: absolute;left: 11px;top: 15px; opacity: 0; transform: translateX(-35px); transition: .3s all ease;}
-.pagination li a.active .panel-name {opacity: 1;transform: translateX(0px);}
-.pagination li a.item0:before, .pagination li a.item3:before, .pagination li a.item4:before {border-color: #fff;}
-.pagination li a.item0 .hover-text, .pagination li a.item3 .hover-text, .pagination li a.item4 .hover-text {color: #fff;}
-.pagination li a.item0 .hover-arrow, .pagination li a.item3 .hover-arrow, .pagination li a.item4 .hover-arrow {background: url('../images/page-arrow_w.svg') no-repeat;}
+.panel .pagination {position: fixed;left: 20px;top: 50%;transform: translateY(-50%);z-index: 10;}
+.panel .pagination li {position: relative; margin-bottom: 20px;}
+.panel .pagination li a {position: relative;display: inline-block;width: 100px;}
+.panel .pagination li a:before {content: ''; position: absolute; width: 6px; height: 6px; border-radius: 50px; background-color: #B1B1B1; transition: .3s all ease;}
+.panel .pagination li a:after {content: ''; position: absolute;}
+.panel .pagination li a .hover-text {display: inline-block;margin-left: 12px;opacity: 0;font-size: 14px;text-transform: uppercase; color: #000;}
+.panel .pagination li a .hover-arrow {position: absolute;width: 0px; height: 6px;top: 4px; left: 7px; background: url('../images/page-arrow.svg') no-repeat; transition: .3s all ease;}
+.panel .pagination li a .panel-name {position: absolute;left: 11px;top: 12px; opacity: 0; transform: translateX(-35px); transition: .3s all ease;}
+.panel .pagination li a.active:before, .panel .pagination li a:hover:before {background-color: transparent; border: 2px solid #000;}
+.panel .pagination li a.active, .panel .pagination li a:hover {margin-left: -2px;}
+.panel .pagination li a.active .hover-text, .panel .pagination li a:hover .hover-text {opacity: 1;}
+.panel .pagination li a.active .hover-arrow, .panel .pagination li a:hover .hover-arrow {width: 60px;}
+.panel .pagination li a.active .panel-name, .panel .pagination li a:hover .panel-name {opacity: 1;transform: translateX(0px);}
+.intro-section .panel .pagination li a .hover-text, .positions-section .panel .pagination li a .hover-text, .products-section .panel .pagination li a .hover-text {color: #fff;}
+.intro-section .panel .pagination li a .hover-arrow, .positions-section .panel .pagination li a .hover-arrow, .products-section .panel .pagination li a .hover-arrow {
+    background: url('../images/page-arrow_w.svg') no-repeat;}
+.intro-section .panel .pagination li a:before, .positions-section .panel .pagination li a:before, .products-section .panel .pagination li a:before {border-color:#fff;}
+
 
 /*SCROLL ARROW*/
 .scroll-arrow img {width: 20px;}
@@ -245,9 +245,9 @@ header.on nav a {color:#fff;}
 .business .column-list li:hover .icon-item {background-color: #fff;box-shadow: 0px 2px 15px 3px rgb(0 0 0 / 7%);}
 .business .column-list .icon-box {position: relative; height: 190px;}
 .business .column-list li:nth-child(2) .icon-box {width: 190px;}
-.business .column-list .arrow-left {position: absolute; top: 50%;left: 24%;transform: rotate(-45deg); transition: .3s all ease;opacity: 0;}
-.business .column-list .arrow-up {position: absolute; left:50%; top:39%; transform: translateX(-50%); transition: .3s all ease;opacity: 0;}
-.business .column-list .icon-box .arrow-right {position: absolute;top: 50%;right: 24%;transform: rotate(45deg); transition: .3s all ease;opacity: 0;}
+.business .column-list .arrow-left {position: absolute; top: 46%;left: 21%;transform: rotate(-45deg); transition: .3s all ease;opacity: 1;}
+.business .column-list .arrow-up {position: absolute; left:50%; top:35%; transform: translateX(-50%); transition: .3s all ease;opacity: 1;}
+.business .column-list .icon-box .arrow-right {position: absolute;top: 46%;right: 22%;transform: rotate(45deg); transition: .3s all ease;opacity: 1;}
 .business .column-list li:nth-child(1):hover .arrow-left {animation: arrowleft 1s infinite;}
 .business .column-list li:nth-child(1):hover .arrow-up {animation: arrowUp 1s infinite;}
 .business .column-list li:nth-child(1):hover .arrow-right {animation: arrowRight 1s infinite;}
@@ -442,10 +442,12 @@ header.on nav a {color:#fff;}
 .products .products-cont {height: 100%;}
 .products .products-cont ul {display: flex; height: 100%;}
 .products .products-cont ul li {position: relative; width: 50%; height: 100%; overflow: hidden; transition: .3s all ease;}
-.products .products-cont ul li .products-bg {height: 100%; transition: .5s all ease;}
-.products .products-cont ul li:nth-child(1) .products-bg {background: url('../images/products_bg1.jpg') no-repeat center; background-size: cover;background-attachment: fixed;background-position: -250px -80px;}
-.products .products-cont ul li:nth-child(2) .products-bg {background: url('../images/products_bg2.jpg') no-repeat center; background-size: cover;background-attachment: fixed;background-position: 450px -80px;}
+.products .products-cont ul li .products-bg {position: relative; height: 100%; transition: .5s all ease;}
+.products .products-cont ul li .products-bg:before {opacity: 0; content: ''; position: absolute; top:0; left:0; width: 100%; height: 100%; background-color: rgba(11,23,46,0.5); transition: .3s all ease-in-out;}
+.products .products-cont ul li:nth-child(1) .products-bg {background: url('../images/products_bg1.png') no-repeat center; background-size: cover;background-attachment: fixed;background-position: -250px -80px;}
+.products .products-cont ul li:nth-child(2) .products-bg {background: url('../images/products_bg2.png') no-repeat center; background-size: cover;background-attachment: fixed;background-position: 450px -80px;}
 .products .products-cont ul li:hover .products-bg {transform: scale(1.1);} 
+.products .products-cont ul li:hover .products-bg:before {opacity: 1;}
 .products .products-company {position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);color: #fff;z-index: 1; text-align: center;}
 .products .products-company p {margin-bottom: 110px; font-size: 40px;}
 
@@ -456,17 +458,16 @@ header.on nav a {color:#fff;}
 .btn-wrap:before {left: 0;transform-origin: 50% 100%;}
 .btn-wrap:after {right: 0;transform-origin: 50% 0%;}
 .btn {position: relative;display: block;padding: 20px 0;text-align: center;color: #fff;font-size: 24px;font-weight: 300;transition: .3s all ease;}
-.btn:hover, .btn:focus {color: #929292;}
 .btn:before, .btn:after {left: 35%;width: 30%;height: 2px;}
 .btn:before {top: 0;transform-origin: 0 50%;}
 .btn:after {bottom: 0;transform-origin: 100% 50%;}
-.btn-wrap:hover:before,
-.btn-wrap:hover:after,
-.btn-wrap:hover .btn:before,
-.btn-wrap:hover .btn:after {transform: scale3d(1, 1, 1);transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);transition-duration: 0.4s;}
-.btn-wrap:hover:after {transition-delay: 0s;}
-.btn-wrap:hover .btn:before {width: 100%; left: 0;}
-.btn-wrap:hover .btn:after {width: 100%; left:0;}
+.products .products-cont ul li:hover .btn-wrap:before,
+.products .products-cont ul li:hover .btn-wrap:after,
+.products .products-cont ul li:hover .btn-wrap .btn:before,
+.products .products-cont ul li:hover .btn-wrap .btn:after {transform: scale3d(1, 1, 1);transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);transition-duration: 0.4s;}
+.products .products-cont ul li:hover .btn-wrap:after {transition-delay: 0s;}
+.products .products-cont ul li:hover .btn-wrap .btn:before {width: 100%; left: 0;}
+.products .products-cont ul li:hover .btn-wrap .btn:after {width: 100%; left:0;}
 .products .products-logo {position: absolute;bottom: 62px;left: 50%;transform: translateX(-50%);opacity: 0.3;}
 
 /*POPUP*/
@@ -528,14 +529,15 @@ header.on nav a {color:#fff;}
 .products .dot-bg {animation: dotScale3 0.5s infinite;animation-direction: alternate;position: absolute; top: -1px;left: -1px;width: 10px;height: 10px; display: inline-block;border-radius: 50%;background-color: #0076FF; opacity: 0.2;}
 
 /*TABLE*/
-.table-data {width: 100%; min-width: 1000px; height:50px;border-collapse: collapse;text-align: center;line-height: 45px; border-radius: 3px 3px 0 0;border: 1px solid #CBCBCB;}
+.table-data {width: 100%; min-width: 1000px; height:50px;border-collapse: collapse;text-align: center;line-height: 45px; background-color: rgba(221,235,252,0.3);border-radius: 3px 3px 0 0;border: 1px solid #CBCBCB;}
 .table-data.marB {margin-bottom: 10px;}
 .table-data > thead th {font-size: 16px; font-weight: 500;}
 .table-data > thead tr > th {position: sticky; top: 53px;z-index: 1;word-break: keep-all; line-height: 42px; background: #F0F0F0; color: #001448;border-bottom:1px solid #CBCBCB;}
 .table-data > thead tr > th > div {position:relative;}
 .table-data > thead tr > th > div:before {content:""; height:23px; position:absolute; top:9px; left:0px; border-left:2px dotted #CBCBCB;}
 .table-data > thead tr > th:first-child > div:before {border:0px;} 
-.table-data > tbody > tr > td {padding: 12px; line-height: 20px; vertical-align: middle; font-size: 15px;background-color: rgba(221,235,252,0.3); box-sizing: border-box;}
+.table-data > tbody > tr > td {padding: 12px; line-height: 20px; vertical-align: middle; font-size: 15px;border-left: 1px solid #CBCBCB;border-right: 1px solid #CBCBCB;box-sizing: border-box;}
+.table-data > tbody > tr > td:nth-child(even) {border-left: none;}
 .table-data > tbody > tr {transition: .3s all ease;}
 .table-data > tbody > tr:hover {background-color: rgba(51,66,145,0.1);}
 @keyframes bgScale {

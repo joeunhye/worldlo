@@ -3,12 +3,16 @@ const topBtn = document.querySelector('.top-btn');
 window.onload = () => {
     size();
     body = document.querySelector('body');
+    let panelEls = document.querySelectorAll('.panel')
+    console.log(panelEls)
+    body.classList.add('intro-section');
     $.scrollify({
         section: ".panel",
         scrollbars: false,
         interstitialSection: "#footer",
         scrollSpeed: 800,
         before: (i, panels) => {
+            var currentWrapper = $.scrollify.current();
             var ref = panels[i].attr("data-section-name");
             $('html').attr('data-scrollify-page-index', i);
             $(".pagination .active").removeClass("active");
@@ -16,8 +20,26 @@ window.onload = () => {
             $('.panel').removeClass('active')
             current = $.scrollify.current();
             current.addClass('active')
-            var currentWrapper = $.scrollify.current();
-            //console.log(currentWrapper)
+            
+            if(currentWrapper[0].classList.contains('intro')) { // intro 섹션 진입
+                body.className = '';
+                body.classList.add('intro-section')
+            }else if(currentWrapper[0].classList.contains('about')) { // about 섹션 진입
+                body.className = '';
+                body.classList.add('about-section')
+            }else if(currentWrapper[0].classList.contains('business')) { // business 섹션 진입
+                body.className = '';
+                body.classList.add('business-section')
+            }else if(currentWrapper[0].classList.contains('positions')) { // positions 섹션 진입
+                body.className = '';
+                body.classList.add('positions-section')
+            }else if(currentWrapper[0].classList.contains('products')) { // products 섹션 진입
+                body.className = '';
+                body.classList.add('products-section')
+            }else if(currentWrapper[0].classList.contains('location')) { // location 섹션 진입
+                body.className = '';
+                body.classList.add('location-section')
+            }
             if(currentWrapper[0].classList.contains('positions') || currentWrapper[0].classList.contains('products')) {
                 topBtn.classList.add('white')
             }else {

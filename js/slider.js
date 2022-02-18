@@ -139,7 +139,7 @@ const enableSwipermMip = function () {
     mipSwiper = new Swiper(".mip-slider .swiper", {
         slidesPerView: 3,
         autoplay: {
-            delay: 2500,
+            delay: 1500,
             disableOnInteraction: false,
         },
         navigation: {
