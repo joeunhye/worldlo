@@ -24,9 +24,10 @@ window.onload = () => {
                 topBtn.classList.remove('white')
             }
             if(currentWrapper[0].classList.contains('foot')) {
-                topBtn.classList.add('foot')
+                topBtn.parentNode.classList.add('foot')
+                $('.panel.location').addClass('active')
             }else {
-                topBtn.classList.remove('foot')
+                topBtn.parentNode.classList.remove('foot')
             }
              
         },
