@@ -7,7 +7,12 @@ window.addEventListener('scroll', () => {
     size();
 })
 
-//WINDOW SIZE CHECK
+document.addEventListener("DOMContentLoaded", function(){
+    new Tab('#hyundaiTab');
+    new Tab('#kiaTab');
+});
+
+//WINDOW SIZE, SCROLL HEIGHT CHECK
 function size() {
     winW = window.innerWidth;
     scrollH = window.pageYOffset;
@@ -42,11 +47,9 @@ closeBtn.forEach((closeEl, idx) => {
 popBodyEls.forEach((popBody, idx) => {
     popBody.addEventListener('mouseenter', () => {
         $.scrollify.disable();
-        console.log('disable')
     })
     popBody.addEventListener('mouseleave', () => {
         $.scrollify.enable();
-        console.log('enable')
     })
 })
 
@@ -66,11 +69,6 @@ function Tab(selector, option) {
     this.activeClass = resultOtp.activeClass;
     this.bindingEvent();
 }
-
-$(document).ready(function() {
-    new Tab('#hyundaiTab');
-    new Tab('#kiaTab');
-})
 
 Tab.prototype.bindingEvent = function() {
     this.btns.on('click', function(e) {
@@ -93,13 +91,11 @@ const dotEls = document.querySelectorAll('.dot');
 const carItemEls = document.querySelectorAll('.list-item');
 
 carItemEls.forEach((carItemEl, idx) => {
-    carItemEl.addEventListener('mouseover', () => {
+    carItemEl.addEventListener('mouseenter', () => {
         addActive(idx, dotEls);
         addActive(idx, carItemEls);
     })
-})
 
-carItemEls.forEach((carItemEl, idx) => {
     carItemEl.addEventListener('mouseleave', () => {
         removeActive(idx, dotEls);
         removeActive(idx, carItemEls);
@@ -114,7 +110,7 @@ function addActive(index, lists){
 }
 
 function removeActive(index, lists){
-    for(var el of lists){
+    for(let el of lists){
         el.classList.remove("on");
     }
 }
