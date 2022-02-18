@@ -236,7 +236,7 @@ header.on nav a {color:#fff;}
 .business {height: 100vh; background-color: #EFF6FF;}
 .business-in {padding-top: 20vh;}
 .business .column-list {margin:35px -35px 0;}
-.business .column-list li {flex: 1 1 30%; margin: 0 40px;opacity: 0; transform: translateY(50px); transition: .5s .2s all ease-in-out;}
+.business .column-list li {flex: 1 1 30%; margin: 0 40px;opacity: 0; transform: translateY(50px); transition: .5s .2s all ease-in-out; z-index: 2;}
 .business .column-list li:nth-child(1) {transition-delay: .2s;}
 .business .column-list li:nth-child(2) {transition-delay: .3s;}
 .business .column-list li:nth-child(3) {transition-delay: .4s;}
@@ -382,6 +382,7 @@ header.on nav a {color:#fff;}
 .check-title {margin-top: 35px;font-size: 20px;text-align: center;color: #fff;opacity: 0; transform: translateY(70px); transition: .7s all ease-in-out;}
 .positions.active .check-title {opacity: 1; transform: translateY(0);}
 .check-title > img {margin-right: 6px;}
+
 .positions {height: 100vh;background: url('../images/positions_bg.jpg') no-repeat center; background-size: cover;background-attachment: fixed;}
 .positions-in {padding-top: 20vh;}
 .positions-in .panel-top {margin-bottom: 22px;}
@@ -528,12 +529,12 @@ header.on nav a {color:#fff;}
 
 /*TABLE*/
 .table-data {width: 100%; min-width: 1000px; height:50px;border-collapse: collapse;text-align: center;line-height: 45px; border-radius: 3px 3px 0 0;border: 1px solid #CBCBCB;}
+.table-data.marB {margin-bottom: 10px;}
 .table-data > thead th {font-size: 16px; font-weight: 500;}
 .table-data > thead tr > th {position: sticky; top: 53px;z-index: 1;word-break: keep-all; line-height: 42px; background: #F0F0F0; color: #001448;border-bottom:1px solid #CBCBCB;}
 .table-data > thead tr > th > div {position:relative;}
 .table-data > thead tr > th > div:before {content:""; height:23px; position:absolute; top:9px; left:0px; border-left:2px dotted #CBCBCB;}
 .table-data > thead tr > th:first-child > div:before {border:0px;} 
-.table-data.marB {margin-bottom: 10px;}
 .table-data > tbody > tr > td {padding: 12px; line-height: 20px; vertical-align: middle; font-size: 15px;background-color: rgba(221,235,252,0.3); box-sizing: border-box;}
 .table-data > tbody > tr {transition: .3s all ease;}
 .table-data > tbody > tr:hover {background-color: rgba(51,66,145,0.1);}
@@ -585,7 +586,6 @@ header.on nav a {color:#fff;}
 /*****FOOTER*****/
 footer {padding: 70px 0 82px;color:#fff; background-color: #06092B;}
 footer .foot-logo {position: relative;width: 160px;height: 38px;margin-bottom: 8px;overflow: hidden;background: url('../images/logo.svg') no-repeat center;background-size: cover;background-position-y: -43px;}
-footer .footer-in {}
 footer .footer-info {display: flex; flex-wrap: wrap; width: 380px;margin-top:50px;}
 footer .footer-info li {margin: 6px 27px 6px 0;}
 footer .footer-info li span {opacity: 0.5; margin-right: 8px;}

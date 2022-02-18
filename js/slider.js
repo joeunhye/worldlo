@@ -108,6 +108,17 @@ const breakpointChecker = function () {
         enableSwipermMip();
     }
 };
+
+let addDestroyClass = () => {
+    if (winW < 1024) {
+        mobisEl.classList.remove('destroy');
+        mipEl.classList.add('destroy');
+    } else {
+        mobisEl.classList.add('destroy');
+        mipEl.classList.remove('destroy');
+    }
+}
+
 const enableSwiperMobis = function () {
     mobisSwiper = new Swiper(".mobis-slider .swiper", {
         slidesPerView: 2,
@@ -138,38 +149,15 @@ const enableSwipermMip = function () {
     });
 }
 
-let addDestroyClass = () => {
-    if (winW < 1024) {
-        mobisEl.classList.remove('destroy');
-        mipEl.classList.add('destroy');
-    } else {
-        mobisEl.classList.add('destroy');
-        mipEl.classList.remove('destroy');
-    }
-}
-
 breakpoint.addEventListener('change', breakpointChecker);
 window.addEventListener('load', addDestroyClass);
 breakpointChecker();
 
-function activation(index, lists){
-    for(let el of lists){
-        el.classList.remove("on");
-    }
-    lists[index].classList.add('on')
-}
-
-mipEls.forEach((aEl, index) => {
-    aEl.addEventListener('mouseover', e => {
-       activation(index, mipEls);
+mipEls.forEach((el, index) => {
+    el.addEventListener('mouseenter', () => {
+        addActive(index, mipEls);
+    })
+    el.addEventListener('mouseleave', () => {
+        removeActive(index, mipEls);
     })
 })
-mipEl.addEventListener('mouseleave', () => {
-    mipEls.forEach((aEl, index) => {
-        aEl.classList.remove('on')
-    })
-})
-
-//https://codepen.io/emranweb/pen/wVaWNN
-//https://codepen.io/mrWilson123/pen/OJMVwzd
-//https://codepen.io/aaronkahlhamer/pen/GveaXP

@@ -79,14 +79,3 @@ let moveTop = () => {
         topBtn.classList.remove('on')
     }
 }
-
-/*
-https://codepen.io/xamyr/pen/oNvyJbO
-https://codepen.io/jonddon/pen/BqdGRZ
-https://codepen.io/willemdaan/pen/yMOLEW
-https://codepen.io/ljubica_b/pen/aqZeWP/
-https://codepen.io/kimyangsun/pen/rNNEgGj
-https://codepen.io/sonamtsu/pen/OapxOd
-https://codepen.io/kimyangsun/pen/eYmrbqL
-https://codepen.io/Priyamaheshwari/pen/RwVRaxQ
-*/
