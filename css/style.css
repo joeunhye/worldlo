@@ -26,7 +26,7 @@ blockquote, q {quotes: none;}
 blockquote:before, blockquote:after,
 q:before, q:after {content: '';content: none;}
 table {border-collapse: collapse;border-spacing: 0;}
-html,body {position: relative; height:100%; padding:0; margin:0;font-family: 'Noto Sans KR';background-color: #F4F5F9;letter-spacing: -0.6px;}
+html,body {position: relative; height:100%; padding:0; margin:0;font-family: 'Noto Sans KR';background-color: #fff;letter-spacing: -0.6px;}
 .skip {width: 0; font-size: 0; text-indent: -9999px; overflow: hidden; height: 0;}
 /*****SCROLLBAR CUSTOM*****/
 ::-webkit-scrollbar {width: 7px; height: 7px;}
@@ -34,7 +34,7 @@ html,body {position: relative; height:100%; padding:0; margin:0;font-family: 'No
 ::-webkit-scrollbar-track{background-color: rgb(231, 231, 231);}
 
 /*****HEADER*****/
-header {position: fixed;top: 0;width: 100vw;height: 80px;z-index: 2;}
+header {position: fixed;top: 0;width: 100vw;height: 80px;z-index: 3;}
 header .header-wrap {background-color: #fff; transition: .3s all ease-in-out;}
 header.on .header-wrap {height:70px; background: linear-gradient(to right, #000536, 95%, #A2031B); background-size: 200% 200%;animation: gradient 1.5s ease both;}
 header.on .gnb {height: 70px;}
@@ -57,6 +57,25 @@ header.on nav a {color:#fff;}
 	}
 }
 
+/*PAGENATION*/
+.panel.pagination {position: fixed;left: 20px;top: 50%;transform: translateY(-50%);z-index: 10;}
+.panel.pagination li {position: relative; margin-bottom: 20px;}
+.panel.pagination li a {position: relative;display: inline-block;width: 100px;}
+.panel.pagination li a:before {content: ''; position: absolute; width: 6px; height: 6px; border-radius: 50px; background-color: #B1B1B1; transition: .3s all ease;}
+.panel.pagination li a:after {content: ''; position: absolute;}
+.panel.pagination li a .hover-text {display: inline-block;margin-left: 12px;opacity: 0;font-size: 14px;text-transform: uppercase; color: #000;}
+.panel.pagination li a .hover-arrow {position: absolute;width: 0px; height: 6px;top: 4px; left: 9px; background: url('../images/page-arrow.svg') no-repeat; transition: .3s all ease;}
+.panel.pagination li a .panel-name {position: absolute;left: 11px;top: 12px; opacity: 0; transform: translateX(-35px); transition: .3s all ease;}
+.panel.pagination li a.active:before, .panel.pagination li a:hover:before {background-color: transparent; border: 2px solid #000;}
+.panel.pagination li a.active, .panel.pagination li a:hover {margin-left: -2px;}
+.panel.pagination li a.active .hover-text, .panel.pagination li a:hover .hover-text {opacity: 1;}
+.panel.pagination li a.active .hover-arrow, .panel.pagination li a:hover .hover-arrow {width: 60px;}
+.panel.pagination li a.active .panel-name, .panel.pagination li a:hover .panel-name {opacity: 1;transform: translateX(0px);}
+.intro-section .panel.pagination li a .hover-text, .positions-section .panel.pagination li a .hover-text, .products-section .panel.pagination li a .hover-text {color: #fff;}
+.intro-section .panel.pagination li a .hover-arrow, .positions-section .panel.pagination li a .hover-arrow, .products-section .panel.pagination li a .hover-arrow {
+    background: url('../images/page-arrow_w.svg') no-repeat;}
+.intro-section .panel.pagination li a:before, .positions-section .panel.pagination li a:before, .products-section .panel.pagination li a:before {border-color:#fff;}
+
 /*****SECTION & COMMON*****/
 .panel {position: relative;}
 .panel-top {display: flex;align-items: flex-start;flex-direction: column; margin-bottom: 22px;}
@@ -68,25 +87,6 @@ header.on nav a {color:#fff;}
 .panel-top .panel-title {display: flex;align-items: center;}
 .panel-text {width: 500px; margin-top:22px; word-break: keep-all;font-size: 18px; line-height: 30px; color:#555555;}
 .wrapper {position: relative;max-width: 1300px; height: 100%; margin: 0 auto;}
-
-/*PAGENATION*/
-.panel .pagination {position: fixed;left: 20px;top: 50%;transform: translateY(-50%);z-index: 10;}
-.panel .pagination li {position: relative; margin-bottom: 20px;}
-.panel .pagination li a {position: relative;display: inline-block;width: 100px;}
-.panel .pagination li a:before {content: ''; position: absolute; width: 6px; height: 6px; border-radius: 50px; background-color: #B1B1B1; transition: .3s all ease;}
-.panel .pagination li a:after {content: ''; position: absolute;}
-.panel .pagination li a .hover-text {display: inline-block;margin-left: 12px;opacity: 0;font-size: 14px;text-transform: uppercase; color: #000;}
-.panel .pagination li a .hover-arrow {position: absolute;width: 0px; height: 6px;top: 4px; left: 7px; background: url('../images/page-arrow.svg') no-repeat; transition: .3s all ease;}
-.panel .pagination li a .panel-name {position: absolute;left: 11px;top: 12px; opacity: 0; transform: translateX(-35px); transition: .3s all ease;}
-.panel .pagination li a.active:before, .panel .pagination li a:hover:before {background-color: transparent; border: 2px solid #000;}
-.panel .pagination li a.active, .panel .pagination li a:hover {margin-left: -2px;}
-.panel .pagination li a.active .hover-text, .panel .pagination li a:hover .hover-text {opacity: 1;}
-.panel .pagination li a.active .hover-arrow, .panel .pagination li a:hover .hover-arrow {width: 60px;}
-.panel .pagination li a.active .panel-name, .panel .pagination li a:hover .panel-name {opacity: 1;transform: translateX(0px);}
-.intro-section .panel .pagination li a .hover-text, .positions-section .panel .pagination li a .hover-text, .products-section .panel .pagination li a .hover-text {color: #fff;}
-.intro-section .panel .pagination li a .hover-arrow, .positions-section .panel .pagination li a .hover-arrow, .products-section .panel .pagination li a .hover-arrow {
-    background: url('../images/page-arrow_w.svg') no-repeat;}
-.intro-section .panel .pagination li a:before, .positions-section .panel .pagination li a:before, .products-section .panel .pagination li a:before {border-color:#fff;}
 
 /*SCROLL ARROW*/
 .scroll-arrow img {width: 20px;}
@@ -180,7 +180,7 @@ header.on nav a {color:#fff;}
 .about-slider .slider-text .sp-text {width: 400px;font-size: 18px;line-height: 30px; color: #555555;word-break: keep-all;}
 .about-slider .swiper {height: 570px;opacity: 0; transform: translateY(50px); transition: .5s .2s all ease-in-out;}
 .active .about-slider .swiper {opacity: 1; transform: translateY(0); overflow: visible;}
-.about-slider .swiper-slide {background: #f4f5f9;}
+.about-slider .swiper-slide {background: #fff;}
 .about-slider .sp-img {position:absolute; left:51%; top:100px; z-index:-1;}
 .sp-img .imgbox img {position:absolute;left:50%;top:50%;transform:translate(-20%,-20%);}
 .current .sp-img .imgbox { animation:leftMoveOut 0.5s cubic-bezier(0.24,0.57,0.45,1) both;}
@@ -567,7 +567,7 @@ header.on nav a {color:#fff;}
 }
 
 /*LOCATION*/
-.location {background: url('../images/location_bg.jpg') #fff no-repeat center bottom; background-size: contain;}
+.location {height: 100vh; background: url('../images/location_bg.jpg') #fff no-repeat center bottom; background-size: contain;}
 .location-in {padding-top: 18vh;}
 .location .location-map {margin-top:36px;opacity: 0; transform: translateY(50px); transition: .5s .2s all ease-in-out;}
 .location.active .location-map {opacity: 1; transform: translateY(0);}
@@ -597,15 +597,101 @@ footer .copyright span:nth-child(1) {margin-left: 0;}
 footer .copyright span {margin-left:10px;}
 
 /*****MEDIA QUERY*****/
+@media screen and (max-width: 1600px) {
+    /*PAGE NATION*/
+
+    /*****BUSINESS*****/
+    /* .business .column-list {margin:0;} */
+
+    /*****OUR PRODUCTS*****/
+    .products .products-cont ul li:nth-child(1) .products-bg, .products .products-cont ul li:nth-child(2) .products-bg {background-position: 0;}
+}
 @media screen and (max-width: 1200px) {
+    html, body {height: auto;}
+    .wrapper {padding: 0 20px;}
+    .top-btnbox .top-btn {right: 20px; bottom: 15px;}
+
     /*HEADER*/
+    header .gnb {padding: 0 20px;}
+    header nav ul.pagination {display: none;}
     header nav ul a {font-size: 18px;}
     
-    /*PAGE NATION*/
-    .panel .pagination {display: none;}
+    
+
+    /*****INTRO*****/
+    .visual-slider .text-cont .sub-text {font-size: 28px;}
+    .visual-slider .text-cont p {font-size: 47px;}
+
+    /*****ABOUT*****/
+    .about-slider .swiper {height: auto;opacity: 1;transform: translateY(0);}
+    .about-slider .swiper-button-prev {left: 42%;}
+    .about-slider .swiper-button-next {right:0;}
+    .sp-img .imgbox img {transform: translate(-22%,-20%) scale(0.7);}
+
+    /*****BUSINESS*****/
+    .business .column-list {margin: 35px -20px 0;}
+    .business .column-list li {margin: 0 20px; opacity: 1;transform: translateY(0);}
+
+    /*****OUR POSITIONS*****/
+    .mobis-slider .swiper-slide {opacity: 1;transform: translateY(0);}
+    .mip-slider {opacity: 1;transform: translateY(0);}
+    
+    /*****LOCATION*****/
+    .location .location-map {opacity: 1;transform: translateY(0);}
+    .location .location-cont ul li {opacity: 1;transform: translateY(0);}
+    
 }
 
 @media screen and (max-width: 1024px) {
+    .wrapper {height: auto;}
+
+    /*HEADER*/
+    
+
+    /*****INTRO*****/
+    .visual-slider .pager {display: none;}
+
+    /*****ABOUT*****/
+    .about-in {padding: 10vh 0;}
+    .about-in .panel-top {margin-bottom: 50px;}
+    .about-slider {top:0;}
+    .about-slider .slider-title {margin: 0;}
+    
+    .about-slider .swiper-slide-active .sub-title, .about-slider .swiper-slide-active .sp-title, .about-slider .swiper-slide-active .sp-text {animation: none;}
+    .about-slider .sp-img {position: relative; top:0; left:0;}
+    .sp-img .imgbox img {position: relative; top:0; left:0; transform: translate(0px,0px);}
+    .current .sp-img .imgbox, .current .swiper-slide-active .sp-img .imgbox, .out .sp-img .imgbox, .out .swiper-slide-active .sp-img .imgbox { animation:none;}
+    .about-slider .swiper-button-next {right: 0; margin-top:0;}
+    .about-slider .swiper-button-prev {left:0; margin-top:0;}
+    .about-slider .slider-text .sp-text {width: auto;}
+    .about-slider .swiper-pagination {position: relative; bottom: 0;}
+
+    /*****BUSINESS*****/
+    .business {height: auto;}
+    .business-in {padding-top: 10vh;}
+    .column-list {flex-wrap: wrap;}
+    .business .column-list li {margin:0;}
+    
+    /*****OUR POSITIONS*****/
+    .positions-in {padding-top: 15vh;}
+    .positions {height: auto;}
+    .mobis-slider .swiper {overflow: hidden;}
+    .mip-slider .swiper {overflow: visible;}
+    .mip-slider .swiper-wrapper {flex-wrap: wrap;}
+    
+    
+    /*****POPUP*****/
+    .popup-body {overflow: hidden;height: calc(100% - 94px);max-height: 100%;}
+    #hyundaiTab {height: 100%;}
+    .tab-contents {overflow: hidden;height: calc(100% - 53px);}
+    .tab-content {height: 100%;margin: 0;}
+    .tabcont-in {height: 100%;}
+    .img-list {position: relative;
+        height: calc(100% - 250px);
+        overflow: hidden;
+        overflow-y: auto;}
+    
+
     .slider-wrapper {height: auto;}
     .slider {height: auto;}
 }

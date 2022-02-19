@@ -11,6 +11,8 @@ window.onload = () => {
         scrollbars: false,
         interstitialSection: "#footer",
         scrollSpeed: 800,
+        setHeights: false,
+        touchScroll: false,
         before: (i, panels) => {
             var currentWrapper = $.scrollify.current();
             var ref = panels[i].attr("data-section-name");
@@ -23,27 +25,28 @@ window.onload = () => {
             
             if(currentWrapper[0].classList.contains('intro')) { // intro 섹션 진입
                 body.className = '';
-                body.classList.add('intro-section')
+                body.classList.add('intro-section');
+                topBtn.classList.remove('white');
             }else if(currentWrapper[0].classList.contains('about')) { // about 섹션 진입
                 body.className = '';
-                body.classList.add('about-section')
+                body.classList.add('about-section');
+                topBtn.classList.remove('white');
             }else if(currentWrapper[0].classList.contains('business')) { // business 섹션 진입
                 body.className = '';
                 body.classList.add('business-section')
+                topBtn.classList.remove('white');
             }else if(currentWrapper[0].classList.contains('positions')) { // positions 섹션 진입
                 body.className = '';
-                body.classList.add('positions-section')
+                body.classList.add('positions-section');
+                topBtn.classList.add('white');
             }else if(currentWrapper[0].classList.contains('products')) { // products 섹션 진입
                 body.className = '';
-                body.classList.add('products-section')
+                body.classList.add('products-section');
+                topBtn.classList.add('white');
             }else if(currentWrapper[0].classList.contains('location')) { // location 섹션 진입
                 body.className = '';
-                body.classList.add('location-section')
-            }
-            if(currentWrapper[0].classList.contains('positions') || currentWrapper[0].classList.contains('products')) {
-                topBtn.classList.add('white')
-            }else {
-                topBtn.classList.remove('white')
+                body.classList.add('location-section');
+                topBtn.classList.remove('white');
             }
             if(currentWrapper[0].classList.contains('foot')) {
                 topBtn.parentNode.classList.add('foot')
@@ -54,7 +57,7 @@ window.onload = () => {
              
         },
         afterRender: () => {
-            var pagination = "<ul class=\"pagination\">";
+            var pagination = "<ul class=\"panel pagination\">";
             var activeClass = "";
             $(".panel").each(function (i) {
                 activeClass = "";
@@ -65,7 +68,7 @@ window.onload = () => {
             });
 
             pagination += "</ul>";
-            $(".intro").append(pagination);
+            $("header").append(pagination);
             $(".pagination a").on("click", $.scrollify.move);
         }
     });
@@ -83,12 +86,15 @@ window.addEventListener('scroll', () => {
 })
 // window 너비에 따라 scrollify 활성화 제어
 let viewSizeChk = () => {
-    if (winW < 1024) {
+    console.log(winW)
+    if (winW <= 1200) {
         $.scrollify.disable();
         body.style.overflow = 'visible';
+        console.log('disable')
     } else {
         $.scrollify.enable();
         body.style.overflow = 'hidden';
+        console.log('enable')
     }
 }
 
