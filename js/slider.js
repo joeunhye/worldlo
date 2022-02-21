@@ -81,7 +81,6 @@ const aboutSwiper = new Swiper('.about-slider .swiper', {
         },
         slideChange: function(){
             var activeSlide = this.realIndex;
-            console.log(activeSlide)
             $(".active-slide").html(activeSlide + 1);
             $(".total-slide").html('/' + totalSlide);
         }

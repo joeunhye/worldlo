@@ -17,6 +17,15 @@
     <script defer src="./js/scrollify.js"></script>
     <script defer src="./js/scrolling.js"></script>
     <script defer src="./js/slider.js"></script>
+    <script>
+        $(document).ready(function() {
+            new Scrolling('section', {
+                btns: 'nav li',
+                speed: 500,
+                base: -200
+            });
+        })
+    </script>
 </head>
 
 <body>

@@ -85,7 +85,6 @@ window.addEventListener('scroll', () => {
 })
 // window 너비에 따라 scrollify 활성화 제어
 let viewSizeChk = () => {
-    console.log(winW)
     if (winW <= 1200) {
         $.scrollify.disable();
         body.style.overflow = 'visible';

@@ -1,69 +1,83 @@
 document.addEventListener("DOMContentLoaded", function(){
     new Scrolling('section', {
-        btns: '#navi li',
+        btns: 'nav li',
         speed: 500,
         base: -200
     });
 });
 
-function Scrolling() {
-    this.init();
-    this.bindingEvent();
-}
-
-Scrolling.prototype.init = function() {
-    this.boxs = $('section');
-    this.btns = $('nav li a');
-    this.speed = 1000;
-    this.base = -200;
-    this.posArr;
-    this.enableClick = true;
-}
-
-Scrolling.prototype.bindingEvent = function() {
-    this.setPos();
-    this.btns.on('click', function(e) {
-        const isOn = $(e.currentTarget).parent().hasClass('on');
-        const i = $(e.currentTarget).parent().index();
-        if(this.enableClick && !isOn) {
-            this.enableClick = false;
-            this.moveScroll(i);
+class Scrolling {
+    constructor(selector, option) {
+        const defaultOtp = {
+            btns: '.btns li',
+            speed: 1000,
+            base: 0
         }
-    }.bind(this))
-    
-    $(window).on('scroll', function() {
-        let scroll = $(window).scrollTop();
-        this.activation(scroll);
-    }.bind(this))
-
-    $(window).on('resize', function() {
-        this.setPos();
-        const activeIdx = this.btns.filter('.on').index();
-        window.scroll(0, this.posArr[activeIdx]);
-    }.bind(this))
-}
+        const resultOtp = {...defaultOtp, ...option}
+        this.init(selector, resultOtp);
+        this.bindingEvent();
+    }
 
 
-Scrolling.prototype.setPos = function() {
-    this.posArr = [];
-    this.btns.each(function(idx) {
-        this.posArr.push(this.boxs.eq(idx).offset().top)
-    }.bind(this))
-}
-
-Scrolling.prototype.moveScroll = function(target) {
-    $('html,body').stop().animate({scrollTop: this.posArr[target]}, this.speed, function() {
+    init(selector, option) {
+        this.boxs = $(selector);
+        this.btns = $(option.btns);
+        this.speed = 1000;
+        this.base = -200;
+        this.posArr;
         this.enableClick = true;
-    }.bind(this))
+    }
+
+    bindingEvent() {
+        this.setPos();
+        this.btns.on('click', e => {
+            const isOn = $(e.currentTarget).hasClass('on');
+            const i = $(e.currentTarget).index();
+            if(this.enableClick && !isOn) {
+                this.enableClick = false;
+                this.moveScroll(i);
+            }
+        })
+        
+        $(window).on('scroll', () => {
+            let scroll = $(window).scrollTop();
+            this.activation(scroll);
+        })
+        
+        $(window).on('resize', () => {
+            this.setPos();
+            const activeIdx = this.btns.filter('.on').index();
+            window.scroll(0, this.posArr[activeIdx]);
+        })
+    }
+    setPos() {
+        this.posArr = [];
+        this.boxs.each(idx => {
+            this.posArr.push(this.boxs.eq(idx).offset().top)
+        })
+    }
+    
+    moveScroll(target){
+        $('html,body').stop().animate({scrollTop: this.posArr[target]}, this.speed, () => {
+            this.enableClick = true;
+        })
+    }
+    
+    activation(scroll){
+        this.btns.each(idx => {
+            if(scroll >= this.posArr[idx] + this.base) {
+                this.btns.removeClass('on');
+                this.btns.eq(idx).addClass('on');
+                this.boxs.removeClass('on');
+                this.boxs.eq(idx).addClass('on');
+            }
+        })
+    }
 }
 
-Scrolling.prototype.activation = function(scroll) {
-    this.btns.each(function(idx) {
-        if(scroll >= this.posArr[idx] + this.base) {
-            this.btns.parent().removeClass('on');
-            this.btns.parent().eq(idx).addClass('on');
-            this.boxs.removeClass('on');
-            this.boxs.eq(idx).addClass('on');
-        }
-    }.bind(this))
-}
+
+
+
+
+
+

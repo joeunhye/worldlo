@@ -61,36 +61,38 @@ popBodyEls.forEach((popBody, idx) => {
 })
 
 //TAB
-function Tab(selector, option) {
-    let defaultOtp = {
-        btns: 'ul li',
-        boxs: '.tab-contents .tab-content',
-        activeClass : 'active'
+class Tab {
+    constructor(selector, option) {
+        const defaultOtp = {
+            btns: 'ul li',
+            boxs: '.tab-contents .tab-content',
+            activeClass : 'active'
+        }
+
+        let resultOtp = Object.assign({}, defaultOtp, option)
+        this.frame = $(selector);
+        this.btns = this.frame.find(resultOtp.btns);
+        this.boxs = this.frame.find(resultOtp.boxs);
+        this.activeClass = resultOtp.activeClass;
+        this.bindingEvent();
     }
 
-    //let resultOtp = $.extend({}, defaultOtp, option)
-    let resultOtp = Object.assign({}, defaultOtp, option)
-    this.frame = $(selector);
-    this.btns = this.frame.find(resultOtp.btns);
-    this.boxs = this.frame.find(resultOtp.boxs);
-    this.activeClass = resultOtp.activeClass;
-    this.bindingEvent();
-}
+    bindingEvent() {
+        this.btns.on('click', e => {
+            let isOn = $(e.currentTarget).hasClass(this.activeClass);
+            if(isOn) return; 
+            let i = $(e.currentTarget).index();
+            this.activation(i);
+        })
+    }
 
-Tab.prototype.bindingEvent = function() {
-    this.btns.on('click', function(e) {
-        let isOn = $(e.currentTarget).hasClass(this.activeClass);
-        if(isOn) return; 
-        let i = $(e.currentTarget).index();
-        this.activation(i);
-    }.bind(this))
-}
-
-Tab.prototype.activation = function(index) {
-    this.btns.removeClass(this.activeClass);
-    this.btns.eq(index).addClass(this.activeClass);
-    this.boxs.removeClass(this.activeClass);
-    this.boxs.eq(index).addClass(this.activeClass);
+    activation(index){
+        this.btns.removeClass(this.activeClass);
+        this.btns.eq(index).addClass(this.activeClass);
+        this.boxs.removeClass(this.activeClass);
+        this.boxs.eq(index).addClass(this.activeClass);
+    }
+    
 }
 
 //OUR PRODUCTS - Car Animation
