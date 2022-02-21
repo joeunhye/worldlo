@@ -8,9 +8,16 @@ window.addEventListener('scroll', () => {
 })
 
 document.addEventListener("DOMContentLoaded", function(){
+    size();
+    changeHeadColor();
     new Tab('#hyundaiTab');
     new Tab('#kiaTab');
 });
+
+window.addEventListener('resize', () => {
+    size();
+    mbMenuChk();
+})
 
 //WINDOW SIZE, SCROLL HEIGHT CHECK
 function size() {
@@ -25,6 +32,7 @@ let changeHeadColor = () => {
     }else{
         headEl.classList.remove('on')
     }
+    console.log(scrollH)
 }
 
 //POPUP
@@ -112,5 +120,24 @@ function addActive(index, lists){
 function removeActive(index, lists){
     for(let el of lists){
         el.classList.remove("on");
+    }
+}
+
+//MOBILE MENU
+const mbMenuBtn = document.querySelector('.triggerBtn');
+let isOpen = false;
+mbMenuBtn.addEventListener('click', () => {
+    isOpen = !isOpen;
+    if(isOpen) {
+        headEl.classList.add('open')
+    }else {
+        headEl.classList.remove('open')
+    }
+})
+
+function mbMenuChk() {
+    if(winW > 1024) {
+        headEl.classList.remove('open')
+        isOpen = false;
     }
 }

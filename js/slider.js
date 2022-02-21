@@ -50,10 +50,12 @@ const aboutSliderEl = document.querySelector('.about-slider');
 const aboutTitle = document.querySelector('.sp-title');
 const aboutSubT = document.querySelector('.sub-title');
 const aboutSpT = document.querySelector('.sp-text');
+let totalSlide = $('.about-slider .swiper-slide').length;
 const aboutSwiper = new Swiper('.about-slider .swiper', {
     effect: 'fade',
     speed: 1000,
     loop: true,
+    autoHeight: true,
     // autoplay: {
     //     delay: 5000,
     //     disableOnInteraction: false,
@@ -76,12 +78,18 @@ const aboutSwiper = new Swiper('.about-slider .swiper', {
         slideChangeTransitionEnd: () => {
             aboutSliderEl.classList.add('current')
             aboutSliderEl.classList.remove('out')
+        },
+        slideChange: function(){
+            var activeSlide = this.realIndex;
+            console.log(activeSlide)
+            $(".active-slide").html(activeSlide + 1);
+            $(".total-slide").html('/' + totalSlide);
         }
     },
     breakpoints: {
         1024: {
             touchRatio: 0,
-        },
+        }
     },
 });
 
@@ -125,8 +133,11 @@ const enableSwiperMobis = function () {
         centeredSlides: true,
         spaceBetween: 16,
         breakpoints: {
+            640: {
+                slidesPerView: 1,
+            },
             768: {
-                slidesPerView: 2,
+                slidesPerView: 1,
             },
             1024: {
                 slidesPerView: 4,

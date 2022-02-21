@@ -15,6 +15,7 @@
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script defer src="./js/common.js"></script>
     <script defer src="./js/scrollify.js"></script>
+    <script defer src="./js/scrolling.js"></script>
     <script defer src="./js/slider.js"></script>
 </head>
 
@@ -35,6 +36,15 @@
                     </ul>
                 </nav>
             </div>
+        </div>
+
+        <!-- MOBILE MENU -->
+        <div class="triggerBtn">
+            <a href="javascript:void(0)">
+                <span class="bar1"></span>
+                <span class="bar2"></span>
+                <span class="bar3"></span>
+            </a>
         </div>
     </header>
     <!-- // HEADER 끝 -->
@@ -63,7 +73,7 @@
                         <div class="slider-bg bg3"></div>
                         <div class="text-cont">
                             <span class="sub-text">월드로지텍은</span>
-                            <p><strong>고객중심 서비스 혁신은 오늘도</strong>계속됩니다.</p>
+                            <p><strong>고객중심 서비스 혁신은 오늘도 </strong>계속됩니다.</p>
                         </div>
                     </div>
                 </div>
@@ -150,11 +160,19 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-pagination"></div>
+                        <div class="slider-controls">
+                            <div class="count-slider">
+                                <div class="active-slide">1</div>
+                                <div class="total-slide">3</div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination"></div>
+                        </div>
                     </div>
                 </div>
+
+                
             </div>
         </div>
     </section>
@@ -179,7 +197,7 @@
                                 <img src="./images/arrow_up.svg" class="arrow-left" alt="">
                                 <img src="./images/arrow_up.svg" class="arrow-up" alt="">
                                 <img src="./images/arrow_up.svg" class="arrow-right" alt="">
-                                <img src="./images/business_icon1.svg" alt="">
+                                <img src="./images/business_icon1.svg" class="icon-bgimg" alt="">
                             </div>
                             <div class="icon-text">
                                 <p>신뢰경영</p>
@@ -220,7 +238,7 @@
                     <li>
                         <div class="icon-item">
                             <div class="icon-box">
-                                <img src="./images/business_icon3.svg" alt="">
+                                <img src="./images/business_icon3.svg" class="icon-bgimg" alt="">
                                 <img src="./images/arrow_rotate.svg" class="arrow-rotate" alt="">
                                 <p class="box box-top on"><span class="fontcon-box_icon"></span></p>
                                 <p class="box box-right"><span class="fontcon-box_icon"></span></p>

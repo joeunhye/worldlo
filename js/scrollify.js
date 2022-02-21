@@ -4,7 +4,6 @@ window.onload = () => {
     size();
     body = document.querySelector('body');
     let panelEls = document.querySelectorAll('.panel')
-    console.log(panelEls)
     body.classList.add('intro-section');
     $.scrollify({
         section: ".panel",
@@ -57,7 +56,7 @@ window.onload = () => {
              
         },
         afterRender: () => {
-            var pagination = "<ul class=\"panel pagination\">";
+            var pagination = "<div class=\"pagination-wrap\"><ul class=\"panel pagination\">";
             var activeClass = "";
             $(".panel").each(function (i) {
                 activeClass = "";
@@ -67,7 +66,7 @@ window.onload = () => {
                 pagination += "<li><a class=\"" + activeClass + ' item' + i + "\" href=\"#" + $(this).attr("data-section-name") + "\"><span class=\"hover-text\">" + "<span class=\"hover-arrow\">" + "</span>" +  "<span class=\"panel-name\">" + $(this).attr("data-section-name").charAt(0).toUpperCase() + $(this).attr("data-section-name").slice(1) + "</span></span></a></li>";
             });
 
-            pagination += "</ul>";
+            pagination += "</ul></div>";
             $("header").append(pagination);
             $(".pagination a").on("click", $.scrollify.move);
         }
@@ -90,11 +89,13 @@ let viewSizeChk = () => {
     if (winW <= 1200) {
         $.scrollify.disable();
         body.style.overflow = 'visible';
-        console.log('disable')
+        body.className = '';
+        $(topBtn).on("click", function() {
+            $('html,body').stop().animate({scrollTop: 0}, 500)
+        });
     } else {
         $.scrollify.enable();
         body.style.overflow = 'hidden';
-        console.log('enable')
     }
 }
 
