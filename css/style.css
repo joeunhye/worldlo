@@ -585,7 +585,7 @@ header.open .triggerBtn .bar3 {-webkit-transform: translateY(-8px) rotate(-45deg
     }
 }
 
-/*LOCATION*/
+/*****LOCATION*****/
 .location {height: 100vh; background: url('../images/location_bg.jpg') #fff no-repeat center bottom; background-size: contain;}
 .location-in {padding-top: 18vh;}
 .location .location-map {margin-top:36px;opacity: 0; transform: translateY(50px); transition: .5s .2s all ease-in-out;}
@@ -779,6 +779,9 @@ footer .copyright span {margin-left:10px;}
     .products .panel-top {position: relative; top: 0;left: 0;transform: translateX(0px);}
     .products .products-cont {height: auto;}
     .products .products-cont ul li .products-bg {height: 200px;}
+
+    /*****LOCATION*****/
+    .location {height: auto;}
 }
 @media screen and (max-width: 768px) {
     /*****BUSINESS*****/
