@@ -753,7 +753,6 @@ footer .copyright span {margin-left:10px;}
     .mip-slider .swiper-slide {border-top: 1px solid rgba(255,255,255,0.3);}
     .mip-slider .swiper-slide:nth-child(1) {border:none;}
     .mip-slider .swiper-slide:before, .mip-slider .swiper-slide:after {display: none;}
-    .swiper-button-next:after, .swiper-button-prev:after {display: none;}
     
     
     /*****POPUP*****/
