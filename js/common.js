@@ -32,7 +32,6 @@ let changeHeadColor = () => {
     }else{
         headEl.classList.remove('on')
     }
-    console.log(scrollH)
 }
 
 //POPUP

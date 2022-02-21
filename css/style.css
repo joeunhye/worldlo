@@ -508,7 +508,7 @@ header.open .triggerBtn .bar3 {-webkit-transform: translateY(-8px) rotate(-45deg
 .car-imgbox {width: 50%;}
 .car-imgbox img {width: 100%;}
 .car-imgbox img.logo-bg {width: auto; margin-top:56px;}
-.car-imgbox .car-wrap {position: sticky; top:15%; max-width: 470px; margin: 0 auto;}
+.car-imgbox .car-wrap {position: sticky; top:15%; display: flex; flex-direction: column; max-width: 470px; margin: 0 auto;}
 .car-imgbox .car-wrap .car-wrap-in {position: relative;}
 .car-imgbox .car-info {margin-top:38px; text-align: center;}
 .car-imgbox .car-info span {font-size: 18px; color: #333;}
@@ -617,11 +617,6 @@ footer .copyright span {margin-left:10px;}
 
 /*****MEDIA QUERY*****/
 @media screen and (max-width: 1600px) {
-    /*PAGE NATION*/
-
-    /*****BUSINESS*****/
-    /* .business .column-list {margin:0;} */
-
     /*****OUR PRODUCTS*****/
     .products .products-cont ul li:nth-child(1) .products-bg, .products .products-cont ul li:nth-child(2) .products-bg {background-position: 0;}
 }
@@ -720,7 +715,6 @@ footer .copyright span {margin-left:10px;}
     .about-slider .swiper-pagination-bullet {width: 100%; height: 3px;background-color: #E0E0E0;}
     .about-slider .swiper-pagination-bullet.swiper-pagination-bullet-active {transform: rotate(0deg);}
     .about-slider .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .about-slider .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {margin:0}
-    /* .about-slider .count-slider {display: block;} */
 
     /*****BUSINESS*****/
     .business {height: auto;}
@@ -737,15 +731,18 @@ footer .copyright span {margin-left:10px;}
     .mobis-slider {margin: 90px 0 105px 0;}
     .mobis-slider .swiper-slide:before {font-size: 130px;}
     .mobis-slider .swiper-slide .positions-item {height: 165px;}
-    /* .positions.active .mobis-slider .swiper-slide.swiper-slide-active {transform: translateY(0) scale(1.2);} */
+    .mobis-slider .swiper-slide {transform: scale(0.8);transition: .3s all ease-in-out;}
+    .mobis-slider .swiper-slide.swiper-slide-active {transform: translateY(0) scale(1);}
     .mobis-slider .swiper-slide.swiper-slide-active:before {transform: translate(-55px, -60px);opacity: 0.4;}
     .mobis-slider .swiper-slide.swiper-slide-active .positions-item {/*width: 216px;height: 216px; margin-top:-25px;*/ background-color: #fff;box-shadow: 0px 7px 30px 3px rgb(0 0 0 / 47%);}
+    
     .mobis-slider .swiper-slide:nth-child(1).swiper-slide-active .icon-box {background-position-x: 13px;}
     .mobis-slider .swiper-slide:nth-child(2).swiper-slide-active .icon-box {background-position-x: 0px;}
     .mobis-slider .swiper-slide:nth-child(3).swiper-slide-active .icon-box {background-position-x: 0px;}
     .mobis-slider .swiper-slide:nth-child(4).swiper-slide-active .icon-box {background-position-x: 7px;}
     .mobis-slider .swiper-slide.swiper-slide-active .icon-text span {color: #1F2A65;}
     .mobis-slider.swiper-slide.swiper-slide-active .icon-box {transform: scale(1.2);}
+    
     .mip-slider {margin-top:25px}
     .mip-slider .swiper {overflow: visible;}
     .mip-slider:before, .mip-slider .swiper:after {display: none;}
@@ -754,18 +751,28 @@ footer .copyright span {margin-left:10px;}
     .mip-slider .swiper-slide:nth-child(1) {border:none;}
     .mip-slider .swiper-slide:before, .mip-slider .swiper-slide:after {display: none;}
     
-    
-    /*****POPUP*****/
-    .popup-body {overflow: hidden;height: calc(100% - 94px);max-height: 100%;}
+    /*POPUP*/
+    .popup {left: 20px; right: 20px;}
+    .popup-head {padding: 15px 20px 15px 20px;}
+    .popup-head .popup-title span {font-size: 15px;}
+    .popup-head .popup-title h3 {font-size: 20px;}
+    .popup-body {overflow: hidden;height: calc(100% - 72px);max-height: 100%;}
     #hyundaiTab {height: 100%;}
     .tab-contents {overflow: hidden;height: calc(100% - 53px);}
     .tab-content {height: 100%;margin: 0;}
-    .tabcont-in {height: 100%;}
-    .img-list {position: relative;
-        height: calc(100% - 250px);
-        overflow: hidden;
-        overflow-y: auto;}
-    
+    .tab-content.table-wrap {height: calc(100% - 0px);overflow: hidden; overflow-y: auto;}
+    .tabcont-in {flex-direction: column;height: 100%;}
+    .tabs > li {font-size: 16px;}
+    .car-imgbox {width: 100%;}
+    .car-imgbox .car-wrap {flex-direction: column-reverse;}
+    .car-imgbox .car-info {margin-top:26px;}
+    .car-imgbox .car-info span, .car-imgbox img.logo-bg {display: none;}
+    .car-imgbox .car-info p {display: inline-block;margin:0;font-size: 15px;color: #fff;background-color: #334291; border-radius: 3px; padding: 7px 8px;}
+    .img-list {position: relative; width: 100%; height: calc(100% - 213px);overflow: hidden;overflow-y: auto;}
+    .img-list .list-title {top:0;}
+    .car-imgbox .car-wrap .car-wrap-in {max-width: 250px; margin: 0 auto;}
+
+    .table-data > thead tr > th {top:0;}
 
     .slider-wrapper {height: auto;}
     .slider {height: auto;}
@@ -776,6 +783,8 @@ footer .copyright span {margin-left:10px;}
     .column-list .icon-text p {margin-bottom: 10px;}
     .business .column-list li {flex: 1 1 60%;}
     .business .column-list li .icon-item {max-width: 420px; width: 100%; height: 350px;padding: 30px 2vw 16px;margin-top:12px; background-color: #fff;box-shadow: 0px 2px 15px 3px rgb(0 0 0 / 7%);}
+
+
 }
 @media screen and (max-width: 640px) {
     .panel-top h2 {margin:-5px 8px 0 0; font-size: 24px;}
@@ -814,7 +823,9 @@ footer .copyright span {margin-left:10px;}
     .check-title {font-size: 18px;}
     .mobis-slider .swiper-slide {height: auto;}
     .mobis-slider .swiper-slide .icon-text span p {font-size: 15px; line-height: 20px;}
-    .positions.active .mobis-slider .swiper-slide.swiper-slide-active {transform: translateY(0) scale(1);}
-    .positions.active .mobis-slider .swiper-slide {transform: scale(0.8);}
+    
     .mip-slider .swiper-slide {padding: 33px 0; font-size: 15px;}
+
+    
+
 }
