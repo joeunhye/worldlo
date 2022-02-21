@@ -1,9 +1,9 @@
 let body;
 const topBtn = document.querySelector('.top-btn');
+const panelEls = document.querySelectorAll('.panel')
 window.onload = () => {
     size();
     body = document.querySelector('body');
-    let panelEls = document.querySelectorAll('.panel')
     body.classList.add('intro-section');
     $.scrollify({
         section: ".panel",
@@ -89,6 +89,9 @@ let viewSizeChk = () => {
         $.scrollify.disable();
         body.style.overflow = 'visible';
         body.className = '';
+        panelEls.forEach((panelEl, idx) => {
+            removeActive(idx, panelEls)
+        })
         $(topBtn).on("click", function() {
             $('html,body').stop().animate({scrollTop: 0}, 500)
         });

@@ -121,6 +121,7 @@ function addActive(index, lists){
 function removeActive(index, lists){
     for(let el of lists){
         el.classList.remove("on");
+        el.classList.remove("active");
     }
 }
 
