@@ -86,7 +86,7 @@ window.addEventListener('scroll', () => {
 // window 너비에 따라 scrollify 활성화 제어
 let viewSizeChk = () => {
     if (winW <= 1200) {
-        //$.scrollify.disable();
+        $.scrollify.disable();
         //body.style.overflow = 'visible';
         body.className = '';
         panelEls.forEach((panelEl, idx) => {
@@ -96,7 +96,7 @@ let viewSizeChk = () => {
             $('html,body').stop().animate({scrollTop: 0}, 500)
         });
     } else {
-        //$.scrollify.enable();
+        $.scrollify.enable();
         //body.style.overflow = 'hidden';
     }
 }
