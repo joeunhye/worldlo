@@ -7,7 +7,7 @@ window.onload = () => {
     body.classList.add('intro-section');
     $.scrollify({
         section: ".panel",
-        scrollbars: false,
+        //scrollbars: false,
         interstitialSection: "#footer",
         scrollSpeed: 800,
         setHeights: false,
@@ -86,8 +86,8 @@ window.addEventListener('scroll', () => {
 // window 너비에 따라 scrollify 활성화 제어
 let viewSizeChk = () => {
     if (winW <= 1200) {
-        $.scrollify.disable();
-        body.style.overflow = 'visible';
+        //$.scrollify.disable();
+        //body.style.overflow = 'visible';
         body.className = '';
         panelEls.forEach((panelEl, idx) => {
             removeActive(idx, panelEls)
@@ -96,8 +96,8 @@ let viewSizeChk = () => {
             $('html,body').stop().animate({scrollTop: 0}, 500)
         });
     } else {
-        $.scrollify.enable();
-        body.style.overflow = 'hidden';
+        //$.scrollify.enable();
+        //body.style.overflow = 'hidden';
     }
 }
 
