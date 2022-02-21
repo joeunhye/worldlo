@@ -771,11 +771,14 @@ footer .copyright span {margin-left:10px;}
     .img-list {position: relative; width: 100%; height: calc(100% - 213px);overflow: hidden;overflow-y: auto;}
     .img-list .list-title {top:0;}
     .car-imgbox .car-wrap .car-wrap-in {max-width: 250px; margin: 0 auto;}
-
     .table-data > thead tr > th {top:0;}
 
-    .slider-wrapper {height: auto;}
-    .slider {height: auto;}
+    /*****OUR PRODUCTS*****/
+    .products {}
+    .products-in {height: auto;}
+    .products .panel-top {position: relative; top: 0;left: 0;transform: translateX(0px);}
+    .products .products-cont {height: auto;}
+    .products .products-cont ul li .products-bg {height: 200px;}
 }
 @media screen and (max-width: 768px) {
     /*****BUSINESS*****/
