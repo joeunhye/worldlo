@@ -137,7 +137,7 @@ const enableSwiperMobis = function () {
                 slidesPerView: 1,
             },
             768: {
-                slidesPerView: 1,
+                slidesPerView: 2,
             },
             1024: {
                 slidesPerView: 4,

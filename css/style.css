@@ -737,8 +737,9 @@ footer .copyright span {margin-left:10px;}
     .mobis-slider {margin: 90px 0 105px 0;}
     .mobis-slider .swiper-slide:before {font-size: 130px;}
     .mobis-slider .swiper-slide .positions-item {height: 165px;}
+    /* .positions.active .mobis-slider .swiper-slide.swiper-slide-active {transform: translateY(0) scale(1.2);} */
     .mobis-slider .swiper-slide.swiper-slide-active:before {transform: translate(-55px, -60px);opacity: 0.4;}
-    .mobis-slider .swiper-slide.swiper-slide-active .positions-item {width: 216px;height: 216px; margin-top:-25px; background-color: #fff;box-shadow: 0px 7px 30px 3px rgb(0 0 0 / 47%);}
+    .mobis-slider .swiper-slide.swiper-slide-active .positions-item {/*width: 216px;height: 216px; margin-top:-25px;*/ background-color: #fff;box-shadow: 0px 7px 30px 3px rgb(0 0 0 / 47%);}
     .mobis-slider .swiper-slide:nth-child(1).swiper-slide-active .icon-box {background-position-x: 13px;}
     .mobis-slider .swiper-slide:nth-child(2).swiper-slide-active .icon-box {background-position-x: 0px;}
     .mobis-slider .swiper-slide:nth-child(3).swiper-slide-active .icon-box {background-position-x: 0px;}
@@ -813,5 +814,7 @@ footer .copyright span {margin-left:10px;}
     /*****OUR POSITIONS*****/
     .check-title {font-size: 18px;}
     .mobis-slider .swiper-slide {height: auto;}
+    .positions.active .mobis-slider .swiper-slide.swiper-slide-active {transform: translateY(0) scale(1);}
+    .positions.active .mobis-slider .swiper-slide {transform: scale(0.8);}
     .mip-slider .swiper-slide {padding: 33px 0; font-size: 15px;}
 }
