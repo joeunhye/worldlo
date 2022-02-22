@@ -39,10 +39,10 @@ class Scrolling {
             }
         })
         
-        $(window).on('scroll', () => {
-            let scroll = $(window).scrollTop();
-            this.activation(scroll);
-        })
+        // $(window).on('scroll', () => {
+        //     let scroll = $(window).scrollTop();
+        //     this.activation(scroll);
+        // })
         
         $(window).on('resize', () => {
             this.setPos();
