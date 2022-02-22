@@ -1,83 +1,46 @@
-document.addEventListener("DOMContentLoaded", function(){
-    new Scrolling('section', {
-        btns: 'nav li',
-        speed: 500,
-        base: 0
-    });
-});
+const boxs = $('section');
+const btns = $('nav li a');
+const speed = 1000;
+const base = -200;
+let posArr;
+let enableClick = true;
 
-class Scrolling {
-    constructor(selector, option) {
-        const defaultOtp = {
-            btns: '.btns li',
-            speed: 1000,
-            base: 0
-        }
-        const resultOtp = {...defaultOtp, ...option}
-        this.init(selector, resultOtp);
-        this.bindingEvent();
-    }
+setPos();
 
+btns.on('click', function(e) {
+    const isOn = $(e.currentTarget).parent().hasClass('on');
+    const i = $(e.currentTarget).parent().index();
+    if(enableClick && !isOn) {
+        enableClick = false;
+        moveScroll(i);
+    }
+})
 
-    init(selector, option) {
-        this.boxs = $(selector);
-        this.btns = $(option.btns);
-        this.speed = 1000;
-        this.base = 0;
-        this.posArr;
-        this.enableClick = true;
-    }
+$(window).on('scroll', function() {
+    let scroll = $(window).scrollTop();
+    activation(scroll);
+})
 
-    bindingEvent() {
-        this.setPos();
-        this.btns.on('click', e => {
-            const isOn = $(e.currentTarget).hasClass('on');
-            const i = $(e.currentTarget).index();
-            if(this.enableClick && !isOn) {
-                this.enableClick = false;
-                this.moveScroll(i);
-            }
-        })
-        
-        // $(window).on('scroll', () => {
-        //     let scroll = $(window).scrollTop();
-        //     this.activation(scroll);
-        // })
-        
-        $(window).on('resize', () => {
-            this.setPos();
-            const activeIdx = this.btns.filter('.on').index();
-            window.scroll(0, this.posArr[activeIdx]);
-        })
-    }
-    setPos() {
-        this.posArr = [];
-        this.boxs.each(idx => {
-            this.posArr.push(this.boxs.eq(idx).offset().top)
-        })
-    }
-    
-    moveScroll(target){
-        $('html,body').stop().animate({scrollTop: this.posArr[target]}, this.speed, () => {
-            this.enableClick = true;
-        })
-    }
-    
-    activation(scroll){
-        this.btns.each(idx => {
-            if(scroll >= this.posArr[idx] + this.base) {
-                this.btns.removeClass('on');
-                this.btns.eq(idx).addClass('on');
-                this.boxs.removeClass('on');
-                this.boxs.eq(idx).addClass('on');
-            }
-        })
-    }
+function setPos() {
+    posArr = [];
+    btns.each(function(idx) {
+        posArr.push(boxs.eq(idx).offset().top)
+    })
 }
 
+function moveScroll(target) {
+    $('html,body').stop().animate({scrollTop: posArr[target]}, speed, function() {
+        enableClick = true;
+    })
+}
 
-
-
-
-
-
+function activation(scroll) {
+    btns.each(function(idx) {
+        if(scroll >= posArr[idx] + base) {
+            btns.parent().removeClass('on');
+            btns.parent().eq(idx).addClass('on');
+            boxs.removeClass('on');
+            boxs.eq(idx).addClass('on');
+        }
+    })
+}
