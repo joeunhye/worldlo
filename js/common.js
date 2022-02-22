@@ -1,5 +1,6 @@
 let winW;
 let scrollH;
+var scrollY; 
 const headEl = document.querySelector('#header');
 window.addEventListener('scroll', () => {
     changeHeadColor();
@@ -21,6 +22,8 @@ window.addEventListener('resize', () => {
 function size() {
     winW = window.innerWidth;
     scrollH = window.pageYOffset;
+    scrollY = window.scrollY; 
+    console.log(scrollH, scrollY)
 }
 
 //HEADER COLOR CHANGE
