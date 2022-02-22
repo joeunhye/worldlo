@@ -97,6 +97,7 @@ let viewSizeChk = () => {
     } else {
         $.scrollify.enable();
     }
+    console.log($.scrollify.isDisabled())
 }
 
 let moveTop = () => {

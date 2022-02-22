@@ -47,25 +47,27 @@ closeBtn.forEach((closeEl, idx) => {
     closeEl.addEventListener('click', e => {
         e.preventDefault();
         removeActive(idx, popupEls);
-        $.scrollify.enable();
-        console.log('scrollify.enable')
+        if(winW > 1024) {
+            $.scrollify.enable();
+        }else {
+            $.scrollify.disable();
+        }
+        console.log($.scrollify.isDisabled())
     })
 })
 popBodyEls.forEach((popBody, idx) => {
     popBody.addEventListener('mouseenter', () => {
         $.scrollify.disable();
-        console.log('scrollify.disable')
     })
     popBody.addEventListener('mouseleave', () => {
         $.scrollify.enable();
-        console.log('scrollify.enable')
     })
 })
-
 
 $('.popup-body').on('touchmove', function(e) {
     console.log('touch! and disable')
     $.scrollify.disable();
+    console.log($.scrollify.isDisabled())
 })
 
 //TAB
