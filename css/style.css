@@ -791,6 +791,12 @@ footer .copyright span {margin-left:10px;}
     /*****LOCATION*****/
     .location {height: auto;}
     .location-in {padding: 10vh 0;}
+
+    /*****FOOTER*****/
+    footer {padding: 24px 20px; font-size: 14px;}
+    footer .foot-logo {margin-bottom: 12px;}
+    footer .footer-info {margin-top:20px;}
+    footer .copyright {position: relative; bottom: 0; margin-top: 45px;}
 }
 @media screen and (max-width: 768px) {
     /*****BUSINESS*****/
