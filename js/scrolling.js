@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function(){
     new Scrolling('section', {
         btns: 'nav li',
         speed: 500,
-        base: -200
+        base: 0
     });
 });
 
@@ -23,7 +23,7 @@ class Scrolling {
         this.boxs = $(selector);
         this.btns = $(option.btns);
         this.speed = 1000;
-        this.base = -200;
+        this.base = 0;
         this.posArr;
         this.enableClick = true;
     }

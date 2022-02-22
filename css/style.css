@@ -597,7 +597,7 @@ header.open .triggerBtn .bar3 {-webkit-transform: translateY(-8px) rotate(-45deg
 .location .location-cont .location-icon {display: flex; align-items: center;justify-content: center;width: 100px; height: 100px; margin: 0 auto 15px; border-radius: 50%;background-color: rgba(6,9,43,0.17);}
 
 /*****FOOTER*****/
-footer {padding: 70px 0 82px;color:#fff; background-color: #06092B;}
+footer {position: relative;padding: 70px 0 82px;color:#fff; background-color: #06092B;}
 footer .foot-logo {position: relative;width: 160px;height: 38px;margin-bottom: 8px;overflow: hidden;background: url('../images/logo.svg') no-repeat center;background-size: cover;background-position-y: 0px;}
 footer .footer-in p {line-height: 1.3;}
 footer .footer-info {display: flex; flex-wrap: wrap; width: 380px;margin-top:50px;}
@@ -914,7 +914,7 @@ footer .copyright span {margin:5px 10px 5px 0;}
     .img-list .list-items .list-item .list-text {width: 120px; text-align: left;}
 
     /*****LOCATION*****/
-    .location-in {padding: 30vh 0;}
+    .location-in {padding: 5vh 0;}
     .location .location-addr {flex-direction: column;align-items: flex-start;padding: 5px 0px 10px 0;}
     .location .location-addr p {margin-bottom: 5px; font-weight: 500; color: #334291; background-color: #EFF6FF;}
     .location .location-addr p img {display: none;}
