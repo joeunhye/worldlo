@@ -93,6 +93,7 @@ class Tab {
             if(isOn) return; 
             let i = $(e.currentTarget).index();
             this.activation(i);
+            $.scrollify.disable();
         })
     }
 
@@ -123,13 +124,7 @@ carItemEls.forEach((carItemEl, idx) => {
     carItemEl.addEventListener('click', () => {
         addActive(idx, dotEls);
         addActive(idx, carItemEls);
-        console.log('alick')
     })
-
-    // carItemEl.addEventListener('mouseleave', () => {
-    //     removeActive(idx, dotEls);
-    //     removeActive(idx, carItemEls);
-    // })
 })
 
 function addActive(index, lists){
