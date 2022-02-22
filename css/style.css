@@ -624,7 +624,7 @@ footer .copyright span {margin:5px 10px 5px 0;}
     .products .products-cont ul li:nth-child(1) .products-bg, .products .products-cont ul li:nth-child(2) .products-bg {background-position: 0;}
 }
 @media screen and (max-width: 1200px) {
-    html, body {height: auto; overflow: visible;}
+    html, body {height: auto; overflow:visible; -webkit-overflow-scrolling:touch;}
     .wrapper {padding: 0 20px;}
     .top-btnbox .top-btn {right: 20px; bottom: 15px;}
 
