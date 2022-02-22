@@ -845,12 +845,45 @@ footer .copyright span {margin:5px 10px 5px 0;}
     .business .column-list li:first-child .icon-item {margin: 0;}
     .business .column-list li .icon-bgimg {width: 150px;}
     .business .column-list .arrow-up, .business .column-list .arrow-left, .business .column-list .arrow-right {width: 20px;}
-    .business .column-list .arrow-left {}
-    .business .column-list .arrow-right {}
+    .business .column-list .arrow-left {top: 40%; left: 23%;animation: arrowleft 1s infinite;}
+    .business .column-list .arrow-up {top: 31%;animation: arrowUp 1s infinite;}
+    .business .column-list .arrow-right {top: 39%;right: 23%;animation: arrowRight 1s infinite;}
+    @keyframes arrowleft {
+        0% {
+            opacity:0;
+        }
+        100% {
+            opacity:1;
+            left: 17%;
+            top: 35%;
+        }
+    }
+    
+    @keyframes arrowRight {
+        0% {
+            opacity:0;
+        }
+        100% {
+            opacity:1;
+            right: 18%;
+            top: 35%;
+        }
+    }
     .business .column-list li:nth-child(2) .icon-box {width: 145px;}
     .business .column-list .icon-box .user-blue, .business .column-list .icon-box .user-white {width: 60px;}
-    .business .column-list .icon-box .user-blue {top:11px;}
-    .business .column-list .icon-box .user-white {bottom: 11px;}
+    .business .column-list .icon-box .user-blue {top:11px;animation: moveUpDown 1s infinite;animation-direction: alternate;}
+    .business .column-list .icon-box .user-white {bottom: 11px;animation: moveUpDown 1.3s infinite;animation-direction: alternate;}
+    .business .column-list li:nth-child(2) .arrow-body {stroke-dasharray: 80;stroke-dashoffset: 160;animation: dash 2s ease-in-out infinite;}
+    .business .column-list li:nth-child(2) .arrow-red-head, .business .column-list li:nth-child(2) .arrow-blue-head {animation: opacity 2s 1s ease-in-out infinite;}
+    .business .column-list .icon-box .box.box-left {top:39%;}
+    .business .column-list .icon-box .box.box-bottom {bottom: 9%;}
+    .business .column-list .icon-box .box.box-right {top:48%; right: 5%;}
+    .business .column-list .icon-box .arrow-rotate {top:29%; left:30%; width: 60px;}
+    .business .column-list li:nth-child(3) .arrow-rotate {animation: rotate 2s ease-in-out infinite;}
+    .business .column-list li:nth-child(3) .box.box-top span {animation: iconColorOff 6s ease-in-out;}
+    .business .column-list li:nth-child(3) .box.box-right span {animation: iconColorOn 1.5s 1s ease-in-out;}
+    .business .column-list li:nth-child(3) .box.box-bottom span {animation: iconColorOn 1.5s 2s ease-in-out;}
+    .business .column-list li:nth-child(3) .box.box-left span {animation: iconColorOn 1.5s 3s ease-in-out;}
 
     /*****OUR POSITIONS*****/
     .check-title {font-size: 18px; opacity: 1; transform: translateY(0px);}
