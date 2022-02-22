@@ -22,6 +22,7 @@ window.addEventListener('scroll', () => {
 let viewSizeChk = () => {
     if (winW <= 1200) {
         $.scrollify.disable();
+        body.style.overflow = 'visible';
         body.className = '';
         panelEls.forEach((panelEl, idx) => {
             removeActive(idx, panelEls)
@@ -95,6 +96,7 @@ let viewSizeChk = () => {
                 $(".pagination a").on("click", $.scrollify.move);
             }
         });
+        body.style.overflow = 'hidden';
         $.scrollify.enable();
     }
     console.log($.scrollify.isDisabled())
