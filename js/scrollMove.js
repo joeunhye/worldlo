@@ -7,14 +7,14 @@ let enableClick = true;
 
 setPos();
 
-// btns.on('click', function(e) {
-//     const isOn = $(e.currentTarget).parent().hasClass('on');
-//     const i = $(e.currentTarget).parent().index();
-//     if(enableClick && !isOn) {
-//         enableClick = false;
-//         moveScroll(i);
-//     }
-// })
+btns.on('click', function(e) {
+    const isOn = $(e.currentTarget).parent().hasClass('on');
+    const i = $(e.currentTarget).parent().index();
+    if(enableClick && !isOn) {
+        enableClick = false;
+        moveScroll(i);
+    }
+})
 
 // $(window).on('scroll', function() {
 //     let scroll = $(window).scrollTop();
@@ -26,14 +26,13 @@ function setPos() {
     btns.each(function(idx) {
         posArr.push(boxs.eq(idx).offset().top)
     })
-    console.log(posArr)
 }
 
-// function moveScroll(target) {
-//     $('html,body').stop().animate({scrollTop: posArr[target]}, speed, function() {
-//         enableClick = true;
-//     })
-// }
+function moveScroll(target) {
+    $('html,body').stop().animate({scrollTop: posArr[target]}, speed, function() {
+        enableClick = true;
+    })
+}
 
 // function activation(scroll) {
 //     btns.each(function(idx) {
