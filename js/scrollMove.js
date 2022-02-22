@@ -10,7 +10,6 @@ setPos();
 btns.on('click', function(e) {
     const isOn = $(e.currentTarget).parent().hasClass('on');
     const i = $(e.currentTarget).parent().index();
-    console.log(isOn, i)
     if(enableClick && !isOn) {
         enableClick = false;
         moveScroll(i);
@@ -35,13 +34,13 @@ function moveScroll(target) {
     })
 }
 
-// function activation(scroll) {
-//     btns.each(function(idx) {
-//         if(scroll >= posArr[idx] + base) {
-//             btns.parent().removeClass('on');
-//             btns.parent().eq(idx).addClass('on');
-//             boxs.removeClass('on');
-//             boxs.eq(idx).addClass('on');
-//         }
-//     })
-// }
+function activation(scroll) {
+    btns.each(function(idx) {
+        if(scroll >= posArr[idx] + base) {
+            btns.parent().removeClass('on');
+            btns.parent().eq(idx).addClass('on');
+            boxs.removeClass('on');
+            boxs.eq(idx).addClass('on');
+        }
+    })
+}

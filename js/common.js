@@ -1,6 +1,5 @@
 let winW;
 let scrollH;
-var scrollY; 
 const headEl = document.querySelector('#header');
 window.addEventListener('scroll', () => {
     changeHeadColor();
@@ -16,6 +15,10 @@ document.addEventListener("DOMContentLoaded", function(){
 window.addEventListener('resize', () => {
     size();
     mbMenuChk();
+})
+
+window.addEventListener('scroll', () => {
+    activation(scrollH);
 })
 
 //WINDOW SIZE, SCROLL HEIGHT CHECK
