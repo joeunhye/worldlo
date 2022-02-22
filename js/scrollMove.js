@@ -6,22 +6,35 @@ let posArr;
 let enableClick = true;
 
 setPos();
+bindingEvent();
 
-[].forEach.call(btns, el => {
-    el.addEventListener('click', e => {
-        const isOn = e.currentTarget.classList.contains('on');
-        const i = getElementIndex(btns, el);
-        if(enableClick && !isOn) {
-            enableClick = false;
-            moveScroll(i);
-        }
+btns[0].classList.add('on');
+function bindingEvent() {
+    [].forEach.call(btns, el => {
+        el.addEventListener('click', e => {
+            const isOn = e.currentTarget.classList.contains('on');
+            const index = getElementIndex(btns, el);
+            if(enableClick && !isOn) {
+                enableClick = false;
+                moveScroll(index);
+            }
+        });
     });
-});
+}
 
-window.addEventListener('scroll', () => {
-    activeOn(scrollH);
+window.addEventListener('resize', () => {
+    if(winW < 1024) {
+        binding();
+    }
 })
 
+window.addEventListener('scroll', () => {
+    if(winW < 1024) {
+        activeOn(scrollH);
+    }
+})
+
+//SECTION OFFSET-TOP SETTING
 function setPos() {
     posArr = [];
     boxs.forEach((boxEl) => {
@@ -29,6 +42,7 @@ function setPos() {
     })
 }
 
+//SECTION MOVE
 function moveScroll(target) {
     $('html,body').stop().animate({
         scrollTop: posArr[target]
