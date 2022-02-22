@@ -10,6 +10,7 @@ setPos();
 btns.on('click', function(e) {
     const isOn = $(e.currentTarget).parent().hasClass('on');
     const i = $(e.currentTarget).parent().index();
+    console.log(isOn, i)
     if(enableClick && !isOn) {
         enableClick = false;
         moveScroll(i);

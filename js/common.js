@@ -22,8 +22,6 @@ window.addEventListener('resize', () => {
 function size() {
     winW = window.innerWidth;
     scrollH = window.pageYOffset;
-    scrollY = window.scrollY; 
-    console.log(scrollH, scrollY)
 }
 
 //HEADER COLOR CHANGE
