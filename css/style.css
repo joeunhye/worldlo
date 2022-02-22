@@ -134,8 +134,8 @@ header.open .triggerBtn .bar3 {-webkit-transform: translateY(-8px) rotate(-45deg
 }
 
 /*****INTRO*****/
-.visual-slider {position: relative; height: 100vh; overflow: hidden;}
-.visual-slider .swiper {height: 100vh;}
+.visual-slider {position: relative; height: 100%; overflow: hidden;}
+.visual-slider .swiper {height: 100%;}
 .visual-slider .swiper-slide .slider-bg {height: 100vh; background-size: cover;background-position: center;}
 .visual-slider .swiper-slide-active .slider-bg {transform: scale(1.1);transition: 7s all ease-out;}
 .visual-slider .swiper-slide .bg1 {background: url('../images/visual_img1.jpg') no-repeat center/cover;}
@@ -624,7 +624,7 @@ footer .copyright span {margin:5px 10px 5px 0;}
     .products .products-cont ul li:nth-child(1) .products-bg, .products .products-cont ul li:nth-child(2) .products-bg {background-position: 0;}
 }
 @media screen and (max-width: 1200px) {
-    html, body {height: auto; overflow:visible; -webkit-overflow-scrolling:touch;}
+    html, body {height: auto; overflow:visible;overscroll-behavior: contain;}
     .wrapper {padding: 0 20px;}
     .top-btnbox .top-btn {right: 20px; bottom: 15px;}
 
@@ -699,7 +699,7 @@ footer .copyright span {margin:5px 10px 5px 0;}
     /*****INTRO*****/
     .visual-slider .pager {display: none;}
     .visual-slider .text-cont strong {margin-right: 10px;}
-
+    .visual-slider .swiper-slide .slider-bg {height: 500px;}
     /*****ABOUT*****/
     .about-in {padding: 10vh 0;}
     .about-in .panel-top {margin-bottom: 50px;}
