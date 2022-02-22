@@ -32,7 +32,7 @@ let viewSizeChk = () => {
     } else {
         $.scrollify({
             section: ".panel",
-            //scrollbars: false,
+            scrollbars: false,
             interstitialSection: "#footer",
             scrollSpeed: 800,
             setHeights: false,
