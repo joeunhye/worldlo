@@ -750,6 +750,7 @@ footer .copyright span {margin-left:10px;}
     .mip-slider .swiper-slide {border-top: 1px solid rgba(255,255,255,0.3);}
     .mip-slider .swiper-slide:nth-child(1) {border:none;}
     .mip-slider .swiper-slide:before, .mip-slider .swiper-slide:after {display: none;}
+    .mip-slider .swiper-button-next, .mip-slider .swiper-button-prev {display: none;}
     
     /*POPUP*/
     .popup {left: 20px; right: 20px; height: 80vh;}
@@ -772,13 +773,6 @@ footer .copyright span {margin-left:10px;}
     .img-list .list-title {top:0;}
     .car-imgbox .car-wrap .car-wrap-in {max-width: 250px; margin: 0 auto;}
     .table-data > thead tr > th {top:0;}
-
-    /*****OUR PRODUCTS*****/
-    .products {}
-    .products-in {height: auto;}
-    .products .panel-top {position: relative; top: 0;left: 0;transform: translateX(0px);}
-    .products .products-cont {height: auto;}
-    .products .products-cont ul li .products-bg {height: 200px;}
 
     /*****LOCATION*****/
     .location {height: auto;}
@@ -828,8 +822,16 @@ footer .copyright span {margin-left:10px;}
     /*****OUR POSITIONS*****/
     .check-title {font-size: 18px;}
     .mobis-slider .swiper-slide .icon-text span p {font-size: 15px; line-height: 20px;}
-    
     .mip-slider .swiper-slide {padding: 33px 0; font-size: 15px;}
+
+     /*****OUR PRODUCTS*****/
+     .products {}
+     .products-in {height: auto;}
+     .products .panel-top {position: relative; top: 0;left: 0;transform: translateX(0px);}
+     .products .products-cont {height: auto;}
+     .products .products-cont ul {flex-wrap: wrap;}
+     .products .products-cont ul li {width: 100%;}
+     .products .products-cont ul li .products-bg {height: 270px;}
 
     
 
