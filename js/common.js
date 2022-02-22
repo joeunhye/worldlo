@@ -17,10 +17,6 @@ window.addEventListener('resize', () => {
     mbMenuChk();
 })
 
-window.addEventListener('scroll', () => {
-    activation(scrollH);
-})
-
 //WINDOW SIZE, SCROLL HEIGHT CHECK
 function size() {
     winW = window.innerWidth;

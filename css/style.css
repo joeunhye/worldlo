@@ -683,16 +683,16 @@ footer .copyright span {margin:5px 10px 5px 0;}
     header.open nav {left: 0;}
     header nav ul a, header.on nav a {color: #000;}
     header nav ul a {display: block; padding-left: 25px;}
-    header nav ul.pagination li {width: 100%; height: 50px; line-height: 50px; margin:0; padding-left: 20px; border-top: 1px solid #EBEEFF;}
-    header nav ul.pagination li.on {background-color: rgba(51,66,145,0.07);}
-    header nav ul.pagination li.on a {font-weight: 500; color: #334291;}
+    header nav ul.pagination li {width: 100%; height: 50px; line-height: 50px; margin:0; border-top: 1px solid #EBEEFF;}
     header nav ul.pagination li:nth-child(1) {border-top: none;}
-    header nav ul.pagination li:nth-child(1) a {background: url('../images/home.svg') no-repeat left center;}
-    header nav ul.pagination li:nth-child(2) a {background: url('../images/about.svg') no-repeat left center;}
-    header nav ul.pagination li:nth-child(3) a {background: url('../images/business.svg') no-repeat left center;}
-    header nav ul.pagination li:nth-child(4) a {background: url('../images/positions.svg') no-repeat left center;}
-    header nav ul.pagination li:nth-child(5) a {background: url('../images/products.svg') no-repeat left center;}
-    header nav ul.pagination li:nth-child(6) a {background: url('../images/location.svg') no-repeat left center;}
+    header nav ul.pagination li:nth-child(1) {background: url('../images/home.svg') no-repeat 20px center;}
+    header nav ul.pagination li:nth-child(2) {background: url('../images/about.svg') no-repeat 20px center;}
+    header nav ul.pagination li:nth-child(3) {background: url('../images/business.svg') no-repeat 20px center;}
+    header nav ul.pagination li:nth-child(4) {background: url('../images/positions.svg') no-repeat 20px center;}
+    header nav ul.pagination li:nth-child(5) {background: url('../images/products.svg') no-repeat 20px center;}
+    header nav ul.pagination li:nth-child(6) {background: url('../images/location.svg') no-repeat 20px center;}
+    header nav ul.pagination li a {padding-left: 45px;}
+    header nav ul.pagination li a.on {font-weight: 500; color: #334291; background-color: rgba(51,66,145,0.07);}
 
     .triggerBtn {display: block;}
 

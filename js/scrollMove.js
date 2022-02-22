@@ -1,5 +1,5 @@
-const boxs = $('section');
-const btns = $('nav li a');
+const boxs = document.querySelectorAll('section');
+const btns = document.querySelectorAll('nav li a');
 const speed = 1000;
 const base = -200;
 let posArr;
@@ -7,40 +7,46 @@ let enableClick = true;
 
 setPos();
 
-btns.on('click', function(e) {
-    const isOn = $(e.currentTarget).parent().hasClass('on');
-    const i = $(e.currentTarget).parent().index();
-    if(enableClick && !isOn) {
-        enableClick = false;
-        moveScroll(i);
-    }
-})
+[].forEach.call(btns, el => {
+    el.addEventListener('click', e => {
+        const isOn = e.currentTarget.classList.contains('on');
+        const i = getElementIndex(btns, el);
+        if(enableClick && !isOn) {
+            enableClick = false;
+            moveScroll(i);
+        }
+    });
+});
 
-// $(window).on('scroll', function() {
-//     let scroll = $(window).scrollTop();
-//     activation(scroll);
-// })
+window.addEventListener('scroll', () => {
+    activeOn(scrollH);
+})
 
 function setPos() {
     posArr = [];
-    btns.each(function(idx) {
-        posArr.push(boxs.eq(idx).offset().top)
+    boxs.forEach((boxEl) => {
+        posArr.push(boxEl.offsetTop)
     })
 }
 
 function moveScroll(target) {
-    $('html,body').stop().animate({scrollTop: posArr[target]}, speed, function() {
+    $('html,body').stop().animate({
+        scrollTop: posArr[target]
+    }, speed, function () {
         enableClick = true;
     })
 }
 
-function activation(scroll) {
-    btns.each(function(idx) {
-        if(scroll >= posArr[idx] + base) {
-            btns.parent().removeClass('on');
-            btns.parent().eq(idx).addClass('on');
-            boxs.removeClass('on');
-            boxs.eq(idx).addClass('on');
+function activeOn(scroll) {
+    btns.forEach((btnEl, idx) => {
+        if (scroll >= posArr[idx] + base) {
+            addActive(idx, btns);
+            addActive(idx, boxs);
         }
     })
+}
+
+function getElementIndex(element, range) {
+    if (!!range) return [].indexOf.call(element, range);
+    return [].indexOf.call(element.parentNode.children, element);
 }
