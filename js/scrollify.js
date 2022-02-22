@@ -10,7 +10,7 @@ window.onload = () => {
         //scrollbars: false,
         interstitialSection: "#footer",
         scrollSpeed: 800,
-        //setHeights: false,
+        setHeights: false,
         //touchScroll: false,
         before: (i, panels) => {
             var currentWrapper = $.scrollify.current();
