@@ -119,6 +119,17 @@ carItemEls.forEach((carItemEl, idx) => {
         removeActive(idx, dotEls);
         removeActive(idx, carItemEls);
     })
+
+    carItemEl.addEventListener('click', () => {
+        addActive(idx, dotEls);
+        addActive(idx, carItemEls);
+        console.log('alick')
+    })
+
+    // carItemEl.addEventListener('mouseleave', () => {
+    //     removeActive(idx, dotEls);
+    //     removeActive(idx, carItemEls);
+    // })
 })
 
 function addActive(index, lists){

@@ -757,7 +757,7 @@ footer .copyright span {margin-left:10px;}
     .mip-slider .swiper-button-next, .mip-slider .swiper-button-prev {display: none;}
     
     /*POPUP*/
-    .popup {top:10vh; left: 20px; right: 20px; height: 80vh;}
+    .popup {top:20vh; left: 20px; right: 20px; height: 80vh;}
     .popup-head {align-items: flex-start;padding: 15px 20px 15px 20px; border: none;}
     .popup-head .popup-title span {font-size: 15px;}
     .popup-head .popup-title h3 {font-size: 20px;}

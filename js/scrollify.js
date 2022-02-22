@@ -10,8 +10,8 @@ window.onload = () => {
         //scrollbars: false,
         interstitialSection: "#footer",
         scrollSpeed: 800,
-        setHeights: false,
-        touchScroll: false,
+        //setHeights: false,
+        //touchScroll: false,
         before: (i, panels) => {
             var currentWrapper = $.scrollify.current();
             var ref = panels[i].attr("data-section-name");
