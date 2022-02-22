@@ -914,7 +914,7 @@ footer .copyright span {margin:5px 10px 5px 0;}
     .img-list .list-items .list-item .list-text {width: 120px; text-align: left;}
 
     /*****LOCATION*****/
-    .location-in {padding: 5vh 0;}
+    .location-in {padding: 30vh 0;}
     .location .location-addr {flex-direction: column;align-items: flex-start;padding: 5px 0px 10px 0;}
     .location .location-addr p {margin-bottom: 5px; font-weight: 500; color: #334291; background-color: #EFF6FF;}
     .location .location-addr p img {display: none;}
