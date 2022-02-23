@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function(){
 window.addEventListener('resize', () => {
     size();
     mbMenuChk();
-    //setScreenSize();
+    setScreenSize();
 })
 
 //WINDOW SIZE, SCROLL HEIGHT CHECK
@@ -170,4 +170,4 @@ function setScreenSize() {
     document.documentElement.style.setProperty('--vh', `${vh}px`);
     console.log(vh)
 }
-//setScreenSize();
+setScreenSize();
