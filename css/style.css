@@ -699,6 +699,7 @@ footer .copyright span {margin:5px 10px 5px 0;}
     /*****INTRO*****/
     .visual-slider .pager {display: none;}
     .visual-slider .text-cont strong {margin-right: 10px;}
+    .visual-slider .swiper-slide-active .slider-bg {transform: none; transition: none;}
 
     /*****ABOUT*****/
     .about-in {padding: 10vh 0;}
