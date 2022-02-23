@@ -8,7 +8,7 @@ let enableClick = true;
 setPos();
 bindingEvent();
 
-btns[0].classList.add('on');
+//btns[0].classList.add('on');
 function bindingEvent() {
     [].forEach.call(btns, el => {
         el.addEventListener('click', e => {
@@ -23,13 +23,13 @@ function bindingEvent() {
 }
 
 window.addEventListener('resize', () => {
-    if(winW < 1024) {
+    if(winW < 1200) {
         bindingEvent();
     }
 })
 
 window.addEventListener('scroll', () => {
-    if(winW < 1024) {
+    if(winW < 1200) {
         activeOn(scrollH);
     }
 })
