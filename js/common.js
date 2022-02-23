@@ -23,7 +23,9 @@ window.addEventListener('resize', () => {
 //WINDOW SIZE, SCROLL HEIGHT CHECK
 function size() {
     winW = window.innerWidth;
+    winH = window.innerHeight;
     scrollH = window.pageYOffset;
+    bodyH = document.body.scrollHeight;
 }
 
 //HEADER COLOR CHANGE

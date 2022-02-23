@@ -1,4 +1,3 @@
-
 const boxs = document.querySelectorAll('section');
 const btns = document.querySelectorAll('nav li a');
 const aboutSection = document.querySelector('.panel.about');
@@ -11,12 +10,13 @@ setPos();
 bindingEvent();
 
 btns[0].classList.add('on');
+
 function bindingEvent() {
     [].forEach.call(btns, el => {
         el.addEventListener('click', e => {
             const isOn = e.currentTarget.classList.contains('on');
             const index = getElementIndex(btns, el);
-            if(enableClick && !isOn) {
+            if (enableClick && !isOn) {
                 enableClick = false;
                 moveScroll(index);
             }
@@ -25,24 +25,22 @@ function bindingEvent() {
 }
 
 window.addEventListener('resize', () => {
-    if(winW < 1200) {
+    if (winW < 1200) {
         setPos();
         bindingEvent();
     }
 })
 
 window.addEventListener('scroll', () => {
-    if(winW < 1200) {
+    if (winW < 1200) {
         activeOn(scrollH);
     }
-    if(scrollH < aboutSection.offsetTop - base) {
+    if (scrollH < aboutSection.offsetTop - base) {
         boxs.forEach((idx) => {
             removeActive(idx, boxs);
         })
     }
-    // if(scrollH >= posArr[1] && scrollH <= posArr[1]) {
-    //     console.log(posArr[1])
-    // }
+    detectBottom();
 })
 
 //SECTION OFFSET-TOP SETTING
@@ -65,19 +63,25 @@ function moveScroll(target) {
 function activeOn(scroll) {
     btns.forEach((btnEl, idx) => {
         if (scroll >= posArr[idx] - base) {
-            //addActive(idx, btns);
-            for(let el of btns){
-                el.classList.remove("on");
-            }
-            btns[idx].classList.add('on');
-            body.classList.add(`active${btns[idx]}`)
-
+            addActive(idx, btns);
             addAllActive(idx, boxs);
         }
+        // if (scroll >= posArr[idx]) {
+        //     body.className = '';
+        //     body.classList.add(`active${idx}`)
+        // }
     })
 }
 
 function getElementIndex(element, range) {
     if (!!range) return [].indexOf.call(element, range);
     return [].indexOf.call(element.parentNode.children, element);
+}
+
+function detectBottom() {
+    if (scrollH + winH >= bodyH) {
+        topBtn.classList.add('white')
+    }else {
+        topBtn.classList.remove('white')
+    }
 }
