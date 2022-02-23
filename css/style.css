@@ -508,7 +508,7 @@ header.open .triggerBtn .bar3 {-webkit-transform: translateY(-8px) rotate(-45deg
 .img-list .list-items {display: flex; flex-wrap: wrap; padding: 7px;}
 .img-list .list-items .list-item {flex: 1 1 30%; margin: 7px; padding-bottom: 10px; text-align: center; border-radius: 10px; transition: .3s all ease;}
 .img-list .list-items .list-item:hover {box-shadow: 0px 2px 15px 3px rgb(0 0 0 / 11%);}
-.img-list .list-items .list-item img {width: 100%;}
+.img-list .list-items .list-item img {width: 150px;}
 .img-list .list-items .list-item span {font-size: 13px;}
 .img-list .list-items .list-item p {margin-top: 7px; font-size: 15px;}
 .img-list .list-items .list-item:hover span, .img-list .list-item li:hover p {font-weight: 500; color: #334291;}
