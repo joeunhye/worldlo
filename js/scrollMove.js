@@ -1,7 +1,7 @@
 const boxs = document.querySelectorAll('section');
 const btns = document.querySelectorAll('nav li a');
 const speed = 1000;
-const base = -200;
+const base = -320;
 let posArr;
 let enableClick = true;
 
