@@ -1,7 +1,7 @@
 const boxs = document.querySelectorAll('section');
 const btns = document.querySelectorAll('nav li a');
 const speed = 1000;
-const base = -320;
+const base = -250;
 let posArr;
 let enableClick = true;
 
@@ -59,7 +59,7 @@ function activeOn(scroll) {
     btns.forEach((btnEl, idx) => {
         if (scroll >= posArr[idx] + base) {
             addActive(idx, btns);
-            addActive(idx, boxs);
+            addAllActive(idx, boxs);
         }
     })
 }
