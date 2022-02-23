@@ -8,7 +8,7 @@ window.addEventListener('scroll', () => {
 document.addEventListener("DOMContentLoaded", function(){
     size();
     changeHeadColor();
-    //setScreenSize();
+    setScreenSize();
     new Tab('#hyundaiTab');
     new Tab('#kiaTab');
 });
@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function(){
 window.addEventListener('resize', () => {
     size();
     mbMenuChk();
-    //setScreenSize();
+    setScreenSize();
 })
 
 //WINDOW SIZE, SCROLL HEIGHT CHECK

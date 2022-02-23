@@ -1,5 +1,6 @@
 const boxs = document.querySelectorAll('section');
 const btns = document.querySelectorAll('nav li a');
+const aboutSection = document.querySelector('.panel.about');
 const speed = 1000;
 const base = -250;
 let posArr;
@@ -32,9 +33,10 @@ window.addEventListener('scroll', () => {
     if(winW < 1200) {
         activeOn(scrollH);
     }
-    let aboutOffset = $('.panel.about').offset().top + base;
-    if(scrollH < aboutOffset) {
-        $('.panel.about').removeClass('on')
+    if(scrollH < aboutSection.offsetTop) {
+        boxs.forEach((idx) => {
+            removeActive(idx, boxs);
+        })
     }
 })
 
