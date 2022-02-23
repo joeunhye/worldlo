@@ -8,7 +8,7 @@ let enableClick = true;
 setPos();
 bindingEvent();
 
-//btns[0].classList.add('on');
+btns[0].classList.add('on');
 function bindingEvent() {
     [].forEach.call(btns, el => {
         el.addEventListener('click', e => {
@@ -31,6 +31,10 @@ window.addEventListener('resize', () => {
 window.addEventListener('scroll', () => {
     if(winW < 1200) {
         activeOn(scrollH);
+    }
+    if(scrollH < 100) {
+        $('.panel').removeClass('on')
+        console.log('scroll top')
     }
 })
 
@@ -55,7 +59,7 @@ function activeOn(scroll) {
     btns.forEach((btnEl, idx) => {
         if (scroll >= posArr[idx] + base) {
             addActive(idx, btns);
-            addAllActive(idx, boxs);
+            addActive(idx, boxs);
         }
     })
 }
