@@ -34,12 +34,13 @@ window.addEventListener('resize', () => {
 window.addEventListener('scroll', () => {
     if (winW < 1200) {
         activeOn(scrollH);
+        if (scrollH < aboutSection.offsetTop - base) {
+            boxs.forEach((idx) => {
+                removeActive(idx, boxs);
+            })
+        }
     }
-    if (scrollH < aboutSection.offsetTop - base) {
-        boxs.forEach((idx) => {
-            removeActive(idx, boxs);
-        })
-    }
+    
     detectBottom();
 })
 
