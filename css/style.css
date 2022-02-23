@@ -660,6 +660,10 @@ footer .copyright span {margin:5px 10px 5px 0;}
     .about-slider .swiper-button-next {right:0; margin-top:-3%;}
     .about-slider .swiper-pagination {bottom: 0;}
     .sp-img .imgbox img {transform: translate(-22%,-36%) scale(0.7);}
+    .about .about-slider .slider-title .sub-title {opacity: 0; transform: translateY(50px);}
+    .about .about-slider .slider-title .sp-title {opacity: 0; transform: translateY(50px);}
+    .about .about-slider .sp-img {opacity: 0; transform: translateY(50px);}
+    .about .about-slider .slider-text .sp-text {opacity: 0; transform: translateY(50px);}
     .about.on .about-slider .slider-title .sub-title {opacity: 1; transform: translateY(0px);}
     .about.on .about-slider .slider-title .sp-title {opacity: 1; transform: translateY(0px);}
     .about.on .about-slider .sp-img {opacity: 1; transform: translateY(0px);}
@@ -677,8 +681,9 @@ footer .copyright span {margin:5px 10px 5px 0;}
     .positions-in {padding: 15vh 0 10vh;}
     /* .mobis-slider .swiper-slide {opacity: 1;transform: translateY(0);} */
     .mobis-slider.destroy .swiper-slide {margin-left: 16px;}
+    .positions .mobis-slider .swiper-slide { transform: translateY(70px) scale(0.8);transition: .3s all ease-in-out;}
     .positions.on .mobis-slider {opacity: 1; transform: translateY(0px);}
-    .positions.on .mobis-slider .swiper-slide {opacity: 1; transform: translateY(0px) scale(0.8);transition: .3s all ease-in-out;}
+    .positions.on .mobis-slider .swiper-slide {opacity: 1; transform: translateY(0px) scale(0.8);}
     .positions.on .mobis-slider .swiper-slide.swiper-slide-active {transform: translateY(0) scale(1.2);}
     .positions.on .mobis-slider .swiper-slide:nth-child(1) {transition-delay: .2s;}
     .positions.on .mobis-slider .swiper-slide:nth-child(2) {transition-delay: .3s;}
@@ -778,13 +783,12 @@ footer .copyright span {margin:5px 10px 5px 0;}
     .business .column-list li:nth-child(3) {opacity: 0; transform: translateY(150px); transition: .3s .6s all ease-in-out;}
     .business .column-list .icon-item {padding: 0 2vw;}
     
-    
     /*****OUR POSITIONS*****/
     .positions-in {padding: 10vh 0;}
     .positions {height: auto; overflow: hidden;}
     .positions .mobis-logo {top: auto; bottom: -10px; right:50px; width: 190px;}
+
     .mobis-slider {margin: 100px 0 75px 0;opacity: 0; transform: translateY(70px); transition: .5s all ease-in-out;}
-   
     .mobis-slider .swiper-slide:before {font-size: 130px;}
     .mobis-slider .swiper-slide .positions-item {height: 165px;}
     .mobis-slider .swiper-slide.swiper-slide-active:before {transform: translate(-55px, -60px);opacity: 0.4;}
@@ -794,7 +798,7 @@ footer .copyright span {margin:5px 10px 5px 0;}
     .mobis-slider .swiper-slide:nth-child(3).swiper-slide-active .icon-box {background-position-x: 0px;}
     .mobis-slider .swiper-slide:nth-child(4).swiper-slide-active .icon-box {background-position-x: 7px;}
     .mobis-slider .swiper-slide.swiper-slide-active .icon-text span {font-size: 15px;letter-spacing: -1.3px;color: #1F2A65;}
-    .mobis-slider.swiper-slide.swiper-slide-active .icon-box {transform: scale(1.2);}
+    .mobis-slider .swiper-slide.swiper-slide-active .icon-box {transform: scale(1.2);}
     .mobis-slider .swiper-slide .icon-text span {font-size: 16px;}
     
     .mip-slider {margin-top:25px}
