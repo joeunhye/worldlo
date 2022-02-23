@@ -32,9 +32,9 @@ window.addEventListener('scroll', () => {
     if(winW < 1200) {
         activeOn(scrollH);
     }
-    if(scrollH < 100) {
-        $('.panel').removeClass('on')
-        console.log('scroll top')
+    let aboutOffset = $('.panel.about').offset().top + base;
+    if(scrollH < aboutOffset) {
+        $('.panel.about').removeClass('on')
     }
 })
 
