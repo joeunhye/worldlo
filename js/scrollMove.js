@@ -24,7 +24,7 @@ function bindingEvent() {
 
 window.addEventListener('resize', () => {
     if(winW < 1024) {
-        binding();
+        bindingEvent();
     }
 })
 

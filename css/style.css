@@ -134,9 +134,9 @@ header.open .triggerBtn .bar3 {-webkit-transform: translateY(-8px) rotate(-45deg
 }
 
 /*****INTRO*****/
-.visual-slider {position: relative; height: 100%; overflow: hidden;}
-.visual-slider .swiper {height: 100%;}
-.visual-slider .swiper-slide .slider-bg {height: 100vh; background-size: cover;background-position: center;}
+.visual-slider {position: relative; height: 100vh; overflow: hidden; height:calc(var(--vh, 1vh) * 100);}
+.visual-slider .swiper {height: 100vh; height:calc(var(--vh, 1vh) * 100);}
+.visual-slider .swiper-slide .slider-bg {height: 100vh; height:calc(var(--vh, 1vh) * 100); background-size: cover;background-position: center;}
 .visual-slider .swiper-slide-active .slider-bg {transform: scale(1.1);transition: 7s all ease-out;}
 .visual-slider .swiper-slide .bg1 {background: url('../images/visual_img1.jpg') no-repeat center/cover;}
 .visual-slider .swiper-slide .bg2 {background: url('../images/visual_img2.jpg') no-repeat center/cover;}
@@ -204,13 +204,13 @@ header.open .triggerBtn .bar3 {-webkit-transform: translateY(-8px) rotate(-45deg
 .out .swiper-slide-active .sp-img .imgbox { animation:leftMoveIn 0.5s cubic-bezier(0.24,0.57,0.45,1) both;}
 .about-slider .slider-controls .count-slider {display: none; font-size: 14px;letter-spacing: 1px;}
 .about-slider .slider-controls .active-slide {font-size: 17px; font-weight: 500;}
-.about-slider .swiper-button-next {right: -5px;margin-top: -5%;} 
+.about-slider .swiper-button-next {right: -5px;margin-top: -5%; outline: none;} 
 .about-slider .swiper-button-next:after {content: ''; width: 18px;height: 30px; background: url('../images/arrow_next_b.svg') no-repeat center; background-size: cover;}
-.about-slider .swiper-button-prev {left: 36%;margin-top: -5%;}
+.about-slider .swiper-button-prev {left: 36%;margin-top: -5%; outline: none;}
 .about-slider .swiper-button-prev:after {content: ''; width: 18px;height: 30px; background: url('../images/arrow_prev_b.svg') no-repeat center; background-size: cover;}
 .about-slider .swiper-pagination-bullet {position: relative; width: 13px;height: 13px;border-radius: 2px;background-color: #334291; opacity: 1;transition: .3s all ease;}
 .about-slider .swiper-pagination {bottom: 10vh; text-align: left;}
-.about-slider .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .about-slider .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {margin:0 10px;}
+.about-slider .swiper-pagination-bullets .swiper-pagination-bullet, .about-slider .swiper-pagination-bullets .swiper-pagination-bullet {margin:0 10px; outline:none;}
 .about-slider .swiper-pagination-bullet.swiper-pagination-bullet-active {background-color: #FE0000; transform: rotate(45deg);}
 .about-slider .swiper-slide-active .sub-title {animation: fadeInRight 1.5s both;}
 .about-slider .swiper-slide-active .sp-title {animation: fadeInRight 1.5s .2s both;}
@@ -719,7 +719,7 @@ footer .copyright span {margin:5px 10px 5px 0;}
     .about-slider .swiper-button-prev {top: auto;left:auto; right:22px; bottom: -12px; margin-top:0;}
     .about-slider .swiper-button-prev:after {width: 12px; height: 20px;}
     .about-slider .slider-text .sp-text {width: auto; min-height: auto;}
-    .about-slider .swiper-pagination {display: flex; bottom: 6px; left: 50%; width: calc(100% - 100px); text-align: center; transform: translateX(-53%);}
+    .about-slider .swiper-pagination {display: flex; bottom: 6px; left: 50%; width: calc(100% - 100px); text-align: center; transform: translateX(-51%);}
     .about-slider .swiper-pagination-bullet {width: 100%; height: 3px;background-color: #E0E0E0;}
     .about-slider .swiper-pagination-bullet.swiper-pagination-bullet-active {transform: rotate(0deg); background-color: transparent;}
     .about-slider .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .about-slider .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {margin:0}
