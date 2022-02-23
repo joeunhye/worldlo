@@ -128,9 +128,9 @@ header.open .triggerBtn .bar3 {-webkit-transform: translateY(-8px) rotate(-45deg
 }
 
 /*****INTRO*****/
-.visual-slider {position: relative; height: 100vh; overflow: hidden; height:calc(var(--vh, 1vh) * 100);}
-.visual-slider .swiper {height: 100vh; height:calc(var(--vh, 1vh) * 100);}
-.visual-slider .swiper-slide .slider-bg {height: 100vh; height:calc(var(--vh, 1vh) * 100); background-size: cover;background-position: center;}
+.visual-slider {position: relative; height: 100vh; overflow: hidden; /*height:calc(var(--vh, 1vh) * 100);*/}
+.visual-slider .swiper {height: 100vh; /*height:calc(var(--vh, 1vh) * 100);*/}
+.visual-slider .swiper-slide .slider-bg {height: 100vh; /* height:calc(var(--vh, 1vh) * 100);*/ background-size: cover;background-position: center;}
 .visual-slider .swiper-slide-active .slider-bg {transform: scale(1.1);transition: 7s all ease-out;}
 .visual-slider .swiper-slide .bg1 {background: url('../images/visual_img1.jpg') no-repeat center/cover;}
 .visual-slider .swiper-slide .bg2 {background: url('../images/visual_img2.jpg') no-repeat center/cover;}
@@ -655,15 +655,15 @@ footer .copyright span {margin:5px 10px 5px 0;}
     .about-in {padding: 15vh 0 10vh;}
     .about-slider .slider-title {margin-top: 5vh;}
     .about-slider .swiper {height: 350px;}
-    .about.on .about-slider .swiper {opacity: 1;transform: translateY(0);}
+    .about.on .about-slider .swiper {opacity: 1;transform: translateY(0px);}
     .about-slider .swiper-button-prev {left: 42%; margin-top:-3%;}
     .about-slider .swiper-button-next {right:0; margin-top:-3%;}
     .about-slider .swiper-pagination {bottom: 0;}
     .sp-img .imgbox img {transform: translate(-22%,-36%) scale(0.7);}
-    .about .about-slider .slider-title .sub-title {opacity: 0; transform: translateY(50px);}
-    .about .about-slider .slider-title .sp-title {opacity: 0; transform: translateY(50px);}
-    .about .about-slider .sp-img {opacity: 0; transform: translateY(50px);}
-    .about .about-slider .slider-text .sp-text {opacity: 0; transform: translateY(50px);}
+    .about-slider .slider-title .sub-title {opacity: 0; transform: translateY(50px);}
+    .about-slider .slider-title .sp-title {opacity: 0; transform: translateY(50px);}
+    /* .about .about-slider .sp-img {opacity: 0; transform: translateY(50px);} */
+    .about-slider .slider-text .sp-text {opacity: 0; transform: translateY(50px);}
     .about.on .about-slider .slider-title .sub-title {opacity: 1; transform: translateY(0px);}
     .about.on .about-slider .slider-title .sp-title {opacity: 1; transform: translateY(0px);}
     .about.on .about-slider .sp-img {opacity: 1; transform: translateY(0px);}
@@ -754,7 +754,7 @@ footer .copyright span {margin:5px 10px 5px 0;}
     .sp-img .imgbox img {position: relative; top:0; left:0; transform: translate(0px,0px); width: 100%;}
     .current .sp-img .imgbox, .current .swiper-slide-active .sp-img .imgbox, .out .sp-img .imgbox, .out .swiper-slide-active .sp-img .imgbox { animation:none;}
     .about-slider .swiper {height: auto;}
-    .about.on .about-slider .swiper {opacity: 1; transform: translateY(0px);}
+    /* .about.on .about-slider .swiper {opacity: 1; transform: translateY(0px);} */
     .active .about-slider .swiper {overflow: hidden;}
     .about-slider .swiper-wrapper {overflow: hidden;}
     .about-slider .slider-controls {display: flex;margin-top: 15px;/*opacity: 0; transform: translateY(70px); transition: .3s .6s all ease-in-out;*/}
@@ -763,7 +763,7 @@ footer .copyright span {margin:5px 10px 5px 0;}
     .about-slider .swiper-button-next:after {width: 12px; height: 20px;}
     .about-slider .swiper-button-prev {top: auto;left:auto; right:22px; bottom: -12px; margin-top:0;}
     .about-slider .swiper-button-prev:after {width: 12px; height: 20px;}
-    .about-slider .slider-text .sp-text {width: auto; min-height: auto; opacity: 0; transform: translateY(40px); transition: .4s .5s all ease-in-out;}
+    .about-slider .slider-text .sp-text {width: auto; min-height: auto; /*opacity: 0; transform: translateY(40px); transition: .4s .5s all ease-in-out;*/}
     .about-slider .swiper-pagination {display: flex; bottom: 6px; left: 50%; width: calc(100% - 100px); text-align: center; transform: translateX(-51%);}
     .about-slider .swiper-pagination-bullet {width: 100%; height: 3px;background-color: #E0E0E0;}
     .about-slider .swiper-pagination-bullet.swiper-pagination-bullet-active {transform: rotate(0deg); background-color: transparent;}

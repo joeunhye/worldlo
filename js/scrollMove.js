@@ -55,7 +55,7 @@ function activeOn(scroll) {
     btns.forEach((btnEl, idx) => {
         if (scroll >= posArr[idx] + base) {
             addActive(idx, btns);
-            addActive(idx, boxs);
+            addAllActive(idx, boxs);
         }
     })
 }
