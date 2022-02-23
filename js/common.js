@@ -54,7 +54,6 @@ closeBtn.forEach((closeEl, idx) => {
         }else {
             $.scrollify.disable();
         }
-        console.log($.scrollify.isDisabled())
     })
 })
 popBodyEls.forEach((popBody, idx) => {
@@ -67,9 +66,7 @@ popBodyEls.forEach((popBody, idx) => {
 })
 
 $('.popup-body').on('touchmove', function(e) {
-    console.log('touch! and disable')
     $.scrollify.disable();
-    console.log($.scrollify.isDisabled())
 })
 
 //TAB

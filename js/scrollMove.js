@@ -1,8 +1,9 @@
+
 const boxs = document.querySelectorAll('section');
 const btns = document.querySelectorAll('nav li a');
 const aboutSection = document.querySelector('.panel.about');
 const speed = 1000;
-const base = -250;
+const base = window.innerHeight / 2;
 let posArr;
 let enableClick = true;
 
@@ -34,14 +35,14 @@ window.addEventListener('scroll', () => {
     if(winW < 1200) {
         activeOn(scrollH);
     }
-    if(scrollH < aboutSection.offsetTop) {
+    if(scrollH < aboutSection.offsetTop - base) {
         boxs.forEach((idx) => {
             removeActive(idx, boxs);
         })
     }
-    if(scrollH >= posArr[1] && scrollH <= posArr[1]) {
-        console.log(posArr[1])
-    }
+    // if(scrollH >= posArr[1] && scrollH <= posArr[1]) {
+    //     console.log(posArr[1])
+    // }
 })
 
 //SECTION OFFSET-TOP SETTING
@@ -63,8 +64,14 @@ function moveScroll(target) {
 
 function activeOn(scroll) {
     btns.forEach((btnEl, idx) => {
-        if (scroll >= posArr[idx] + base - vh) {
-            addActive(idx, btns);
+        if (scroll >= posArr[idx] - base) {
+            //addActive(idx, btns);
+            for(let el of btns){
+                el.classList.remove("on");
+            }
+            btns[idx].classList.add('on');
+            body.classList.add(`active${btns[idx]}`)
+
             addAllActive(idx, boxs);
         }
     })
