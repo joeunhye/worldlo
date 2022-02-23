@@ -397,10 +397,15 @@ header.open .triggerBtn .bar3 {-webkit-transform: translateY(-8px) rotate(-45deg
 .check-title {margin-top: 35px;font-size: 20px;text-align: center;color: #fff;opacity: 0; transform: translateY(70px); transition: .7s all ease-in-out;}
 .positions.active .check-title {opacity: 1; transform: translateY(0);}
 .check-title > img {margin-right: 6px;}
+.positions.on .check-title {opacity: 1; transform: translateY(0);}
 
 .positions {height: 100vh;background: url('../images/positions_bg.jpg') no-repeat center; background-size: cover;background-attachment: fixed;}
 .positions-in {padding-top: 20vh;}
 .positions-in .panel-top {margin-bottom: 22px;}
+/* .positions .panel-top .panel-title {opacity: 0; transform: translateY(70px); transition: .3s all ease-in-out;} */
+/* .positions.on .panel-top .panel-title {opacity: 1; transform: translateY(0);} */
+.positions .panel-text {opacity: 0; transform: translateY(70px); transition: .3s .1s all ease-in-out;}
+.positions.on .panel-text {opacity: 1; transform: translateY(0);}
 .positions .positions-cont {position: relative;}
 .positions .mobis-logo {position: absolute; top:-60px; right:0;}
 .mobis-slider {margin-top:40px;}
@@ -658,15 +663,15 @@ footer .copyright span {margin:5px 10px 5px 0;}
     .positions-in {padding: 15vh 0 10vh;}
     .mobis-slider .swiper-slide {opacity: 1;transform: translateY(0);}
     .mobis-slider.destroy .swiper-slide {margin-left: 16px;}
-    .mip-slider {opacity: 1;transform: translateY(0);}
+    .positions.on .mip-slider {opacity: 1;transform: translateY(0);}
 
     /*****OUR PRODUCTS*****/
     .products-in {padding: 15vh 10vh;}
     
     /*****LOCATION*****/
     .location-in {padding: 15vh 10vh;}
-    .location .location-map {opacity: 1;transform: translateY(0);}
-    .location .location-cont ul li {opacity: 1;transform: translateY(0);}
+    /* .location .location-map {opacity: 1;transform: translateY(0);} */
+    /* .location .location-cont ul li {opacity: 1;transform: translateY(0);} */
     
 }
 
@@ -700,8 +705,11 @@ footer .copyright span {margin:5px 10px 5px 0;}
     .visual-slider .swiper-slide-active .slider-bg {transform: none; transition: none;}
 
     /*****ABOUT*****/
+    .panel-top .panel-title {opacity: 0; transform: translateY(50px); transition: .3s all ease-in-out;}
+    .panel.on .panel-top .panel-title {opacity: 1; transform: translateY(0px);}
+
     .about-in {padding: 10vh 0;}
-    .about-in .panel-top {margin-bottom: 50px; opacity: 0; transform: translateY(50px); transition: .3s all ease-in-out;}
+    .about-in .panel-top {margin-bottom: 50px;}
     .about-slider {top:0;}
     .about-slider .slider-title {margin: 0;}
     .about-slider .slider-title .sub-title {opacity: 0; transform: translateY(40px); transition: .3s .1s all ease-in-out;}
@@ -726,7 +734,7 @@ footer .copyright span {margin:5px 10px 5px 0;}
     .about-slider .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .about-slider .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {margin:0}
     .about-slider .swiper-pagination-bullets .swiper-pagination-bullet:after {content: ''; position: absolute; top:0; left:0; width: 0%; height: 3px; background-color: #FE0000; transition: .3s all ease;} 
     .about-slider .swiper-pagination-bullet.swiper-pagination-bullet-active:after {width: 100%;}
-    .about.on .about-in .panel-top {opacity: 1; transform: translateY(0px);}
+    /* .panel.on .panel-top .panel-title {opacity: 1; transform: translateY(0px);} */
     .about.on .about-slider .slider-title .sub-title {opacity: 1; transform: translateY(0px);}
     .about.on .about-slider .slider-title .sp-title {opacity: 1; transform: translateY(0px);}
     .about.on .about-slider .sp-img {opacity: 1; transform: translateY(0px);}
@@ -736,7 +744,6 @@ footer .copyright span {margin:5px 10px 5px 0;}
     /*****BUSINESS*****/
     .business {height: auto;}
     .business-in {padding: 10vh 0;}
-    .business .panel-top .panel-title {opacity: 0; transform: translateY(70px); transition: .3s all ease-in-out;}
     .business .panel-text {opacity: 0; transform: translateY(70px); transition: .3s .1s all ease-in-out;}
     .business .column-list {flex-wrap: wrap;}
     .business .column-list {margin: 35px 2vw 0;}
@@ -745,7 +752,6 @@ footer .copyright span {margin:5px 10px 5px 0;}
     .business .column-list li:nth-child(2) {opacity: 0; transform: translateY(100px); transition: .3s .4s all ease-in-out;}
     .business .column-list li:nth-child(3) {opacity: 0; transform: translateY(150px); transition: .3s .8s all ease-in-out;}
     .business .column-list .icon-item {padding: 0 2vw;}
-    .business.on .panel-top .panel-title {opacity: 1; transform: translateY(0px);}
     .business.on .panel-text {opacity: 1; transform: translateY(0px);}
     .business.on .column-list li:nth-child(1) {opacity: 1; transform: translateY(0px);}
     .business.on .column-list li:nth-child(2) {opacity: 1; transform: translateY(0px);}
@@ -755,7 +761,8 @@ footer .copyright span {margin:5px 10px 5px 0;}
     .positions-in {padding: 10vh 0;}
     .positions {height: auto; overflow: hidden;}
     .positions .mobis-logo {top: auto; bottom: -10px; right:50px; width: 190px;}
-    .mobis-slider {margin: 100px 0 75px 0;}
+    .mobis-slider {margin: 100px 0 75px 0;opacity: 0; transform: translateY(70px); transition: .3s .2s all ease-in-out;}
+    .positions.on .mobis-slider {opacity: 1; transform: translateY(0px);}
     .mobis-slider .swiper-slide:before {font-size: 130px;}
     .mobis-slider .swiper-slide .positions-item {height: 165px;}
     .mobis-slider .swiper-slide {transform: scale(0.8);transition: .3s all ease-in-out;}
@@ -778,6 +785,12 @@ footer .copyright span {margin:5px 10px 5px 0;}
     .mip-slider .swiper-slide:nth-child(1) {border:none;}
     .mip-slider .swiper-slide:before, .mip-slider .swiper-slide:after {display: none;}
     .mip-slider .swiper-button-next, .mip-slider .swiper-button-prev {display: none;}
+
+    /*****OUR PRODUCTS*****/
+    .products .products-cont ul li {opacity: 0; transform: translateY(70px); transition: .3s .1s all ease-in-out;}
+    .products.on .products-cont ul li {opacity: 1; transform: translateY(0px);}
+    .products.on .products-cont ul li:nth-child(1) {transition-delay: .1s;}
+    .products.on .products-cont ul li:nth-child(2) {transition-delay: .2s;}
     
     /*POPUP*/
     .popup {top:30vh; left: 20px; right: 20px; height: 75vh;}
@@ -815,6 +828,14 @@ footer .copyright span {margin:5px 10px 5px 0;}
     /*****LOCATION*****/
     .location {height: auto;}
     .location-in {padding: 10vh 0;}
+    .location .location-map {opacity: 0; transform: translateY(70px); transition: .3s .1s all ease-in-out;}
+    .location.on .location-map {opacity: 1; transform: translateY(0px);}
+    .location .location-cont {opacity: 0; transform: translateY(70px); transition: .3s .3s all ease-in-out;}
+    .location.on .location-cont {opacity: 1; transform: translateY(0px);}
+    .location.on .location-cont ul li {opacity: 1; transform: translateY(0px);}
+    .location.on .location-cont ul li:nth-child(1) {transition-delay: .2s;}
+    .location.on .location-cont ul li:nth-child(2) {transition-delay: .3s;}
+    .location.on .location-cont ul li:nth-child(3) {transition-delay: .4s;}
 
     /*****FOOTER*****/
     footer {padding: 24px 0px; font-size: 14px;}
@@ -903,7 +924,7 @@ footer .copyright span {margin:5px 10px 5px 0;}
     .business .column-list li:nth-child(3) .box.box-left span {animation: iconColorOn 1.5s 3s ease-in-out;}
 
     /*****OUR POSITIONS*****/
-    .check-title {font-size: 18px; opacity: 1; transform: translateY(0px);}
+    .check-title {font-size: 18px; /*opacity: 1; transform: translateY(0px);*/}
     .mobis-slider .swiper-slide .icon-text span p {font-size: 15px; line-height: 20px;}
     .mip-slider .swiper-slide {padding: 33px 0; font-size: 15px;}
 
@@ -932,7 +953,8 @@ footer .copyright span {margin:5px 10px 5px 0;}
 
     /*****LOCATION*****/
     .location-in {padding: 5vh 0;}
-    .location .location-addr {flex-direction: column;align-items: flex-start;padding: 5px 0px 10px 0;}
+    .location .location-addr {position: relative; flex-direction: column;align-items: flex-start;padding: 5px 0px 10px 0;}
+    .location .location-addr:before {content: ''; position: absolute; top:0; left:0; width: 55px; height: 3px; background-color: #334291;}
     .location .location-addr p {margin-bottom: 5px; font-weight: 500; color: #334291; background-color: #EFF6FF;}
     .location .location-addr p img {display: none;}
     .location .location-addr span {font-size: 16px;}
