@@ -942,7 +942,7 @@ footer .copyright span {margin:5px 10px 5px 0;}
     .products .products-company p {margin-bottom: 21px; font-size: 26px;}
     .products .products-logo {bottom: 12px; transform: scale(0.6) translateX(-85%);}
 
-    .btn {display: inline-block;background-color: #FE0000;border-radius: 3px;padding: 7px 24px 11px;font-size: 16px; font-weight: 500; line-height: 1.2;}
+    .btn {display: inline-block;background-color: #FE0000;border-radius: 3px;padding: 7px 24px;font-size: 16px; font-weight: 500; line-height: 1.2;}
     .btn-wrap:hover .btn {color: #fff;background-color: transparent;border: 2px solid #FE0000;}
     .btn-wrap:before, .btn-wrap:after, .btn:before, .btn:after {display: none;}
 
