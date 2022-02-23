@@ -99,7 +99,6 @@ let viewSizeChk = () => {
         body.style.overflow = 'hidden';
         $.scrollify.enable();
     }
-    console.log($.scrollify.isDisabled())
 }
 
 let moveTop = () => {

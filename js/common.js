@@ -1,5 +1,6 @@
 let winW;
 let scrollH;
+let vh;
 const headEl = document.querySelector('#header');
 window.addEventListener('scroll', () => {
     changeHeadColor();
@@ -167,6 +168,6 @@ function mbMenuChk() {
 
 //MOBILE 100VH SETTING
 function setScreenSize() {
-	let vh = window.innerHeight * 0.01;
+	vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh}px`);
 }

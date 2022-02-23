@@ -25,6 +25,7 @@ function bindingEvent() {
 
 window.addEventListener('resize', () => {
     if(winW < 1200) {
+        setPos();
         bindingEvent();
     }
 })
@@ -37,6 +38,9 @@ window.addEventListener('scroll', () => {
         boxs.forEach((idx) => {
             removeActive(idx, boxs);
         })
+    }
+    if(scrollH >= posArr[1] && scrollH <= posArr[1]) {
+        console.log(posArr[1])
     }
 })
 
@@ -61,7 +65,7 @@ function activeOn(scroll) {
     btns.forEach((btnEl, idx) => {
         if (scroll >= posArr[idx] + base - vh) {
             addActive(idx, btns);
-            addAllActive(idx, boxs); 
+            addAllActive(idx, boxs);
         }
     })
 }
