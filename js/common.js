@@ -134,6 +134,10 @@ function addActive(index, lists){
     lists[index].classList.add('on')
 }
 
+function addAllActive(index, lists){
+    lists[index].classList.add('on')
+}
+
 function removeActive(index, lists){
     for(let el of lists){
         el.classList.remove("on");
