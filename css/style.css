@@ -678,6 +678,11 @@ footer .copyright span {margin:5px 10px 5px 0;}
 }
 
 @media screen and (max-width: 1024px) {
+    a[href^="tel"] {
+        color: inherit; /* Inherit text color of parent element. */
+        text-decoration: none; /* Remove underline. */
+        /* Additional css `propery: value;` pairs here */
+      }
     .wrapper {height: auto;}
 
     /*****HEADER*****/
