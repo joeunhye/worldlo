@@ -139,7 +139,7 @@ header.open .triggerBtn .bar3 {-webkit-transform: translateY(-8px) rotate(-45deg
 }
 
 /*****INTRO*****/
-.visual-slider {position: relative; min-height: 100vh; overflow: hidden; height: -webkit-fill-available; }
+.visual-slider {position: relative; min-height: 100vh; overflow: hidden;}
 .visual-slider .swiper {min-height: 100vh; height: -webkit-fill-available;}
 .visual-slider .swiper-slide .slider-bg {min-height: 100vh; height: -webkit-fill-available; background-size: cover;background-position: center;}
 .visual-slider .swiper-slide-active .slider-bg {transform: scale(1.1);transition: 7s all ease-out;}
@@ -642,8 +642,14 @@ footer .copyright span {margin:5px 10px 5px 0;}
 @media screen and (max-width: 1300px) {
     .wrapper {padding: 0 20px;}
 
+    /*****HEADER*****/
+    header .header-wrap {padding: 0 20px;}
+
     /*PAGENATION*/
     .panel.pagination {display: none;} 
+
+    /*****INTRO*****/
+    .visual-slider .pager {left: -20px;}
 
     /*POPUP*/
     .popup {left: 10px; right: 10px;}
@@ -776,7 +782,7 @@ footer .copyright span {margin:5px 10px 5px 0;}
     
     /*****OUR POSITIONS*****/
     .positions {height: auto; overflow: hidden;background-attachment: inherit;}
-    .positions-in {padding: 70px 0;}
+    .positions-in {padding: 85px 0;}
     .check-title {line-height: 1.3;}
     .positions .mobis-logo {top: auto; bottom: -10px; right:50px; width: 190px;}
     .mobis-slider .swiper-slide {transition: .3s all ease;}
@@ -901,14 +907,14 @@ footer .copyright span {margin:5px 10px 5px 0;}
     .visual-slider .text-cont .bullet {margin: 0 -1px; font-size: 30px;}
 
     /*****ABOUT*****/
-    .about-in {padding: 70px 0;}
+    .about-in {padding: 80px 0;}
     .about-in .panel-top {margin-bottom: 23px;}
     .about-slider .slider-title .sub-title {margin-bottom: 8px; font-size: 16px;}
     .about-slider .slider-title .sp-title {margin-bottom: 20px; font-size: 22px;}
     .about-slider .slider-text .sp-text {margin-top:16px; font-size: 15px; line-height: 25px;}
 
     /*****BUSINESS*****/
-    .business-in {padding: 70px 0;}
+    .business-in {padding: 80px 0;}
     .business .column-list .icon-text p {font-size: 19px; font-weight: 500;}
     .business .column-list .icon-text span {line-height: 23px; font-size: 16px;}
     .business .column-list li .icon-item {height: 250px;}
@@ -957,7 +963,7 @@ footer .copyright span {margin:5px 10px 5px 0;}
     /*****OUR PRODUCTS*****/
     .products .panel-top.color-white h2, .products .panel-top.color-white .panel-text {color: #334291;}
     .products .panel-top.color-white span {color: #000;}
-    .products-in {height: auto; padding: 70px 20px 10px;}
+    .products-in {height: auto; padding: 80px 20px 10px;}
     .products .panel-top {position: relative; top: 0;left: 0;transform: translateX(0px);}
     .products .products-cont {height: auto;}
     .products .products-cont ul {flex-wrap: wrap;}
@@ -978,7 +984,7 @@ footer .copyright span {margin:5px 10px 5px 0;}
     .img-list .list-items .list-item .list-text {width: 120px; text-align: left;}
 
     /*****LOCATION*****/
-    .location-in {padding: 70px 0;}
+    .location-in {padding: 80px 0;}
     .location .location-addr {position: relative; flex-direction: column;align-items: flex-start; height: auto; padding: 12px 0px 10px 0;}
     .location .location-addr:before {content: ''; position: absolute; top:0; left:0; width: 55px; height: 3px; background-color: #334291;}
     .location .location-addr p {height: auto; margin-bottom: 5px; font-weight: 500; color: #334291; background-color: #EFF6FF;}
