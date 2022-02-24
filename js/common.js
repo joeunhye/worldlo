@@ -46,7 +46,6 @@ const popBodyEls = document.querySelectorAll('.popup-body');
 moreBtn.forEach((btnEl, idx) => {
     btnEl.addEventListener('click', e => {
         popupEls[idx].classList.add('on');
-        $('.popup-bg').addClass('on')
     })
 })
 closeBtn.forEach((closeEl, idx) => {
