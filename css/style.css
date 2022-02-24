@@ -634,15 +634,10 @@ footer .copyright span {margin:5px 10px 5px 0;}
     .mobis-slider .swiper-slide:hover .icon-text span {color: #1F2A65;}
     .mobis-slider.swiper-slide:hover .icon-box {transform: scale(1.2);}
 }
-
-@supports (-webkit-text-size-adjust:none) and (not (-ms-accelerator:true))
-and (not (-moz-appearance:none)) {
-    
-}
-@media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0) 
-{ @media {
+@supports (overflow:-webkit-marquee) and (justify-content:inherit) {
     .triggerBtn a span {background-color: greenyellow;}
-}}
+}
+
 @media screen and (max-width: 1600px) {
     /*****OUR PRODUCTS*****/
     .products .products-cont ul li:nth-child(1) .products-bg, .products .products-cont ul li:nth-child(2) .products-bg {background-position: 0; background-attachment: inherit;}
