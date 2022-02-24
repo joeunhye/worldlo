@@ -203,7 +203,7 @@ $(".popup-close").on("click", function () {
         posY = $(window).scrollTop(posY);
         $("section").css("top", 0);
         headEl.classList.add('on1')
-        $(window).unbind('touchmove', handler);
+        $(window).unbind('touchmove', handler); 
     }else {
         headEl.classList.remove('on1')
     }
@@ -221,8 +221,7 @@ function scrollAble() {
     $('body').off('touchmove');
 }
 
-       // 레이어팝업 열린 상태
-$(window).unbind('touchmove', handler); 
+ // 레이어팝업 열린 상태
 var handler = function(e) { 
     e.preventDefault();
 }
