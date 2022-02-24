@@ -28,6 +28,7 @@ q:before, q:after {content: '';content: none;}
 table {border-collapse: collapse;border-spacing: 0;}
 html,body {position: relative; height:100%; padding:0; margin:0;font-family: 'Noto Sans KR';background-color: #fff;letter-spacing: -0.6px;text-size-adjust: none;-webkit-text-size-adjust: none;-moz-text-size-adjust: none;-ms-text-size-adjust: none; -o-text-size-adjust: none;}
 .skip {width: 0; font-size: 0; text-indent: -9999px; overflow: hidden; height: 0;}
+.pc-hide {display: none;}
 .not_scroll{position: fixed;overflow: hidden !important;width: 100%;height: 100%}
 .not_scroll header {pointer-events: none;}
 .not_scroll .popup-bg {transform: scaleX(1);}
@@ -778,7 +779,7 @@ footer .copyright span {margin:5px 10px 5px 0;}
     
     /*****OUR POSITIONS*****/
     .positions {height: auto; overflow: hidden;background-attachment: inherit;}
-    .positions-in {padding: 10vh 0;}
+    .positions-in {padding: 6vh 0;}
     .positions .mobis-logo {top: auto; bottom: -10px; right:50px; width: 190px;}
 
     .mobis-slider {margin: 100px 0 75px 0;opacity: 0; transform: translateY(70px); transition: .5s all ease-in-out;}
@@ -872,6 +873,8 @@ footer .copyright span {margin:5px 10px 5px 0;}
 
 }
 @media screen and (max-width: 640px) {
+    .mb-hide {display: none;}
+    .pc-hide {display: block;}
     .panel-top.ac {align-items: flex-start;} 
     .panel-top h2 {margin:-5px 8px 0 0; font-size: 24px;letter-spacing: -2px;}
     .panel-top span {font-size: 18px;word-break: keep-all;}

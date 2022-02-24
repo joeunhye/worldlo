@@ -55,7 +55,7 @@ function setPos() {
 //SECTION MOVE
 function moveScroll(target) {
     $('html,body').stop().animate({
-        scrollTop: posArr[target]
+        scrollTop: posArr[target] - 60
     }, speed, function () {
         enableClick = true;
     })
