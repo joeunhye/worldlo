@@ -39,7 +39,17 @@ window.addEventListener('scroll', () => {
                 removeActive(idx, boxs);
             })
         }
+
+        if(window.scrollY > lastScrollY) { 
+            console.log('down')
+        } else { 
+            console.log('up')
+            $('.panel').addClass('on');
+        }
     }
+
+    
+    lastScrollY = window.scrollY;
     
     detectBottom();
 })
@@ -80,7 +90,7 @@ function getElementIndex(element, range) {
 }
 
 function detectBottom() {
-    if (scrollH + winH >= bodyH) {
+    if (scrollH + winH >= bodyH - base) {
         topBtn.classList.add('white')
     }else {
         topBtn.classList.remove('white')
