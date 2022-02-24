@@ -177,14 +177,21 @@ var posY;
         
 $(".more-view").on("click", function(e){
     posY = $(window).scrollTop();
-    
-    $("html, body").addClass("not_scroll");
+    // $("html, body").addClass("not_scroll");
+    $('body').addClass('not_scroll').on('scroll touchmove mousewheel', function(e){
+        e.preventDefault();
+    });
     $("section").css("top",-posY);
+    // $('.header nav ul.pagination').addClass('on');
+    // console.log('sdsdfdsff')
 });
 
 $(".popup-close").on("click", function(){
-    $("html, body").removeClass("not_scroll");
+    // $("html, body").removeClass("not_scroll");
+    $('body').removeClass('not_scroll').off('scroll touchmove mousewheel');
     posY = $(window).scrollTop(posY);
     $("section").css("top",0);
     $('header').addClass('on1')
+    // $('.header nav ul.pagination li').addClass('on');
+    // console.log('sdsdfdsff')
 });
