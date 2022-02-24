@@ -634,13 +634,6 @@ footer .copyright span {margin:5px 10px 5px 0;}
     .mobis-slider .swiper-slide:hover .icon-text span {color: #1F2A65;}
     .mobis-slider.swiper-slide:hover .icon-box {transform: scale(1.2);}
 }
-@media not all and (min-resolution:.001dpcm)
-{ @supports (-webkit-appearance:none) {
-	.about-in {padding: 10vh 0;}
-    .business-in {padding: 10vh 0;}
-    .positions-in {padding: 10vh 0;}
-    .products-in, .location-in {padding: 10vh 0;}
-}}
 
 @media screen and (max-width: 1600px) {
     /*****OUR PRODUCTS*****/
@@ -888,7 +881,7 @@ footer .copyright span {margin:5px 10px 5px 0;}
     .visual-slider .text-cont .sub-text {margin-bottom: 20px; font-size: 23px;}
     .visual-slider .text-cont p {font-size: 30px; word-break: keep-all;}
     .visual-slider .text-cont strong {margin-right: 0px;}
-    .visual-slider .text-cont .bullet {margin: 0 5px; font-size: 30px;}
+    .visual-slider .text-cont .bullet {margin: 0 -1px; font-size: 30px;}
 
     /*****ABOUT*****/
     .about-in {padding: 70px 0;}
