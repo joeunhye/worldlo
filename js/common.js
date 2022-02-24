@@ -190,10 +190,10 @@ $(".popup-close").on("click", function(){
 });
 
 function scrollDisable(){
-    $('body').on('scroll touchmove', function(e){
+    $('body').on('touchmove', function(e){
         e.preventDefault();
     });
 }
 function scrollAble(){
-    $('body').off('scroll touchmove');
+    $('body').off('touchmove');
 }
