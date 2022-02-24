@@ -48,6 +48,11 @@ const popBodyEls = document.querySelectorAll('.popup-body');
 moreBtn.forEach((btnEl, idx) => {
     btnEl.addEventListener('click', e => {
         popupEls[idx].classList.add('on');
+
+        if(winW <= 1024) {
+            $("body").addClass("not_scroll");
+            $(window).bind('touchmove', handler); 
+        }
     })
 })
 closeBtn.forEach((closeEl, idx) => {
@@ -56,8 +61,10 @@ closeBtn.forEach((closeEl, idx) => {
         removeActive(idx, popupEls);
         if (winW > 1024) {
             $.scrollify.enable();
-        } else {
+        } else if(winW <= 1024) {
             $.scrollify.disable();
+            $("body").removeClass("not_scroll");
+            $(window).unbind('touchmove', handler); 
         }
     })
 })
@@ -185,18 +192,11 @@ columnList.forEach((item, idx) => {
     })
 })
 $(".more-view").on("click", function (e) {
-    if(winW <= 1024) {
-        posY = $(window).scrollTop();
-        $("html, body").addClass("not_scroll");
-        $(window).bind('touchmove', handler); 
-    }
-});
-
-$(".popup-close").on("click", function () {
-    if(winW <= 1024) {
-        $("html, body").removeClass("not_scroll");
-        $(window).unbind('touchmove', handler); 
-    }
+    // if(winW <= 1024) {
+    //     posY = $(window).scrollTop();
+    //     $("html, body").addClass("not_scroll");
+    //     $(window).bind('touchmove', handler); 
+    // }
 });
 
 let handler = function(e) { 
