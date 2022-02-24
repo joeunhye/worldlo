@@ -189,10 +189,10 @@ var posY;
 
 $(".more-view").on("click", function (e) {
     if(winW <= 1024) {
+        posY = $(window).scrollTop();
         $("html, body").addClass("not_scroll");
-        // posY = $(window).scrollTop();
-        // $("section").css("top", -posY);
-        scrollDisable();
+        $("section").css("top", -posY);
+        $(window).bind('touchmove', handler); 
     }
     
 });
@@ -200,17 +200,17 @@ $(".more-view").on("click", function (e) {
 $(".popup-close").on("click", function () {
     if(winW <= 1024) {
         $("html, body").removeClass("not_scroll");
-        // posY = $(window).scrollTop(posY);
-        // $("section").css("top", 0);
+        posY = $(window).scrollTop(posY);
+        $("section").css("top", 0);
         headEl.classList.add('on1')
-        scrollAble();
+        $(window).unbind('touchmove', handler);
     }else {
         headEl.classList.remove('on1')
     }
 });
 
 function scrollDisable() {
-    $('body').on('scroll touchmove', function (e) {
+    $('body').on('touchmove', function (e) {
         e.preventDefault();
     }, {
         passive: false
@@ -218,5 +218,11 @@ function scrollDisable() {
 }
 
 function scrollAble() {
-    $('body').off('scroll touchmove');
+    $('body').off('touchmove');
+}
+
+       // 레이어팝업 열린 상태
+$(window).unbind('touchmove', handler); 
+var handler = function(e) { 
+    e.preventDefault();
 }
