@@ -191,7 +191,7 @@ $(".more-view").on("click", function (e) {
     if(winW <= 1024) {
         posY = $(window).scrollTop();
         $("html, body").addClass("not_scroll");
-        $("section").css("top", -posY);
+        //$("section").css("top", -posY);
         $(window).bind('touchmove', handler); 
     }
     
@@ -200,8 +200,8 @@ $(".more-view").on("click", function (e) {
 $(".popup-close").on("click", function () {
     if(winW <= 1024) {
         $("html, body").removeClass("not_scroll");
-        posY = $(window).scrollTop(posY);
-        $("section").css("top", 0);
+        //posY = $(window).scrollTop(posY);
+        //$("section").css("top", 0);
         headEl.classList.add('on1')
         $(window).unbind('touchmove', handler); 
     }else {
