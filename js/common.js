@@ -210,7 +210,7 @@ $(".popup-close").on("click", function () {
 });
 
 function scrollDisable() {
-    $('body').on('scroll touchmove mousewheel', function (e) {
+    $('body').on('scroll touchmove', function (e) {
         e.preventDefault();
     }, {
         passive: false
@@ -218,5 +218,5 @@ function scrollDisable() {
 }
 
 function scrollAble() {
-    $('body').off('scroll touchmove mousewheel');
+    $('body').off('scroll touchmove');
 }
