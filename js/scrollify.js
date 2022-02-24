@@ -1,10 +1,8 @@
-let body;
 const topBtn = document.querySelector('.top-btn');
 const panelEls = document.querySelectorAll('.panel');
 
 document.addEventListener("DOMContentLoaded", function(){
     size();
-    body = document.querySelector('body');
     body.classList.add('intro-section');
     viewSizeChk();
     $(topBtn).on("click", $.scrollify.move);
