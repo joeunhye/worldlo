@@ -28,19 +28,14 @@ window.addEventListener('resize', () => {
     if (winW < 1200) {
         setPos();
         bindingEvent();
+        detectBottom();
     }
 })
 
 window.addEventListener('scroll', () => {
     if (winW < 1200) {
         activeOn(scrollH);
-        if (scrollH < aboutSection.offsetTop - base) {
-            boxs.forEach((idx) => {
-                removeActive(idx, boxs);
-            })
-        }
     }
-    
     detectBottom();
 })
 
@@ -55,7 +50,7 @@ function setPos() {
 //SECTION MOVE
 function moveScroll(target) {
     $('html,body').stop().animate({
-        scrollTop: posArr[target] - 60
+        scrollTop: posArr[target]
     }, speed, function () {
         enableClick = true;
     })
@@ -65,7 +60,6 @@ function activeOn(scroll) {
     btns.forEach((btnEl, idx) => {
         if (scroll >= posArr[idx] - base) {
             addActive(idx, btns);
-            addAllActive(idx, boxs);
         }
     })
 }
@@ -76,9 +70,12 @@ function getElementIndex(element, range) {
 }
 
 function detectBottom() {
-    if (scrollH + winH >= bodyH - base) {
-        topBtn.classList.add('white')
-    }else {
-        topBtn.classList.remove('white')
+    if(winW < 1200) {
+        if (scrollH + winH >= bodyH - base) {
+            topBtn.classList.add('white')
+        }else {
+            topBtn.classList.remove('white')
+        }
     }
+    
 }

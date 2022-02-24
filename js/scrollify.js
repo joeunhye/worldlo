@@ -1,4 +1,3 @@
-const topBtn = document.querySelector('.top-btn');
 const panelEls = document.querySelectorAll('.panel');
 
 document.addEventListener("DOMContentLoaded", function(){

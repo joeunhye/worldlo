@@ -2,7 +2,9 @@ let winW;
 let scrollH;
 let vh;
 let body = document.querySelector('body');
+let topBtn = document.querySelector('.top-btn');
 const headEl = document.querySelector('#header');
+
 window.addEventListener('scroll', () => {
     changeHeadColor();
     size();
@@ -172,21 +174,40 @@ function setScreenSize() {
     document.documentElement.style.setProperty('--vh', `${vh}px`);
 }
 
+const columnList = document.querySelectorAll('.business .column-list li');
+columnList[0].classList.add('on')
+columnList.forEach((item, idx) => {
+    item.addEventListener('click', () => {
+        addActive(idx, columnList);
+    })
+    item.addEventListener('mouseover', () => {
+        addActive(idx, columnList);
+    })
+})
+
 var posY;
 
 $(".more-view").on("click", function (e) {
-    posY = $(window).scrollTop();
-    $("html, body").addClass("not_scroll");
-    $("section").css("top", -posY);
-    scrollDisable();
+    if(winW <= 1024) {
+        posY = $(window).scrollTop();
+        $("html, body").addClass("not_scroll");
+        $("section").css("top", -posY);
+        scrollDisable();
+    }
+    
 });
 
 $(".popup-close").on("click", function () {
-    $("html, body").removeClass("not_scroll");
-    posY = $(window).scrollTop(posY);
-    $("section").css("top", 0);
-    $('header').addClass('on1')
-    scrollAble();
+    if(winW <= 1024) {
+        $("html, body").removeClass("not_scroll");
+        posY = $(window).scrollTop(posY);
+        $("section").css("top", 0);
+        headEl.classList.add('on1')
+        scrollAble();
+    }else {
+        headEl.classList.remove('on1')
+    }
+    
 });
 
 function scrollDisable() {
