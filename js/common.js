@@ -46,6 +46,7 @@ const popBodyEls = document.querySelectorAll('.popup-body');
 moreBtn.forEach((btnEl, idx) => {
     btnEl.addEventListener('click', e => {
         popupEls[idx].classList.add('on');
+        $('.popup-bg').addClass('on')
     })
 })
 closeBtn.forEach((closeEl, idx) => {
@@ -172,7 +173,6 @@ function setScreenSize() {
     document.documentElement.style.setProperty('--vh', `${vh}px`);
 }
 
-
 var posY;
         
 $(".more-view").on("click", function(e){
@@ -180,8 +180,6 @@ $(".more-view").on("click", function(e){
     $("html, body").addClass("not_scroll");
     $("section").css("top",-posY);
     scrollDisable();
-    // $('.header nav ul.pagination').addClass('on');
-    // console.log('sdsdfdsff')
 });
 
 $(".popup-close").on("click", function(){
@@ -189,8 +187,6 @@ $(".popup-close").on("click", function(){
     posY = $(window).scrollTop(posY);
     $("section").css("top",0);
     $('header').addClass('on1')
-    // $('.header nav ul.pagination li').addClass('on');
-    // console.log('sdsdfdsff')
     scrollAble();
 });
 

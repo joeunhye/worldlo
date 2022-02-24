@@ -38,6 +38,7 @@ html,body {position: relative; height:100%; padding:0; margin:0;font-family: 'No
     position: relative;
     top: 0;
 }
+.not_scroll header {pointer-events: none;}
 /*****SCROLLBAR CUSTOM*****/
 ::-webkit-scrollbar {width: 7px; height: 7px;}
 ::-webkit-scrollbar-thumb{background-color: #c7c7c7; border-radius: 10px;}
@@ -48,11 +49,11 @@ header {position: fixed;top: 0;width: 100vw;height: 80px;z-index: 3;}
 header:before {content: ''; position: fixed; top:60px; left:0; display: block; width: 100vw; height: 100vh; background-color: rgba(0,0,0,0.3);transform: scaleX(0); transition: .2s all ease;transform-origin: top left;}
 header.open:before {transform: scaleX(1);}
 header .header-wrap {background-color: #fff; transition: .3s all ease-in-out;}
-header.on .header-wrap, header.on1 .header-wrap {height:70px; background: linear-gradient(to right, #000536, 95%, #A2031B); background-size: 200% 200%;animation: gradient 1.5s ease both;}
-header.on .gnb {height: 70px;}
+header.on .header-wrap, header.on1 .header-wrap {background: linear-gradient(to right, #000536, 95%, #A2031B); background-size: 200% 200%;animation: gradient 1.5s ease both;}
+header.on .gnb, header.on1 .gnb {height: 70px;}
 header .gnb {display: flex;max-width: 1300px;height: 80px;align-items: center;margin: 0 auto;justify-content: space-between;transition: .3s all ease-in-out;}
 header .gnb .logo {position: relative; width: 160px; height: 38px; overflow: hidden; background: url('../images/logo.svg') no-repeat center;background-size: cover;background-position-y: -43px;}
-header.on .gnb .logo {background-position-y: 0px;}
+header.on .gnb .logo, header.on1 .gnb .logo {background-position-y: 0px;}
 header .gnb .pagination {position: relative;top: 0; left:0;display: flex; transform: translateY(0px);}
 header .gnb .pagination a::before {display: none;}
 header nav ul.pagination li {margin-left: 75px;}
@@ -75,7 +76,7 @@ header.on nav a {color:#fff;}
 .triggerBtn .bar1 {top:14px;}
 .triggerBtn .bar2 {top:22px;}
 .triggerBtn .bar3 {top:30px;}
-header.on .triggerBtn a span {background-color: #fff;}
+header.on .triggerBtn a span, header.on1 .triggerBtn a span {background-color: #fff;}
 header.open .triggerBtn .bar1 { -webkit-transform: translateY(8px) rotate(45deg);-ms-transform: translateY(8px) rotate(45deg);-o-transform: translateY(8px) rotate(45deg);transform: translateY(8px) rotate(45deg);}
 header.open .triggerBtn .bar2 {opacity: 0;}
 header.open .triggerBtn .bar3 {-webkit-transform: translateY(-8px) rotate(-45deg);-ms-transform: translateY(-8px) rotate(-45deg);-o-transform: translateY(-8px) rotate(-45deg);transform: translateY(-8px) rotate(-45deg);}
@@ -496,6 +497,8 @@ header.open .triggerBtn .bar3 {-webkit-transform: translateY(-8px) rotate(-45deg
 .popup-head .popup-title span {font-size: 20px; color: #334291;opacity: 0.8;font-weight: 500;}
 .popup-head .popup-title h3 {margin-top: 10px;font-size: 32px;font-weight: 500;color: #06092B;}
 .popup-body {overflow: hidden;height: calc(100% - 94px); overflow-y: auto;}
+.popup-bg {content: ''; position: fixed; top:60px; left:0; display: block; width: 100vw; height: 100vh; background-color: rgba(0,0,0,0.3);transform: scaleX(0); transition: .2s all ease;transform-origin: top left;}
+.not_scroll .popup-bg {transform: scaleX(1);}
 
 /*TAB*/
 .tabs {position: sticky;top: 0;display: flex;justify-content: space-around;list-style-type: none;margin: 0;padding: 0;border-bottom: 1px solid #334291;background-color: #fff;z-index: 1;}
