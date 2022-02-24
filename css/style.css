@@ -48,7 +48,7 @@ header {position: fixed;top: 0;width: 100vw;height: 80px;z-index: 3;}
 header:before {content: ''; position: fixed; top:60px; left:0; display: block; width: 100vw; height: 100vh; background-color: rgba(0,0,0,0.3);transform: scaleX(0); transition: .2s all ease;transform-origin: top left;}
 header.open:before {transform: scaleX(1);}
 header .header-wrap {background-color: #fff; transition: .3s all ease-in-out;}
-header.on .header-wrap {height:70px; background: linear-gradient(to right, #000536, 95%, #A2031B); background-size: 200% 200%;animation: gradient 1.5s ease both;}
+header.on .header-wrap, header.on1 .header-wrap {height:70px; background: linear-gradient(to right, #000536, 95%, #A2031B); background-size: 200% 200%;animation: gradient 1.5s ease both;}
 header.on .gnb {height: 70px;}
 header .gnb {display: flex;max-width: 1300px;height: 80px;align-items: center;margin: 0 auto;justify-content: space-between;transition: .3s all ease-in-out;}
 header .gnb .logo {position: relative; width: 160px; height: 38px; overflow: hidden; background: url('../images/logo.svg') no-repeat center;background-size: cover;background-position-y: -43px;}
@@ -811,7 +811,7 @@ footer .copyright span {margin:5px 10px 5px 0;}
     
     
     /*POPUP*/
-    .popup {top:30vh; left: 20px; right: 20px; height: 75vh;}
+    .popup {position: fixed; top:15vh; left: 20px; right: 20px; height: 85vh;}
     .popup-head {align-items: flex-start;padding: 15px 20px 15px 20px; border: none;}
     .popup-head .popup-title span {font-size: 15px;}
     .popup-head .popup-title h3 {font-size: 20px;}

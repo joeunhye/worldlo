@@ -185,4 +185,6 @@ $(".popup-close").on("click", function(){
     $("html, body").removeClass("not_scroll");
     posY = $(window).scrollTop(posY);
     $("section").css("top",0);
+    $('header').addClass('on1')
+    console.log('adad')
 });
