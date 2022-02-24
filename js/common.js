@@ -170,3 +170,19 @@ function setScreenSize() {
 	vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh}px`);
 }
+
+
+var posY;
+        
+$(".more-view").on("click", function(e){
+    posY = $(window).scrollTop();
+    
+    $("html, body").addClass("not_scroll");
+    $("section").css("top",-posY);
+});
+
+$(".popup-close").on("click", function(){
+    $("html, body").removeClass("not_scroll");
+    posY = $(window).scrollTop(posY);
+    $("section").css("top",0);
+});
