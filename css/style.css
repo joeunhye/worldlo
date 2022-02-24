@@ -137,10 +137,10 @@ header.open .triggerBtn .bar3 {-webkit-transform: translateY(-8px) rotate(-45deg
         top:30px;
     }
 }
-
+ 
 /*****INTRO*****/
 .panel.intro {overflow: hidden; height: 100vh; overflow: hidden;}
-.visual-slider {position: relative; height: 100vh; overflow: hidden; }
+.visual-slider {position: relative; height: 100vh; overflow: hidden;}
 .visual-slider .swiper {height: 100vh; height:calc(var(--vh, 1vh) * 100);}
 .visual-slider .swiper-slide .slider-bg {height: 100vh; height:calc(var(--vh, 1vh) * 100); background-size: cover;background-position: center;}
 .visual-slider .swiper-slide-active .slider-bg {transform: scale(1.1);transition: 7s all ease-out;}
