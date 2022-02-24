@@ -830,7 +830,7 @@ footer .copyright span {margin:5px 10px 5px 0;}
     .car-imgbox .car-info {margin-top:26px;}
     .car-imgbox .car-info span, .car-imgbox img.logo-bg {display: none;}
     .car-imgbox .car-info p {display: inline-block;margin:0;font-size: 15px;color: #fff;background-color: #334291; border-radius: 3px; padding: 7px 8px;}
-    .img-list {position: relative; width: 100%; height: calc(100% - 243px);overflow: hidden;overflow-y: auto; border: none; border-top: 1px solid #000; border-bottom: 1px solid #000;}
+    .img-list {position: relative; width: 100%; height: calc(100% - 243px);overflow: hidden;overflow-y: auto; border: none; border-top: 1px solid #000; border-bottom: 1px solid #000;-webkit-overflow-scrolling: touch;}
     .img-list .list-title {display: none;}
     .car-imgbox .car-wrap .car-wrap-in {max-width: 250px; margin: 0 auto 10px;}
     .table-data {border: none;}
