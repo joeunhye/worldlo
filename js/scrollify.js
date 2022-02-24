@@ -15,6 +15,7 @@ window.addEventListener('resize', () => {
 
 window.addEventListener('scroll', () => {
     moveTop();
+    console.log($.scrollify.isDisabled())
 })
 // window 너비에 따라 scrollify 활성화 제어
 let viewSizeChk = () => {
@@ -97,6 +98,7 @@ let viewSizeChk = () => {
         body.style.overflow = 'hidden';
         $.scrollify.enable();
     }
+    console.log($.scrollify.isDisabled())
 }
 
 let moveTop = () => {

@@ -39,8 +39,8 @@ window.addEventListener('scroll', () => {
                 removeActive(idx, boxs);
             })
         }
+        $.scrollify.disable();
     }
-    
     detectBottom();
 })
 
@@ -67,10 +67,6 @@ function activeOn(scroll) {
             addActive(idx, btns);
             addAllActive(idx, boxs);
         }
-        // if (scroll >= posArr[idx]) {
-        //     body.className = '';
-        //     body.classList.add(`active${idx}`)
-        // }
     })
 }
 
