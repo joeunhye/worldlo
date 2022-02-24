@@ -207,6 +207,8 @@ $(".popup-close").on("click", function () {
     }else {
         headEl.classList.remove('on1')
     }
+    activeOn(scrollH);
+    console.log(posArr)
     
 });
 
