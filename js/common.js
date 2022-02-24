@@ -1,7 +1,7 @@
 let winW;
 let scrollH;
 let vh;
-let body = document.querySelector('body');;
+let body = document.querySelector('body');
 const headEl = document.querySelector('#header');
 window.addEventListener('scroll', () => {
     changeHeadColor();
@@ -46,9 +46,7 @@ const popBodyEls = document.querySelectorAll('.popup-body');
 moreBtn.forEach((btnEl, idx) => {
     btnEl.addEventListener('click', e => {
         popupEls[idx].classList.add('on');
-        body.classList.add('not_scroll');
     })
-    
 })
 closeBtn.forEach((closeEl, idx) => {
     closeEl.addEventListener('click', e => {
@@ -59,7 +57,6 @@ closeBtn.forEach((closeEl, idx) => {
         }else {
             $.scrollify.disable();
         }
-        body.classList.remove('not_scroll');
     })
 })
 popBodyEls.forEach((popBody, idx) => {
@@ -176,18 +173,18 @@ function setScreenSize() {
 }
 
 
-// var posY;
+var posY;
         
-// $(".more-view").on("click", function(e){
-//     posY = $(window).scrollTop();
+$(".more-view").on("click", function(e){
+    posY = $(window).scrollTop();
     
-//     $("html, body").addClass("not_scroll");
-//     $("section").css("top",-posY);
-// });
+    $("html, body").addClass("not_scroll");
+    $("section").css("top",-posY);
+});
 
-// $(".popup-close").on("click", function(){
-//     $("html, body").removeClass("not_scroll");
-//     posY = $(window).scrollTop(posY);
-//     $("section").css("top",0);
-//     $('header').addClass('on1')
-// });
+$(".popup-close").on("click", function(){
+    $("html, body").removeClass("not_scroll");
+    posY = $(window).scrollTop(posY);
+    $("section").css("top",0);
+    $('header').addClass('on1')
+});

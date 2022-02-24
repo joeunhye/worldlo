@@ -39,8 +39,8 @@ window.addEventListener('scroll', () => {
                 removeActive(idx, boxs);
             })
         }
-        $.scrollify.disable();
     }
+    
     detectBottom();
 })
 
