@@ -184,44 +184,21 @@ columnList.forEach((item, idx) => {
         addActive(idx, columnList);
     })
 })
-
-var posY;
-
 $(".more-view").on("click", function (e) {
     if(winW <= 1024) {
         posY = $(window).scrollTop();
         $("html, body").addClass("not_scroll");
-        //$("section").css("top", -posY);
         $(window).bind('touchmove', handler); 
     }
-    
 });
 
 $(".popup-close").on("click", function () {
     if(winW <= 1024) {
         $("html, body").removeClass("not_scroll");
-        //posY = $(window).scrollTop(posY);
-        //$("section").css("top", 0);
-        headEl.classList.add('on1')
         $(window).unbind('touchmove', handler); 
-    }else {
-        headEl.classList.remove('on1')
     }
 });
 
-function scrollDisable() {
-    $('body').on('touchmove', function (e) {
-        e.preventDefault();
-    }, {
-        passive: false
-    });
-}
-
-function scrollAble() {
-    $('body').off('touchmove');
-}
-
- // 레이어팝업 열린 상태
-var handler = function(e) { 
+let handler = function(e) { 
     e.preventDefault();
 }

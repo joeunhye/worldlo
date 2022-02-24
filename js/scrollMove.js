@@ -77,5 +77,4 @@ function detectBottom() {
             topBtn.classList.remove('white')
         }
     }
-    
 }
