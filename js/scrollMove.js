@@ -2,7 +2,7 @@ const boxs = document.querySelectorAll('section');
 const btns = document.querySelectorAll('nav li a');
 const aboutSection = document.querySelector('.panel.about');
 const speed = 1000;
-const base = window.innerHeight / 2;
+const base = window.innerHeight / 1.5;
 let posArr;
 let enableClick = true;
 
@@ -39,17 +39,7 @@ window.addEventListener('scroll', () => {
                 removeActive(idx, boxs);
             })
         }
-
-        if(window.scrollY > lastScrollY) { 
-            console.log('down')
-        } else { 
-            console.log('up')
-            $('.panel').addClass('on');
-        }
     }
-
-    
-    lastScrollY = window.scrollY;
     
     detectBottom();
 })

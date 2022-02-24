@@ -1,7 +1,6 @@
 let winW;
 let scrollH;
 let vh;
-let lastScrollY = 0;
 const headEl = document.querySelector('#header');
 window.addEventListener('scroll', () => {
     changeHeadColor();
