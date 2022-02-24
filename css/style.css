@@ -712,7 +712,7 @@ footer .copyright span {margin:5px 10px 5px 0;}
     .wrapper {height: auto;}
 
     /*SCROLL ARROW*/
-    .scroll-arrow {bottom: 12%;}
+    .scroll-arrow {bottom: 12%; opacity: 0.6;}
 
     /*****HEADER*****/
     header .gnb {justify-content: center;}
