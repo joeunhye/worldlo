@@ -636,8 +636,10 @@ footer .copyright span {margin:5px 10px 5px 0;}
 }
 @media not all and (min-resolution:.001dpcm)
 { @supports (-webkit-appearance:none) {
-	/* 이 안에 Safari(10.1 이상)에서만 적용할 스타일 작성 */
-    .triggerBtn a span {background-color: greenyellow;}
+	.about-in {padding: 10vh 0;}
+    .business-in {padding: 10vh 0;}
+    .positions-in {padding: 10vh 0;}
+    .products-in, .location-in {padding: 10vh 0;}
 }}
 
 @media screen and (max-width: 1600px) {
