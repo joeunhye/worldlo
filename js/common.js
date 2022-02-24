@@ -40,21 +40,37 @@ let changeHeadColor = () => {
     }
 }
 
+//BUSINESS - Column Animation
+const columnList = document.querySelectorAll('.business .column-list li');
+columnList[0].classList.add('on')
+columnList.forEach((item, idx) => {
+    item.addEventListener('click', () => {
+        addActive(idx, columnList);
+    })
+    item.addEventListener('mouseover', () => {
+        addActive(idx, columnList);
+    })
+})
+
 //POPUP
 const moreBtn = document.querySelectorAll('.more-view');
 const closeBtn = document.querySelectorAll('.popup-close');
 const popupEls = document.querySelectorAll('.popup');
 const popBodyEls = document.querySelectorAll('.popup-body');
+
+//POPUP OPEN
 moreBtn.forEach((btnEl, idx) => {
     btnEl.addEventListener('click', e => {
         popupEls[idx].classList.add('on');
 
         if(winW <= 1024) {
-            $("body").addClass("not_scroll");
+            body.classList.add('not_scroll');
             $(window).bind('touchmove', handler); 
         }
     })
 })
+
+//POPUP CLOSE
 closeBtn.forEach((closeEl, idx) => {
     closeEl.addEventListener('click', e => {
         e.preventDefault();
@@ -63,7 +79,7 @@ closeBtn.forEach((closeEl, idx) => {
             $.scrollify.enable();
         } else if(winW <= 1024) {
             $.scrollify.disable();
-            $("body").removeClass("not_scroll");
+            body.classList.remove('not_scroll');
             $(window).unbind('touchmove', handler); 
         }
     })
@@ -180,24 +196,6 @@ function setScreenSize() {
     vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh}px`);
 }
-
-const columnList = document.querySelectorAll('.business .column-list li');
-columnList[0].classList.add('on')
-columnList.forEach((item, idx) => {
-    item.addEventListener('click', () => {
-        addActive(idx, columnList);
-    })
-    item.addEventListener('mouseover', () => {
-        addActive(idx, columnList);
-    })
-})
-$(".more-view").on("click", function (e) {
-    // if(winW <= 1024) {
-    //     posY = $(window).scrollTop();
-    //     $("html, body").addClass("not_scroll");
-    //     $(window).bind('touchmove', handler); 
-    // }
-});
 
 let handler = function(e) { 
     e.preventDefault();
