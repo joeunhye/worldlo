@@ -874,8 +874,8 @@ footer .copyright span {margin:5px 10px 5px 0;}
 }
 @media screen and (max-width: 640px) {
     /*SCROLL ARROW*/
-    .scroll-arrow {bottom: 12%;width: 60px;height: 60px; opacity: 0.6;}
-    .scroll-arrow p {font-size: 10px;}
+    .scroll-arrow {bottom: 12%;width: 65px;height: 65px; opacity: 0.6;}
+    .scroll-arrow p {font-size: 12px;}
     @keyframes scrollMove{
         from {
             opacity: 1;
