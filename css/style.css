@@ -811,7 +811,7 @@ footer .copyright span {margin:5px 10px 5px 0;}
     
     
     /*POPUP*/
-    .popup {position: fixed; top:15vh; left: 20px; right: 20px; height: 85vh;}
+    .popup {position: fixed; top:70px; left: 20px; right: 20px; height: 80%;}
     .popup-head {align-items: flex-start;padding: 15px 20px 15px 20px; border: none;}
     .popup-head .popup-title span {font-size: 15px;}
     .popup-head .popup-title h3 {font-size: 20px;}
