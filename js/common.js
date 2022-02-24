@@ -7,7 +7,7 @@ window.addEventListener('scroll', () => {
     changeHeadColor();
     size();
 })
-document.addEventListener("DOMContentLoaded", function(){
+document.addEventListener("DOMContentLoaded", function () {
     size();
     changeHeadColor();
     setScreenSize();
@@ -31,9 +31,9 @@ function size() {
 
 //HEADER COLOR CHANGE
 let changeHeadColor = () => {
-    if(scrollH > 100) {
+    if (scrollH > 100) {
         headEl.classList.add('on')
-    }else{
+    } else {
         headEl.classList.remove('on')
     }
 }
@@ -52,9 +52,9 @@ closeBtn.forEach((closeEl, idx) => {
     closeEl.addEventListener('click', e => {
         e.preventDefault();
         removeActive(idx, popupEls);
-        if(winW > 1024) {
+        if (winW > 1024) {
             $.scrollify.enable();
-        }else {
+        } else {
             $.scrollify.disable();
         }
     })
@@ -68,7 +68,7 @@ popBodyEls.forEach((popBody, idx) => {
     })
 })
 
-$('.popup-body').on('touchmove', function(e) {
+$('.popup-body').on('touchmove', function (e) {
     $.scrollify.disable();
 })
 
@@ -78,7 +78,7 @@ class Tab {
         const defaultOtp = {
             btns: 'ul li',
             boxs: '.tab-contents .tab-content',
-            activeClass : 'active'
+            activeClass: 'active'
         }
 
         let resultOtp = Object.assign({}, defaultOtp, option)
@@ -92,20 +92,20 @@ class Tab {
     bindingEvent() {
         this.btns.on('click', e => {
             let isOn = $(e.currentTarget).hasClass(this.activeClass);
-            if(isOn) return; 
+            if (isOn) return;
             let i = $(e.currentTarget).index();
             this.activation(i);
             $.scrollify.disable();
         })
     }
 
-    activation(index){
+    activation(index) {
         this.btns.removeClass(this.activeClass);
         this.btns.eq(index).addClass(this.activeClass);
         this.boxs.removeClass(this.activeClass);
         this.boxs.eq(index).addClass(this.activeClass);
     }
-    
+
 }
 
 //OUR PRODUCTS - Car Animation
@@ -129,19 +129,19 @@ carItemEls.forEach((carItemEl, idx) => {
     })
 })
 
-function addActive(index, lists){
-    for(let el of lists){
+function addActive(index, lists) {
+    for (let el of lists) {
         el.classList.remove("on");
     }
     lists[index].classList.add('on')
 }
 
-function addAllActive(index, lists){
+function addAllActive(index, lists) {
     lists[index].classList.add('on')
 }
 
-function removeActive(index, lists){
-    for(let el of lists){
+function removeActive(index, lists) {
+    for (let el of lists) {
         el.classList.remove("on");
         el.classList.remove("active");
     }
@@ -152,15 +152,15 @@ const mbMenuBtn = document.querySelector('.triggerBtn');
 let isOpen = false;
 mbMenuBtn.addEventListener('click', () => {
     isOpen = !isOpen;
-    if(isOpen) {
+    if (isOpen) {
         headEl.classList.add('open')
-    }else {
+    } else {
         headEl.classList.remove('open')
     }
 })
 
 function mbMenuChk() {
-    if(winW > 1024) {
+    if (winW > 1024) {
         headEl.classList.remove('open')
         isOpen = false;
     }
@@ -168,32 +168,35 @@ function mbMenuChk() {
 
 //MOBILE 100VH SETTING
 function setScreenSize() {
-	vh = window.innerHeight * 0.01;
+    vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh}px`);
 }
 
 var posY;
-        
-$(".more-view").on("click", function(e){
+
+$(".more-view").on("click", function (e) {
     posY = $(window).scrollTop();
     $("html, body").addClass("not_scroll");
-    $("section").css("top",-posY);
+    $("section").css("top", -posY);
     scrollDisable();
 });
 
-$(".popup-close").on("click", function(){
+$(".popup-close").on("click", function () {
     $("html, body").removeClass("not_scroll");
     posY = $(window).scrollTop(posY);
-    $("section").css("top",0);
+    $("section").css("top", 0);
     $('header').addClass('on1')
     scrollAble();
 });
 
-function scrollDisable(){
-    $('body').on('touchmove', function(e){
+function scrollDisable() {
+    $('body').on('touchmove', function (e) {
         e.preventDefault();
+    }, {
+        passive: false
     });
 }
-function scrollAble(){
+
+function scrollAble() {
     $('body').off('touchmove');
 }
