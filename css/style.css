@@ -712,7 +712,7 @@ footer .copyright span {margin:5px 10px 5px 0;}
     .wrapper {height: auto;}
 
     /*SCROLL ARROW*/
-    .scroll-arrow {bottom: 12%; opacity: 0.6;}
+    .scroll-arrow {bottom: 12%;}
 
     /*****HEADER*****/
     header .gnb {justify-content: center;}
@@ -873,6 +873,20 @@ footer .copyright span {margin:5px 10px 5px 0;}
 
 }
 @media screen and (max-width: 640px) {
+    /*SCROLL ARROW*/
+    .scroll-arrow {bottom: 12%;width: 60px;height: 60px; opacity: 0.6;}
+    .scroll-arrow p {font-size: 10px;}
+    @keyframes scrollMove{
+        from {
+            opacity: 1;
+            top:15px;
+        }
+        to {
+            opacity: 0;
+            top:30px;
+        }
+    }
+
     .mb-hide {display: none;}
     .pc-hide {display: block;}
     .panel-top.ac {align-items: flex-start;} 
