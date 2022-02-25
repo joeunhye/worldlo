@@ -30,11 +30,7 @@ html,body {position: relative; height:100%; padding:0; margin:0;font-family: 'No
 .skip {width: 0; font-size: 0; text-indent: -9999px; overflow: hidden; height: 0;}
 .pc-hide {display: none;}
 /* .not_scroll{position: fixed;overflow: hidden !important;width: 100%;height: 100%; touch-action:none;touch-action: none;-ms-touch-action: none;} */
-.not_scroll{touch-action: none;
-    -webkit-overflow-scrolling: none;
-    overflow: hideen;
-    /* 이외의 브라우저 */
-    overscroll-behavior: none;}
+.not_scroll{touch-action: none; -webkit-overflow-scrolling: none;overflow: hidden; overscroll-behavior: none;}
 .not_scroll header {pointer-events: none;}
 .not_scroll .popup-bg {transform: scaleX(1);}
 .not_scroll .triggerBtn {opacity: 0.5;}
@@ -105,11 +101,11 @@ header.open .triggerBtn .bar3 {-webkit-transform: translateY(-8px) rotate(-45deg
 .panel {position: relative;}
 .panel-top {display: flex;align-items: flex-start;flex-direction: column; margin-bottom: 22px;}
 .panel-top.ac {align-items: center;}
-.panel-top h2 {margin:-10px 8px 0 0; font-size: 46px; font-weight: 500;letter-spacing: -3px; color: #334291;}
+.panel-top h2 {float: left; margin:0 12px 0 0; font-size: 46px; font-weight: 500;letter-spacing: -3px; color: #334291;}
 .panel-top.color-white h2, .panel-top.color-white span, .panel-top.color-white .panel-text {color: #fff;}
-.panel-top img {margin-right:4px;}
-.panel-top span {font-size: 24px;font-weight: 500; color:#333;}
-.panel-top .panel-title {display: flex;align-items: center;}
+.panel-top img {position: relative; top:13px; margin-right:4px;}
+.panel-top span {position: relative; top:13px; font-size: 24px;font-weight: 500; color:#333;}
+.panel-top .panel-title {position: relative;}
 .panel-text {width: 500px; margin-top:22px; word-break: keep-all;font-size: 18px; line-height: 30px; color:#555555;}
 .wrapper {position: relative;max-width: 1300px; height: 100%; margin: 0 auto;}
 
@@ -190,6 +186,7 @@ header.open .triggerBtn .bar3 {-webkit-transform: translateY(-8px) rotate(-45deg
 }
 
 /*****ABOUT*****/
+.about {height: 100vh;}
 .about-in {padding-top: 23vh;}
 .about-in .panel-top {margin-bottom: 100px;}
 .about-slider {position: relative; top:-70px;}
@@ -673,6 +670,7 @@ footer .copyright span {margin:5px 10px 5px 0;}
     .visual-slider .text-cont p {font-size: 47px;}
 
     /*****ABOUT*****/
+    .about {height: auto;}
     .about-in {padding: 15vh 0 10vh;}
     .about-slider .slider-title {margin-top: 5vh;}
     .about-slider .swiper {height: 350px;opacity: 1;transform: translateY(0px);}
@@ -716,6 +714,9 @@ footer .copyright span {margin:5px 10px 5px 0;}
 @media screen and (max-width: 1024px) {
     a[href^="tel"] {color: inherit; text-decoration: none;}
     .wrapper {height: auto;}
+    .panel-top .panel-title {display: flex; align-items: center;}
+    .panel-top img {top:7px;}
+    .panel-top span {top:5px;}
 
     /*SCROLL ARROW*/
     .scroll-arrow {bottom: 12%;}
@@ -896,8 +897,9 @@ footer .copyright span {margin:5px 10px 5px 0;}
     .mb-hide {display: none;}
     .pc-hide {display: block;}
     .panel-top.ac {align-items: flex-start;} 
-    .panel-top h2 {margin:-5px 8px 0 0; font-size: 24px;letter-spacing: -2px;}
-    .panel-top span {font-size: 18px;word-break: keep-all;}
+    .panel-top h2 {margin:0 8px 0 0; font-weight: 600; font-size: 24px;letter-spacing: -1px;}
+    .panel-top span {top:0; font-size: 18px;word-break: keep-all;}
+    .panel-top img {top:0; width: 22px;}
     .panel-text {width: auto; font-size: 15px; line-height: 23px;}
 
     /*****INTRO*****/
