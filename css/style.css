@@ -265,25 +265,23 @@ header.open .triggerBtn .bar3 {-webkit-transform: translateY(-8px) rotate(-45deg
 .business .column-list .icon-text p {margin-bottom: 25px;font-size: 24px;color: #333;}
 .business.active .column-list li {opacity: 1; transform: translateY(0);}
 .business .column-list .icon-item {display: flex;flex-direction: column;align-items: center;justify-content: space-evenly;height: 500px;padding: 0 50px;border-radius: 10px; transition: .3s all ease;}
-.business .column-list li:hover .icon-item, .business .column-list li.on .icon-item {background-color: #fff;box-shadow: 0px 2px 15px 3px rgb(0 0 0 / 7%);}
+.business .column-list li.on .icon-item {background-color: #fff;box-shadow: 0px 2px 15px 3px rgb(0 0 0 / 7%);}
 .business .column-list .icon-box {position: relative; height: 190px;}
 .business .column-list .arrow-left {position: absolute; top: 46%;left: 21%;transform: rotate(-45deg); transition: .3s all ease;opacity: 1;}
 .business .column-list .arrow-up {position: absolute; left:50%; top:35%; transform: translateX(-50%); transition: .3s all ease;opacity: 1;}
 .business .column-list .arrow-right {position: absolute;top: 46%;right: 22%;transform: rotate(45deg); transition: .3s all ease;opacity: 1;}
-.business .column-list li:nth-child(1):hover .arrow-left, .business .column-list li:nth-child(1).on .arrow-left {animation: arrowleft 1s infinite;}
-.business .column-list li:nth-child(1):hover .arrow-up, .business .column-list li:nth-child(1).on .arrow-up {animation: arrowUp 1s infinite;}
-.business .column-list li:nth-child(1):hover .arrow-right, .business .column-list li:nth-child(1).on .arrow-right {animation: arrowRight 1s infinite;}
+.business .column-list li:nth-child(1).on .arrow-left {animation: arrowleft 1s infinite;}
+.business .column-list li:nth-child(1).on .arrow-up {animation: arrowUp 1s infinite;}
+.business .column-list li:nth-child(1).on .arrow-right {animation: arrowRight 1s infinite;}
 .business .column-list .icon-box .user-blue {position: absolute; top:0; left:0;}
 .business .column-list .icon-box .user-white {position: absolute; bottom: 0; right:0;}
 .business .column-list .icon-box .arrow-red-body {position: absolute; top:40px; right:20px;transition: .3s all ease;}
 .business .column-list .icon-box .arrow-red-head {position: absolute; top:68px; right:20px;transition: .3s all ease;}
 .business .column-list .icon-box .arrow-blue-body {position: absolute; bottom: 40px; left:20px;transition: .3s all ease;}
 .business .column-list .icon-box .arrow-blue-head {position: absolute; bottom: 65px; left:20px;transition: .3s all ease;}
-.business .column-list li:nth-child(2):hover .user-blue, .business .column-list li:nth-child(2).on .user-blue {animation: moveUpDown 1s infinite; animation-direction: alternate;}
-.business .column-list li:nth-child(2):hover .user-white, .business .column-list li:nth-child(2).on .user-white {animation: moveUpDown 1.3s infinite; animation-direction: alternate;}
-.business .column-list li:nth-child(2):hover .arrow-body, .business .column-list li:nth-child(2).on .arrow-body {stroke-dasharray: 80;stroke-dashoffset: 160;animation: dash 2s ease-in-out infinite;}
-.business .column-list li:nth-child(2):hover .arrow-red-head,
-.business .column-list li:nth-child(2):hover .arrow-blue-head,
+.business .column-list li:nth-child(2).on .user-blue {animation: moveUpDown 1s infinite; animation-direction: alternate;}
+.business .column-list li:nth-child(2).on .user-white {animation: moveUpDown 1.3s infinite; animation-direction: alternate;}
+.business .column-list li:nth-child(2).on .arrow-body {stroke-dasharray: 80;stroke-dashoffset: 160;animation: dash 2s ease-in-out infinite;}
 .business .column-list li:nth-child(2).on .arrow-red-head,
 .business .column-list li:nth-child(2).on .arrow-blue-head {animation: opacity 2s 1s ease-in-out infinite;}
 .business .column-list .icon-box .arrow-rotate {position: absolute;top: 26%;left: 29%; width: 70px; transition: .3s all ease;}
@@ -294,11 +292,11 @@ header.open .triggerBtn .bar3 {-webkit-transform: translateY(-8px) rotate(-45deg
 .business .column-list .icon-box .box.box-right {top: 45%; right: 7%;transform: translateY(-50%);}
 .business .column-list .icon-box .box.box-bottom {bottom: 16%;left: 50%;transform: translateX(-50%);}
 .business .column-list .icon-box .box.box-left {top: 37%; left: 14%;transform: translateX(-50%);}
-.business .column-list li:nth-child(3):hover .arrow-rotate, .business .column-list li:nth-child(3).on .arrow-rotate {animation: rotate 2s ease-in-out infinite;}
-.business .column-list li:nth-child(3):hover .box.box-top span, .business .column-list li:nth-child(3).on .box.box-top span {animation: iconColorOff 6s ease-in-out;}
-.business .column-list li:nth-child(3):hover .box.box-right span, .business .column-list li:nth-child(3).on .box.box-right span {animation: iconColorOn 1.5s 1s ease-in-out;}
-.business .column-list li:nth-child(3):hover .box.box-bottom span, .business .column-list li:nth-child(3).on .box.box-bottom span {animation: iconColorOn 1.5s 2s ease-in-out;}
-.business .column-list li:nth-child(3):hover .box.box-left span, .business .column-list li:nth-child(3).on .box.box-left span {animation: iconColorOn 1.5s 3s ease-in-out;}
+.business .column-list li:nth-child(3).on .arrow-rotate {animation: rotate 2s ease-in-out infinite;}
+.business .column-list li:nth-child(3).on .box.box-top span {animation: iconColorOff 6s ease-in-out;}
+.business .column-list li:nth-child(3).on .box.box-right span {animation: iconColorOn 1.5s 1s ease-in-out;}
+.business .column-list li:nth-child(3).on .box.box-bottom span {animation: iconColorOn 1.5s 2s ease-in-out;}
+.business .column-list li:nth-child(3).on .box.box-left span {animation: iconColorOn 1.5s 3s ease-in-out;}
 .business .column-list .icon-text span {color: #555;}
 
 .wave-bg {position: absolute; bottom: 0; width: 100%; z-index: 1;}
@@ -621,6 +619,22 @@ footer .copyright span {margin:5px 10px 5px 0;}
 
 /*****MEDIA QUERY*****/
 @media (hover: hover) {
+    /*****BUSINESS*****/
+    .business .column-list li:hover .icon-item {background-color: #fff;box-shadow: 0px 2px 15px 3px rgb(0 0 0 / 7%);}
+    .business .column-list li:nth-child(1):hover .arrow-left {animation: arrowleft 1s infinite;}
+    .business .column-list li:nth-child(1):hover .arrow-up {animation: arrowUp 1s infinite;}
+    .business .column-list li:nth-child(1):hover .arrow-right {animation: arrowRight 1s infinite;}
+    .business .column-list li:nth-child(2):hover .user-blue {animation: moveUpDown 1s infinite; animation-direction: alternate;}
+    .business .column-list li:nth-child(2):hover .user-white {animation: moveUpDown 1.3s infinite; animation-direction: alternate;}
+    .business .column-list li:nth-child(2):hover .arrow-body {stroke-dasharray: 80;stroke-dashoffset: 160;animation: dash 2s ease-in-out infinite;}
+    .business .column-list li:nth-child(2):hover .arrow-red-head,
+    .business .column-list li:nth-child(2):hover .arrow-blue-head {animation: opacity 2s 1s ease-in-out infinite;}
+    .business .column-list li:nth-child(3):hover .arrow-rotate {animation: rotate 2s ease-in-out infinite;}
+    .business .column-list li:nth-child(3):hover .box.box-top span {animation: iconColorOff 6s ease-in-out;}
+    .business .column-list li:nth-child(3):hover .box.box-right span {animation: iconColorOn 1.5s 1s ease-in-out;}
+    .business .column-list li:nth-child(3):hover .box.box-bottom span {animation: iconColorOn 1.5s 2s ease-in-out;}
+    .business .column-list li:nth-child(3):hover .box.box-left span {animation: iconColorOn 1.5s 3s ease-in-out;}
+
     /*****OUR POSITIONS*****/
 	.mobis-slider .swiper-slide:hover:before {transform: translate(-55px, -60px);opacity: 0.4;}
     .mobis-slider .swiper-slide:hover .positions-item {background-color: #fff;box-shadow: 0px 7px 30px 3px rgb(0 0 0 / 47%);}
