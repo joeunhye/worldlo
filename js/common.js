@@ -91,10 +91,9 @@ popBodyEls.forEach((popBody, idx) => {
     popBody.addEventListener('mouseleave', () => {
         $.scrollify.enable();
     })
-})
-
-$('.popup-body').on('touchmove', function (e) {
-    $.scrollify.disable();
+    popBody.addEventListener('touchmove', () => {
+        $.scrollify.disable();
+    })
 })
 
 //TAB
