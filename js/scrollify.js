@@ -65,6 +65,10 @@ let viewSizeChk = () => {
                     body.className = '';
                     body.classList.add('products-section');
                     topBtn.classList.add('white');
+                }else if(currentWrapper[0].classList.contains('partnership')) { // partnership 섹션 진입
+                    body.className = '';
+                    body.classList.add('partnership-section');
+                    // topBtn.classList.add('white');
                 }else if(currentWrapper[0].classList.contains('location')) { // location 섹션 진입
                     body.className = '';
                     body.classList.add('location-section');
